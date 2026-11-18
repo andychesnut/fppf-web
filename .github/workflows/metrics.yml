@@ -1,0 +1,53 @@
+name: Metrics snapshot
+# Every 6 hours: check the live site, pull aggregate numbers, and commit them to the ops-data branch.
+# The GM reads that branch. Aggregates only: no emails, no individual rows.
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ops-data
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://firstprinciplesmoney.com' }}
+      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Switch to ops-data
+        run: |
+          git config user.name "fppf-ops"
+          git config user.email "ops@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin ops-data >/dev/null 2>&1; then
+            git checkout ops-data
+          else
+            git checkout --orphan ops-data
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+      - name: Collect
+        run: |
+          mkdir -p metrics/history
+          NOW=$(date -u +%Y-%m-%dT%H%MZ)
+          HEALTH=$(curl -sS --max-time 30 "$SITE_URL/api/health" || echo '{"ok":false,"error":"unreachable"}')
+          HOME_CODE=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "$SITE_URL/" || echo 000)
+          if [ -n "$METRICS_TOKEN" ]; then
+            METRICS=$(curl -sS --max-time 30 -H "Authorization: Bearer $METRICS_TOKEN" "$SITE_URL/api/metrics" || echo '{"ok":false,"error":"unreachable"}')
+          else
+            METRICS='{"ok":false,"error":"METRICS_TOKEN secret not set"}'
+          fi
+          echo "$HEALTH" | jq -e . >/dev/null 2>&1 || HEALTH='{"ok":false,"error":"non-json health response"}'
+          echo "$METRICS" | jq -e . >/dev/null 2>&1 || METRICS='{"ok":false,"error":"non-json metrics response"}'
+          jq -n --arg at "$NOW" --arg site "$SITE_URL" --arg home "$HOME_CODE" --argjson health "$HEALTH" --argjson metrics "$METRICS" \
+            '{collected_at: $at, site: $site, home_status: $home, health: $health, metrics: $metrics}' > metrics/latest.json
+          cp metrics/latest.json "metrics/history/$NOW.json"
+      - name: Commit
+        run: |
+          git add metrics
+          git commit -m "metrics: $(date -u +%Y-%m-%dT%H:%MZ)" || exit 0
+          git push origin ops-data
