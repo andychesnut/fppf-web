@@ -69,7 +69,9 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Metrics (ops-data, 2026-11-18 15:36 UTC):** unmeasured. Home returned 308, `/api/health` returned non-JSON, and the collector reported `METRICS_TOKEN secret not set` in GitHub. No `reviews/` verdicts exist.
 - **Failed:** live site check. This session's network allowlist refuses `firstprinciplesmoney.com` and `www`. The change is not verified live.
 - **Verified live afterwards (setup session, 2026-11-18 18:21 UTC):** all three new strings are in the live `/snapshot` JavaScript bundle on `www.firstprinciplesmoney.com`. `/api/health` returns `{"ok":true,"db":true,"email":false,"checkout":false}`.
-- **Blocked on Andy:** add `firstprinciplesmoney.com` and `www.firstprinciplesmoney.com` to the cloud environment's allowed domains; set the `METRICS_TOKEN` GitHub secret (same value as Vercel).
+- **Update (same day, after Andy allowlisted the domain):** live check passed. `/`, `/snapshot`, `/privacy`, `/terms` returned 200. `/api/health` returned ok true, db true, email false, checkout false. The new price-note string ("launch price may differ") is in the live JavaScript bundle, so the change shipped (verified by fetching the bundle, not by walking the flow). The earlier metrics note about non-JSON health is stale. Email sending is off. The `METRICS_TOKEN` item still needs checking on the next metrics run.
+- **Failed (earlier in the run, now resolved):** live site check. This session's network allowlist refuses `firstprinciplesmoney.com` and `www`. The change is not verified live.
+- **Blocked on Andy:** set the `METRICS_TOKEN` GitHub secret (same value as Vercel). The domain allowlist is done.
 - **Gospel changes:** none. No brief (run outside 6:00 to 8:00 Mountain).
 
 ### 2026-11-18 about 07:30 Mountain - interactive: move the scheduled run to Claude Code
