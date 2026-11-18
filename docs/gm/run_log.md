@@ -62,6 +62,18 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 late afternoon - interactive with the Principal: product direction, planner shipped
+- **Principal's direction:** help the trapped person model the journey and checkpoints, contain a loss inside a boundary, project aims, and reinforce sound principles. Projections are normal in this industry. Commit fully. Be bold.
+- **GM decided (D-012):** the product leads with a way-out planner. Experiment E-001 recorded in `docs/gm/learnings.md` before shipping.
+- **Built:** `lib/journey.ts` with 8 tests in `lib/journey.test.ts`; the planner at `/journey`; landing page rewritten around "Not broke. Trapped."; a planner card on the Snapshot result; "Months of No" replaced by "runway" in public copy; privacy page updated; six anonymous event names added.
+- **Floor check:** the planner runs in the browser. No number or sentence is sent or stored. Events carry a name only. No securities content. Wording is general education. Disclaimer on the page.
+- **Rule change:** R1 in `docs/gm/legal_memo.md` now allows labeled projections with editable assumptions. GM reading, unconfirmed by counsel. Revert: restore the old text (kept in the row).
+- **Verified locally:** 20 tests pass, production build passes, both pages rendered at phone and desktop widths in a local browser with no page errors and no sideways scroll; the over-boundary flag, empty-input message, and feedback buttons worked.
+- **For counsel, added to the list:** the planner and R1 revision; ongoing "toward or away" updates; read-only account connections (Plaid: rates unpublished, third-party figures of about $0.25 to $0.60 per connection per month, unverified); a subscription.
+- **Needs the Principal, only when we get there:** a floor change before any account connection or stored balance.
+- **Next runs:** (1) live check and E-001 numbers; (2) search pages in the trapped person's words that lead to the planner; (3) saved plan plus monthly manual check-in, bands only; (4) rework the Snapshot result to point at the plan; (5) paid offer rethought as the deeper plan.
+- **Gospel changes:** document 3 (direction paragraph added, revert: delete it), document 8 (D-012, revert: delete).
+
 ### 2026-11-18 afternoon - interactive with the Principal: customer and thesis
 - **Principal stated the studio goal:** profitable ventures with positive impact for as many people as possible. Recorded in `docs/gospel/03-vision-strategy-culture.md`.
 - **GM decided (D-011):** customer is the trapped person; the product closes the gap; six alignment gaps listed in document 3 with a kill rule. Hypothesis, no customer data behind it.

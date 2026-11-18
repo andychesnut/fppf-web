@@ -13,7 +13,7 @@ export async function sendResultEmail(to: string, body: { stage: string; load: s
     '',
     'Your stage: ' + body.stage,
     'Your structure: ' + body.load + ' load',
-    'Months of No: ' + body.monthsOfNo,
+    'Runway, in months: ' + body.monthsOfNo,
     '',
     ...body.lines,
     '',

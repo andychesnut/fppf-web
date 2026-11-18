@@ -134,7 +134,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
       <p className="muted small">Formation is your structure, not a grade. A {r.load.toLowerCase()} load means {r.load === 'Heavy' ? 'more people and fewer incomes rest on each decision, so every stage above needs more margin.' : r.load === 'Moderate' ? 'some weight rests on each decision, so the stages above need steady margin.' : 'few obligations rest on each decision, which gives the stages above more room.'}</p>
 
       <div className="mon">
-        <span className="label">Months of No (an estimate from your own answers)</span>
+        <span className="label">Your runway, in months (an estimate from your own answers)</span>
         <span className="num">{r.monthsOfNo.text}</span>
         <p>How long your household could go without its largest income source.</p>
         <p className="math">{r.monthsOfNo.math}</p>
@@ -143,6 +143,12 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
       <div className="q">
         <h2>Three next moves</h2>
         <ol className="list">{moves.map((m) => <li key={m}>{m}</li>)}</ol>
+      </div>
+
+      <div className="card">
+        <h2>Plan a way out</h2>
+        <p>Knowing where you stand is half of it. Say what you want instead, set the most you are willing to risk, and see whether the plan holds.</p>
+        <Link href="/journey" className="btn">Build my plan</Link>
       </div>
 
       <form className="card" onSubmit={save}>

@@ -4,9 +4,9 @@ import { BRAND, TAGLINE, siteUrl } from '@/lib/site.ts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: BRAND + ' | A free 6-minute financial self-assessment', template: '%s | ' + BRAND },
-  description: 'A free 6-minute self-assessment that shows where you stand across six stages of financial health, and where your next move is. No login. No account numbers.',
-  openGraph: { title: TAGLINE, description: 'A free 6-minute self-assessment across six stages of financial health.', siteName: BRAND, type: 'website' },
+  title: { default: BRAND + ' | Plan your way out of a life your money locked in', template: '%s | ' + BRAND },
+  description: 'A decent income and no room to move. Say what you want instead, set the most you are willing to risk, and see whether your plan holds. Free. No login. Nothing you type is stored.',
+  openGraph: { title: TAGLINE, description: 'Free tools to plan a change you can afford: a bounded plan and a 6-minute self-assessment.', siteName: BRAND, type: 'website' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
 

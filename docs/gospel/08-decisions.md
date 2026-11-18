@@ -9,6 +9,7 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 
 | ID | Date | Title | Status |
 | --- | --- | --- | --- |
+| D-012 | 2026-11-18 | Product direction: plan a way out, with a bounded loss | GM DECISION (hypothesis) |
 | D-011 | 2026-11-18 | Customer is the trapped person; product closes the gap | GM DECISION (hypothesis) |
 | D-010 | 2026-11-17 | Operating mode: chat-only, scheduled task declined | PROPOSED |
 | D-009 | 2026-11-17 | Framework principles are protected | PROPOSED |
@@ -22,6 +23,8 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 | D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
 
 ## Entries
+
+**D-012, 2026-11-18, Product direction.** Status: GM DECISION, a hypothesis under experiment E-001. The product helps the trapped person (D-011) plan a way out: name what they want, model the journey in phases, set a boundary on the loss, see a range of outcomes from their own assumptions, hit checkpoints, and check the plan against sound principles. The six F's become the principles under the plan. Longer-term shape, not built: regular updates on whether the person is moving toward or away from what they said they wanted, first from a manual check-in, later from read-only account connections. Connections and any subscription need a floor change by the Principal and counsel first. The Principal's direction on 2026-11-18: commit fully and be bold. Rule R1 revised the same day to allow labeled projections.
 
 **D-011, 2026-11-18, Customer and product thesis.** Status: GM DECISION, a hypothesis with a kill rule. The Principal stated the studio goal (a profitable venture with positive impact for as many people as possible) and told the GM to decide. Decision: the customer is the trapped person, first segment the trapped middle manager already named in document 3. The product's job is closing the gap between the life they fund and the life they want. The six F's stay as the engine. Six alignment gaps and the kill rule are listed in document 3. Alternatives considered and ranked lower: people in a money shock (urgent but least able to pay, and closest to the advice line), young adults starting out (large, crowded, low willingness to pay), employers (pays, but needs outreach the floor forbids and a long sales cycle). Evidence: reasoning and the Principal's direction only. No customer data yet.
 

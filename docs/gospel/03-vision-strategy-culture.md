@@ -35,6 +35,8 @@ Nobody ever gave them a map. And the deepest cost is not financial. It is a quie
 5. The paid offer is a report with financial statements. This customer more likely wants a path out: what the life they want costs, and the sequence to get there, as education built on their own inputs (rules R1 to R4 still bind).
 6. The headline number ("Months of No") is jargon for a number most people already know.
 
+**Product direction (D-012, 2026-11-18):** lead with the way-out planner. The person names what they want, sets a boundary on what the change may cost, sees fast, expected, and slow scenarios from their own numbers, gets checkpoints, and sees how the plan sits against the principles. The Snapshot is the second door. Gaps 1, 2, 3, and 6 above are addressed by this for the planner. Gaps 4 and 5 remain. Next rungs, in order: a saved plan with a monthly "toward or away" check-in (manual entry, bands only); then read-only account connections in a paid tier, which needs the Principal to change the floor and counsel to review.
+
 **Kill rule:** after about 100 real completions, if fewer than 30% say they feel trapped, or fewer than 30% say the result told them something new, drop this thesis and reopen the customer question.
 
 **Changelog:** 2026-11-18, added this section and the studio goal. No earlier text removed. Revert: delete both sections.

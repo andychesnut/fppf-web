@@ -28,7 +28,7 @@ These apply now. Each traces to a section below.
 
 | # | Rule | From |
 | --- | --- | --- |
-| R1 | No output names a security, fund, ticker, asset class weighting, or adviser. No view on markets. | 3 |
+| R1 | No output recommends or names a security, fund, ticker, asset class weighting, or adviser. Projections are allowed only with visible, editable assumptions, a range of scenarios, and a hypothetical label. No assumption is tailored to the person. (Revised 2026-11-18, GM reading, unconfirmed by counsel. Old text: "No output names a security, fund, ticker, asset class weighting, or adviser. No view on markets." Revert: restore the old text.) | 3 |
 | R2 | Next moves are written as general education for a stage ("people in this stage often..."), never "you should buy, sell, or hold". | 3 |
 | R3 | The "education, not advice" line appears on every result and report. It is a clarifier, not a shield: the content itself must stay educational. | 3 |
 | R4 | Do not call the product, the GM, or any seat an "advisor", "planner", or "coach who tells you what to do". | 3 |

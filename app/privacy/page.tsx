@@ -10,13 +10,14 @@ export default function Page() {
     <main className="prose">
       <Link href="/">Back to home</Link>
       <h1>Privacy</h1>
-      <p className="muted small">Last updated November 17, 2026.</p>
+      <p className="muted small">Last updated November 18, 2026.</p>
       <p>{BRAND} is operated by {legalEntity()}{address ? ', ' + address : ''}. This page says what we collect and what we do with it.</p>
       <h2>What we collect</h2>
       <ul className="list">
         <li><strong>Your snapshot answers.</strong> They are scored in your browser. If you save your map, they are sent once to be scored again and are then discarded. We do not store individual answers.</li>
-        <li><strong>Your saved result,</strong> only if you ask us to save it: your email address, the state of each stage, your structure load, and your Months of No range.</li>
-        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
+        <li><strong>Your saved result,</strong> only if you ask us to save it: your email address, the state of each stage, your structure load, and your runway range in months.</li>
+        <li><strong>The way-out planner.</strong> The numbers and the sentence you type are used in your browser only. They are never sent to us and never stored.</li>
+        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether the planner was opened or changed, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
       </ul>
       <h2>What we never collect</h2>
       <p>Account balances, account numbers, Social Security numbers, or passwords.</p>

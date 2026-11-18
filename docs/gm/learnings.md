@@ -33,3 +33,13 @@ Experiment results and learnings, newest first. No experiments are known to be r
 3. **Check state before reporting it.** The GM said the old Cowork task was still enabled with no evidence, when the run log already said Andy had disabled it. Consequence: read the run log's State section before calling anything open, and say "unverified" when a state cannot be checked.
 4. **A redirect can break an authenticated job without any error.** The metrics workflow hit the apex host, which 308-redirects to `www`, so the feed stayed empty after the secret was set. Consequence: scheduled jobs call the canonical host directly.
 5. **Andy has said his feedback is welcome** when the GM wants it. Ask for it when a decision is a judgment call, not a lookup.
+
+## Experiment E-001: lead with the way-out planner (recorded 2026-11-18, before shipping)
+
+- **Change:** the landing page leads with "Not broke. Trapped." and sends people to a new planner at `/journey` (target, boundary, three scenarios, checkpoints, principle checks). The Snapshot becomes the second door.
+- **Hypothesis:** the trapped customer wants a bounded way out more than a score.
+- **Metrics:** `journey_view` over `landing_view`; `journey_edit` over `journey_view`; yes share on "showed me something new"; yes share on "I feel trapped".
+- **Prediction:** 25% of landing visitors open the planner. 40% of those change a number. Of people who answer, 50% say it showed something new and 60% say they feel trapped.
+- **Sample:** 100 planner views from real visitors.
+- **Kill rule:** at 100 views, if fewer than 25% change a number, or fewer than 30% of answers say "something new", put the Snapshot back as the lead and reopen the thesis. No early peeking, no extension.
+- **Known weakness:** traffic is near zero, so the sample may take weeks. The first views will include the Principal's and must be discounted.
