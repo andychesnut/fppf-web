@@ -41,39 +41,46 @@ Nobody ever gave them a map. And the deepest cost is not financial. It is a quie
 
 **Changelog:** 2026-11-18, added this section and the studio goal. No earlier text removed. Revert: delete both sections.
 
-## The story (StoryBrand, rewritten 2026-11-18 with the Principal)
+## The story in the Principal's words (2026-11-18, verbatim)
 
-**The hero.** Someone who feels trapped in a life their money has locked in. It might be a job they cannot afford to leave, a career the world is moving away from, or a marriage they stay in because they cannot see how they would manage alone. Three people we hold in mind: the would-be founder working out where and how to jump; the 40-year-old who can feel the ground shifting; the mother of three who set her career aside and now has to ask whether she can make it on her own.
+> Everyone hits a moment in their life where they know the world is changing under them, but they can't get themselves unstuck from the path they are on. They sit with the dissonance of needing to pay the bills and just keep doing the mundane everyday money in, money out. They struggle to create space for what their mind and heart know they need to create space for.
+>
+> And once they get stuck there, they can get abused by others, at work or in other aspects of life. They can feel like they have to go along with things they otherwise wouldn't do.
+>
+> First Principles Money is a system for helping people identify what they want, what their principles and priorities are, then assesses their structural financial foundation to see if they are on solid ground, then helps them track progress towards closing their structural gaps in order to get to where they want to go.
 
-**What they want.** To make the change without wrecking what they and their family depend on. Underneath that: to know there is a way out they can afford.
+This is the source. Everything below is the GM's arrangement of it and gives way to it where they differ.
 
-**The villain: the maze.** Every wall was a reasonable decision at the time. From inside, you cannot see over them.
-- **External problem:** what comes in is already spoken for, and they have no clear picture of what they have, what leaving would cost, or what the ways out are.
-- **Internal problem:** fear that the new world will be worse than this one. So they stay, and feel ashamed of staying.
-- **Philosophical problem:** nobody should have to stay in a life because they cannot see the way out of it. And a bank balance is not the measure of what a person has to work with.
+## The story (StoryBrand, second version, 2026-11-18)
 
-**The guide: First Principles Money.**
-- **Empathy:** we know the sum you do at 2am and never finish. (This needs a true story from a real person behind the product. It is not written yet.)
-- **Authority:** we show our working, every number with its sum and every change with its cause. We count what a bank cannot see. We never hold your money, never sell you a product, and never tell you what to do. (Authority is thin until real people have used it. Say so internally and do not fake it publicly.)
+**The hero.** A person at the moment they know the world is changing under them and cannot get unstuck from the path they are on. Examples we hold in mind: the would-be founder, the 40-year-old who feels the ground shifting, the mother of three who has to ask whether she can make it on her own.
 
-**The plan.**
-1. **Take stock.** Everything you have to work with: money, what you own, what you can do, who would back you.
-2. **Say where you want to be.** In a sentence, and what that life costs.
-3. **See your routes.** Each way out, what it costs, how long it takes, and what it leans on. Come back and see what moved.
+**What they want.** Room for what their mind and heart already know they need to make room for.
 
-**The promises that make it safe to start.** It is free. What you type stays on your device and leaves no trace unless you choose. Staying is a legitimate route too.
+**The problem.**
+- **The villain is being stuck.** The bills have to be paid, so the days go to money in and money out, and nothing is left over for the change.
+- **External:** their finances are built to hold the current path in place. They do not know whether they are on solid ground or what would have to change.
+- **Internal:** the dissonance of knowing and not moving.
+- **Philosophical:** a person who cannot afford to leave can be made to go along with things they otherwise would not. Nobody should be that easy to push around.
 
-**The call to action.** Direct: "Map your way out." Softer: "See an example map."
+**The guide: First Principles Money.** Empathy and authority are as in the first version: a true story is still needed, and the authority is the working shown.
 
-**What failure looks like.** Another year passes. The commitments grow and the options narrow. Or they jump blind, and it costs more than it had to.
+**The plan (the Principal's three steps).**
+1. **Say what you want, and what your principles and priorities are.** Including the things you will not go along with.
+2. **Find out whether you are on solid ground.** An assessment of the structure of your finances against what you want, ending in a short list of gaps.
+3. **Close the gaps and watch them close.** Each gap has a measure. You see it move, and why.
 
-**What success looks like.** They know what they have. They can see their routes. They choose one on purpose, and that includes choosing to stay. They take the first step this week, and a few months later they can see they have moved.
+**The call to action.** Direct: "See where you stand." Softer: "See an example."
 
-**The transformation.** From trapped and guessing to someone who knows their options and chose.
+**What failure looks like.** They stay stuck. The longer they stay, the more they can be pushed into things they would not otherwise do, at work or at home.
 
-**The one-liner.** Most people who feel trapped cannot see what they would be leaving for. First Principles Money maps what you have against what you want, so you can see your ways out and choose one.
+**What success looks like.** They are on solid ground, with room to say no, and moving toward what they said they wanted.
 
-**Lines in play.** "The rat race is a maze. This is the map." "Put your money where your mind is." (the Principal's, for the alignment reading).
+**The transformation.** From stuck and going along with it to standing on their own ground and choosing.
+
+**The one-liner.** When you cannot afford to change course, other people get to decide things for you. First Principles Money helps you say what you want, find out whether you are on solid ground, and close the gaps until you can choose.
+
+**Open points.** (1) The map and routes idea from the first version is not in the Principal's statement; it may belong inside step 3 or not at all. (2) "Structural gaps" needs a concrete list. GM's first draft: months of costs covered, share of pay already committed, dependence on one source of income, high-interest debt, skills that sell outside the current job, people who would back you. (3) Whether the Principal's words may appear on the public page, unsigned.
 
 ## The mission
 

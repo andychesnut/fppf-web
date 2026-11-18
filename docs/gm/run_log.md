@@ -62,6 +62,11 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 night - the Principal states the story himself
+- **His words are now in `docs/gospel/03-vision-strategy-culture.md`, verbatim, as the source.** The GM's StoryBrand was rewritten to follow them (second version). The first version from earlier tonight is replaced; it is in git history at commit 10a2b01.
+- **What changed from the GM's version:** the hero is anyone at the moment they know the world is changing under them and cannot get unstuck. The stakes are being pushed into things they would not otherwise do. The plan is his three steps: what you want and your principles and priorities; whether your financial structure is on solid ground; tracking the gaps as they close.
+- **Consequence for the product:** the core object is a short list of gaps between a person's foundation and what they want, each with a measure that moves. The live site (spending map, one plan) does not show that yet. Nothing was changed on the site in this entry.
+
 ### 2026-11-18 night - StoryBrand narrative rewritten with the Principal
 - **Path here:** six brand angles on a design canvas (private artifact, not in the repo). The Principal's thread: rat race, paths, route, way out, map. Three people to hold in mind: the would-be founder, the 40-year-old who feels the ground shifting, the mother of three who has to ask whether she can make it alone. His point: the maze and the trapped feeling are the same for her; people stay out of fear the new world is worse.
 - **His verdict on the mock-ups:** not visually compelling enough. Back up and write the story first.
