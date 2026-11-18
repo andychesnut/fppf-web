@@ -3,7 +3,7 @@ import { Journey } from './Journey.tsx';
 
 export const metadata: Metadata = {
   title: 'Your plan',
-  description: 'Six questions, then a plan: what the life you want costs, how long you could give it, and where you would stop. Saved only in your browser.',
+  description: 'Eight short questions, then a plan: how far you are from the life you want, what stands behind you, and what moves the distance. Saved only in your browser.',
 };
 
 export default function Page() {

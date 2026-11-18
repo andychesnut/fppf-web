@@ -147,7 +147,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
 
       <div className="card">
         <h2>What would you be doing instead?</h2>
-        <p>Say what you want, and work out what it would cost, how long you could give it, and where you would stop.</p>
+        <p>Say what you want and what you have, and see how far away it is in months.</p>
         <Link href="/" className="btn">Work it out</Link>
       </div>
 

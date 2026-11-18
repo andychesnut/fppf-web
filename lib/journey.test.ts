@@ -53,3 +53,29 @@ test('no advice or guarantee wording in any check', () => {
   for (const v of [base, { ...base, boundary: 20000 }, { ...base, cash: 0 }, { ...base, incomeAfter: 0 }])
     for (const c of journey(v).checks) assert.doesNotMatch(c.text, /you should|you must|guarantee|will earn|—/i);
 });
+
+import { compare } from './journey.ts';
+
+// The example on the home page must be true to the engine.
+const october: JourneyInput = { incomeNow: 7000, costNow: 6400, cash: 22000, costDip: 5000, incomeDip: 2000, months: 6, boundary: 27000, incomeAfter: 6000, costAfter: 5000 };
+const november: JourneyInput = { ...october, costNow: 6000 };
+
+test('home page example: 9 months away, then 5 after the car loan ends', () => {
+  const c = compare(october, november);
+  assert.equal(c.before, 9);
+  assert.equal(c.after, 5);
+  assert.deepEqual(c.changes, [{ key: 'costNow', from: 6400, to: 6000, months: -4 }]);
+  assert.equal(journey(november).needed, 27000);
+});
+
+test('compare measures each change on its own', () => {
+  const c = compare(october, { ...november, cash: 24000 });
+  assert.equal(c.after, 3);
+  assert.deepEqual(c.changes.map((x) => [x.key, x.months]), [['costNow', -4], ['cash', -4]]);
+});
+
+test('compare reports no months when nothing is left over each month', () => {
+  const c = compare({ ...october, incomeNow: 6400 }, november);
+  assert.equal(c.before, null);
+  assert.equal(c.changes.find((x) => x.key === 'incomeNow')!.months, null);
+});

@@ -56,3 +56,11 @@ Experiment results and learnings, newest first. No experiments are known to be r
 4. **The six F's are cheesy and over-engineered for someone who just wants help.** They are now internal only (D-013). Public pages use plain names.
 
 **E-001 amended before any sample existed:** the landing page changed again on 2026-11-18 (one frame, with the calculator on it). New first metric: `landing_edit` over `landing_view`, predicted 20%. The planner metrics and the kill rule are unchanged.
+
+## 2026-11-18, later advice from the Principal
+
+5. **Name things literally.** Metaphor labels ("footing", "drift") make the reader translate before they can act. Say "fixed commitments", "savings", "months".
+6. **The home page can only show what the product does.** The offer was sharper than the build, so the build came first. A page that shows an unbuilt feature is a claim we cannot support (rule R5).
+7. **Calling the six F's cheesy was about the names, not the idea.** The idea worth keeping: wealth includes things owned, skills, and people, and they sit under the money.
+
+**E-001 note:** the plan now has eight questions and a distance headline. Metrics and kill rule unchanged. `journey_update` added: the share of completers who come back and update is the first retention signal. No prediction recorded for it yet because there is no baseline.

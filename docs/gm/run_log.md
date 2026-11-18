@@ -62,6 +62,19 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 late night - interactive with the Principal: the offer, built and shown
+- **Principal's direction this session:** measure a person's money against what they want; show progress and where it comes from; drop construction metaphors and name things literally; the original point of the layers was wealth that sits under the purely digital (things owned, relationships); imagine linking those as well as accounts; then come back to a home page that states and shows the offer.
+- **GM's reading of the offer:** tell us what you want and what you have, including what a bank account never shows. See how far away it is in months, and what moves it.
+- **Built so the home page shows only what exists:**
+  - The plan's headline is now distance: months until the person has the savings their plan needs, at what they keep each month.
+  - A question on what is not in a bank account: things owned that could be sold, people who would send work, people who would take the household in. Each changes what the plan says.
+  - "Update my numbers" keeps the earlier answers and shows the change since that date, with each changed answer's own effect in months (`compare` in `lib/journey.ts`, 3 new tests).
+  - Home page: one sentence of offer, one button, and a labeled example whose numbers are checked by a test.
+- **Competitors discussed (from memory, not researched):** Rocket Money, Wealthfront, Mint (closed in 2024), Monarch, YNAB. All start from the money. None known to measure against a stated life goal with non-account wealth counted. A proper search is still owed.
+- **Verified locally:** 23 tests pass, build passes, a phone-sized walk through all eight questions gave 9 months away, an update gave 5 months away with "4 months closer" and the right reason, and the comparison survived a reload. Home page fits one frame at 390x844 and 1280x800.
+- **Not built:** account connections, LinkedIn or asset imports, automatic monthly updates. All need a floor change and counsel.
+- **Writing rule added:** name the thing literally. No concept names or metaphors in product copy.
+
 ### 2026-11-18 night - interactive with the Principal: home page starts with what the person wants
 - **Principal asked "why is this the home page?"** The GM's answer: it should not have been. The one-frame calculator was the runway number again, which the Principal had already said people do not need, and it never asked what the person wants. He said that if he likes the product he will be its first user.
 - **Did:** the home page is now one question ("What would you be doing if money weren't holding you in place?"), one box, one button, and a labeled example plan. The plan page asks six questions one at a time and ends with a plan in the person's own words: what the life costs against today, how long they could give it, three ways it could go, when to look up, and what to look at first. The plan is saved in the person's browser only, so they can return and update it, and can be printed or erased.

@@ -4,9 +4,9 @@ import { BRAND, TAGLINE, siteUrl } from '@/lib/site.ts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: BRAND + ' | Work out what the life you want would take', template: '%s | ' + BRAND },
-  description: 'Say what you would be doing if money were not holding you in place. In about three minutes, see what it would cost, how long you could give it, and where you would stop.',
-  openGraph: { title: TAGLINE, description: 'Say what you want. See what it would cost, how long you could give it, and where you would stop.', siteName: BRAND, type: 'website' },
+  title: { default: BRAND + ' | How far are you from the life you want?', template: '%s | ' + BRAND },
+  description: 'Tell us what you want and what you have, including what never shows up in a bank account. See the distance in months, and what moves it. Free, and your answers stay in your browser.',
+  openGraph: { title: TAGLINE, description: 'See how far you are from the life you want, in months, and what moves it.', siteName: BRAND, type: 'website' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
 

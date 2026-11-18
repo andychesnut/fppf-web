@@ -5,13 +5,13 @@ import { Mark } from '@/components/Mark.tsx';
 import { Track } from '@/components/Track.tsx';
 import { track } from '@/lib/client.ts';
 import { DISCLAIMER } from '@/lib/site.ts';
-import { journey, type JourneyInput } from '@/lib/journey.ts';
-import { clearPlan, loadPlan, savePlan } from '@/lib/plan-store.ts';
+import { compare, journey, type Change, type JourneyInput } from '@/lib/journey.ts';
+import { clearPlan, loadPlan, longDate, savePlan, today, type Answers } from '@/lib/plan-store.ts';
 
 // One question at a time, then the plan. Everything is worked out in the browser and saved only there.
 // Analytics events carry a step number at most: never a figure and never the sentence.
-type Key = 'costAfter' | 'incomeNow' | 'costNow' | 'incomeDip' | 'incomeAfter' | 'cash' | 'boundary' | 'months';
-type Step = { title: string; help: string; fields: { key: Key; label: string; unit?: 'months' }[] };
+type Field = { key: string; label: string; unit?: 'months' | 'people' };
+type Step = { title: string; help: string; fields: Field[] };
 const STEPS: Step[] = [
   { title: 'What would that life cost you each month?', help: 'Housing, food, insurance, everything. If you are not sure, start with what you spend now.',
     fields: [{ key: 'costAfter', label: 'Monthly cost of the life you want' }] },
@@ -22,35 +22,55 @@ const STEPS: Step[] = [
   { title: 'And once it is working?', help: 'The monthly income you are aiming for. It can be less than you earn now.',
     fields: [{ key: 'incomeAfter', label: 'Monthly income you are aiming for' }] },
   { title: 'How much could you put behind it?', help: 'The second number is your limit. If you reach it, you stop.',
-    fields: [{ key: 'cash', label: 'Cash you could get to within a week' }, { key: 'boundary', label: 'The most of it you would be willing to use' }] },
+    fields: [{ key: 'cash', label: 'Savings you could get to within a week' }, { key: 'boundary', label: 'The most of it you would be willing to use' }] },
   { title: 'How long do you think it would take?', help: 'Your honest guess. You will also see what happens if it takes half as long again.',
     fields: [{ key: 'months', label: 'Months', unit: 'months' }] },
+  { title: 'What do you have that is not in a bank account?', help: 'These count too. Zero is a fine answer to any of them.',
+    fields: [
+      { key: 'sellable', label: 'Things you own outright and could sell if you had to (a vehicle, tools, equipment)' },
+      { key: 'referrers', label: 'People who would hire you or send you work', unit: 'people' },
+      { key: 'housers', label: 'People who would take your household in for a month', unit: 'people' },
+    ] },
 ];
+const LABEL: Record<keyof JourneyInput, string> = {
+  incomeNow: 'Your take-home pay', costNow: 'Your monthly spending', cash: 'Your savings', costDip: 'The cost of the life you want', costAfter: 'The cost of the life you want',
+  incomeDip: 'What you expect to earn along the way', incomeAfter: 'The income you are aiming for', boundary: 'Your limit', months: 'Your guess at how long it takes',
+};
 const digits = (s: string) => s.replace(/[^0-9]/g, '').slice(0, 9);
 const money = (n: number) => '$' + Math.round(n).toLocaleString('en-US');
 const plural = (n: number, w: string) => n + ' ' + w + (n === 1 ? '' : 's');
+const people = (n: number) => (n === 1 ? '1 person' : n + ' people');
+const complete = (raw: Answers) => STEPS.every((s) => s.fields.every((f) => raw[f.key] !== undefined && raw[f.key] !== ''));
+
+function toInput(raw: Answers): JourneyInput {
+  const n = (k: string) => Number(raw[k]);
+  return { incomeNow: n('incomeNow'), costNow: n('costNow'), cash: n('cash'), costDip: n('costAfter'), incomeDip: n('incomeDip'), months: Math.max(1, n('months')), boundary: n('boundary'), incomeAfter: n('incomeAfter'), costAfter: n('costAfter') };
+}
+function changeLine(c: Change): string {
+  const amount = c.key === 'months' ? plural(c.from, 'month') + ' to ' + plural(c.to, 'month') : money(c.from) + ' to ' + money(c.to);
+  const effect = c.months === null ? '' : c.months === 0 ? ' On its own, that did not change the distance.' : ' On its own, that is ' + plural(Math.abs(c.months), 'month') + (c.months < 0 ? ' closer.' : ' further.');
+  return LABEL[c.key] + ' went from ' + amount + '.' + effect;
+}
 
 export function Journey() {
   const [ready, setReady] = useState(false);
   const [want, setWant] = useState('');
-  const [raw, setRaw] = useState<Record<string, string>>({});
-  const [step, setStep] = useState(-1); // -1 = the sentence, 0..5 = questions, 6 = the plan
+  const [raw, setRaw] = useState<Answers>({});
+  const [at, setAt] = useState<string | undefined>();
+  const [prev, setPrev] = useState<{ raw: Answers; at: string } | undefined>();
+  const [step, setStep] = useState(-1); // -1 = the sentence, 0..6 = questions, 7 = the plan
   const [fb, setFb] = useState<{ fresh?: boolean; trapped?: boolean }>({});
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const p = loadPlan();
-    if (p) { setWant(p.want); setRaw(p.raw); setStep(p.done ? STEPS.length : p.want ? 0 : -1); }
+    if (p) { setWant(p.want); setRaw(p.raw); setAt(p.at); setPrev(p.prev); setStep(p.done && complete(p.raw) ? STEPS.length : p.want ? 0 : -1); }
     setReady(true);
   }, []);
   useEffect(() => { if (ready) headingRef.current?.focus(); }, [step, ready]);
 
-  const input = useMemo(() => {
-    const n = (k: Key) => Number(raw[k]);
-    if (STEPS.some((s) => s.fields.some((f) => !raw[f.key]))) return null;
-    const i: JourneyInput = { incomeNow: n('incomeNow'), costNow: n('costNow'), cash: n('cash'), costDip: n('costAfter'), incomeDip: n('incomeDip'), months: Math.max(1, n('months')), boundary: n('boundary'), incomeAfter: n('incomeAfter'), costAfter: n('costAfter') };
-    return i;
-  }, [raw]);
+  const plan = useMemo(() => (complete(raw) ? { input: toInput(raw), out: journey(toInput(raw)) } : null), [raw]);
+  const since = useMemo(() => (prev && plan && complete(prev.raw) ? compare(toInput(prev.raw), plan.input) : null), [prev, plan]);
 
   if (!ready) return <main className="narrow flow" />;
 
@@ -64,13 +84,14 @@ export function Journey() {
 
   if (step === -1) {
     return shell(
-      <form className="q" onSubmit={(e) => { e.preventDefault(); savePlan({ want: want.trim(), raw, done: false }); setStep(0); }}>
+      <form className="q" onSubmit={(e) => { e.preventDefault(); savePlan({ want: want.trim(), raw, done: false, at, prev }); setStep(0); }}>
         <h1 ref={headingRef} tabIndex={-1}>What would you be doing if money weren&apos;t holding you in place?</h1>
         <div className="field">
           <label htmlFor="want">Say it in a sentence</label>
-          <input id="want" type="text" maxLength={140} required value={want} onChange={(e) => setWant(e.target.value)} />
+          <input id="want" type="text" maxLength={140} required autoFocus placeholder="Work for myself. Go part time. Move back home." value={want} onChange={(e) => setWant(e.target.value)} />
         </div>
         <div className="nav"><button type="submit" className="btn">Next</button></div>
+        <p className="muted small">Eight short questions. Your answers stay in this browser.</p>
       </form>,
     );
   }
@@ -81,8 +102,10 @@ export function Journey() {
     const next = (e: React.FormEvent) => {
       e.preventDefault();
       const done = step === STEPS.length - 1;
+      const stamp = done ? today() : at;
       track(done ? 'journey_complete' : 'journey_step', { i: step + 1 });
-      savePlan({ want, raw, done });
+      savePlan({ want, raw, done: done || complete(raw), at: stamp, prev });
+      setAt(stamp);
       setStep(step + 1);
     };
     return shell(
@@ -104,69 +127,109 @@ export function Journey() {
           <button type="button" className="btn btn-ghost" onClick={() => setStep(step - 1)}>Back</button>
           <button type="submit" className="btn" disabled={!filled}>{step === STEPS.length - 1 ? 'Show my plan' : 'Next'}</button>
         </div>
-        <p className="muted small">Question {step + 1} of {STEPS.length}. Your answers stay in this browser.</p>
+        <p className="muted small">Question {step + 2} of {STEPS.length + 1}. Your answers stay in this browser.</p>
       </form>,
     );
   }
 
-  if (!input) { return shell(<div className="q"><h1 ref={headingRef} tabIndex={-1}>A few answers are missing.</h1><div className="nav"><button type="button" className="btn" onClick={() => setStep(0)}>Go through the questions</button></div></div>); }
+  if (!plan) { return shell(<div className="q"><h1 ref={headingRef} tabIndex={-1}>A few answers are missing.</h1><div className="nav"><button type="button" className="btn" onClick={() => setStep(0)}>Go through the questions</button></div></div>); }
 
-  const j = journey(input);
+  const { input, out: j } = plan;
   const [fast, expected, slow] = j.scenarios;
   const worries = j.checks.filter((c) => !c.ok);
   const diff = input.costAfter - input.costNow;
+  const sellable = Number(raw.sellable), referrers = Number(raw.referrers), housers = Number(raw.housers);
+  const moved = since && since.before !== null && since.after !== null ? since.after - since.before : null;
+
+  // Keep today's answers as the point to compare against, then walk the questions again.
+  const update = () => {
+    const kept = { raw: { ...raw }, at: at ?? today() };
+    track('journey_update');
+    savePlan({ want, raw, done: true, at, prev: kept });
+    setPrev(kept);
+    setStep(0);
+  };
+
   return (
     <main className="narrow result">
       <Link href="/" className="brand"><Mark size={24} /><span>Your plan</span></Link>
       <div className="q">
         <span className="eyebrow">What you want</span>
         <h1 ref={headingRef} tabIndex={-1}>{want}</h1>
-        <p>{diff === 0 ? 'That life costs about what you spend today.' : 'That life costs ' + money(Math.abs(diff)) + ' a month ' + (diff < 0 ? 'less' : 'more') + ' than the one you have now.'}{' '}
-          {j.afterSurplus >= 0 ? 'At the income you are aiming for, it pays for itself' + (j.afterSurplus > 0 ? ' with ' + money(j.afterSurplus) + ' a month to spare.' : '.') : 'At the income you are aiming for, it runs ' + money(-j.afterSurplus) + ' a month short.'}</p>
       </div>
 
       <div className="mon">
-        <span className="label">How long you could give it</span>
-        <span className="num">{j.burn === 0 ? 'As long as it takes' : plural(j.boundaryMonths!, 'month')}</span>
-        <p>{j.burn === 0
-          ? 'You would earn what you spend while you get there, so your savings stay whole.'
-          : 'You would draw ' + money(j.burn) + ' a month from savings (' + money(input.costAfter) + ' of costs, ' + money(input.incomeDip) + ' of income) and stop at ' + money(input.boundary) + '.'}</p>
+        <span className="label">How far away you are</span>
+        <span className="num">{j.prepMonths === 0 ? 'You could start now' : j.prepMonths === null ? 'No date yet' : plural(j.prepMonths, 'month') + ' away'}</span>
+        <p>{j.prepMonths === 0
+          ? 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '.'
+          : j.prepMonths === null
+            ? 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '. Nothing is left over each month to close that gap, so that is the first thing to change.'
+            : 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '. At the ' + money(j.surplusNow) + ' you keep each month, the rest takes ' + plural(j.prepMonths, 'month') + '.'}</p>
       </div>
 
-      {j.burn > 0 ? (
-        <div className="q">
-          <h2>Three ways it could go</h2>
+      {since && prev ? (
+        <div className="card">
+          <h2>Since {longDate(prev.at)}</h2>
+          <p>{since.changes.length === 0 ? 'Nothing in your answers changed.'
+            : moved === null ? 'Your answers changed, but the distance cannot be compared in months for both dates.'
+            : moved === 0 ? 'You are the same distance away.'
+            : 'You are ' + plural(Math.abs(moved), 'month') + (moved < 0 ? ' closer.' : ' further away.')}</p>
+          {since.changes.length ? <ul className="list">{since.changes.map((c) => <li key={c.key}>{changeLine(c)}</li>)}</ul> : null}
+        </div>
+      ) : null}
+
+      <div className="q">
+        <h2>Once you start</h2>
+        <p>{j.burn === 0
+          ? 'You would earn what you spend while you get there, so your savings stay whole.'
+          : 'You would draw ' + money(j.burn) + ' a month from savings (' + money(input.costAfter) + ' of costs, ' + money(input.incomeDip) + ' of income). Your limit of ' + money(input.boundary) + ' lasts ' + plural(j.boundaryMonths!, 'month') + '.'}</p>
+        {j.burn > 0 ? (
           <ul className="list">
             {([['If it goes quickly', fast], ['If it goes the way you expect', expected], ['If it goes slowly', slow]] as const).map(([label, s]) => (
               <li key={s.name}><strong>{label}:</strong> {plural(s.months, 'month')} and {money(s.cost)}. {s.withinBoundary ? 'That is ' + s.boundaryUsedPct + '% of your limit.' : 'That is ' + money(s.cost - input.boundary) + ' past your limit.'}</li>
             ))}
           </ul>
-          <p className="muted small">These come from your own guess of {plural(input.months, 'month')}: two thirds of it, all of it, and half as long again. They are scenarios, not predictions.</p>
+        ) : null}
+        {j.burn > 0 ? <p className="muted small">These come from your own guess of {plural(input.months, 'month')}: two thirds of it, all of it, and half as long again. They are scenarios, not predictions.</p> : null}
+      </div>
+
+      {j.burn > 0 ? (
+        <div className="q">
+          <h2>When to stop and check</h2>
+          <ol className="list">
+            <li><strong>When {money(input.boundary / 2)} is spent.</strong> Is the income arriving the way you thought it would?</li>
+            <li><strong>When {money(input.boundary)} is spent.</strong> You stop. Decide now what stopping means, while it is easy to decide.</li>
+          </ol>
         </div>
       ) : null}
 
       <div className="q">
-        <h2>When to look up</h2>
-        <ol className="list">
-          <li><strong>Before you start.</strong> {j.prepMonths === 0 ? 'You already have the cash this plan needs.' : j.prepMonths === null ? 'You do not have the cash this plan needs yet, and nothing is left over each month to build it. That is the first thing to change.' : 'You are ' + plural(j.prepMonths, 'month') + ' of saving away, at the ' + money(j.surplusNow) + ' a month you keep today.'}</li>
-          {j.burn > 0 ? <li><strong>When {money(input.boundary / 2)} is gone.</strong> Halfway. Is the income showing up the way you thought it would?</li> : null}
-          {j.burn > 0 ? <li><strong>When {money(input.boundary)} is gone.</strong> You stop. Decide now what stopping looks like, while it is easy to decide.</li> : null}
-          <li><strong>When you are earning {money(input.incomeAfter)} a month.</strong> You are there.</li>
-        </ol>
+        <h2>What you have that is not in a bank account</h2>
+        <ul className="list">
+          <li>{sellable > 0 ? 'You own about ' + money(sellable) + ' in things you could sell. If you reached your limit, that is roughly ' + plural(Math.floor(sellable / Math.max(1, input.costAfter)), 'more month') + ' of costs.' : 'You listed nothing you could sell, so your savings are the whole of what stands behind this plan.'}</li>
+          <li>{referrers > 0 ? people(referrers) + ' would hire you or send you work.' : 'You named no one who would hire you or send you work.'}{input.incomeDip > 0 ? (referrers > 0 ? ' The ' + money(input.incomeDip) + ' a month you expect along the way probably starts with them.' : ' You are counting on ' + money(input.incomeDip) + ' a month along the way, so it is worth knowing where the first of it comes from.') : ''}</li>
+          <li>{housers > 0 ? people(housers) + ' would take your household in for a month. Reaching your limit would be hard, but you would have somewhere to go.' : 'You named no one who would take your household in. That makes reaching your limit more serious than the dollars suggest.'}</li>
+        </ul>
       </div>
 
       <div className="q">
-        <h2>{worries.length ? 'What to look at first' : 'Nothing in this plan breaks a basic rule'}</h2>
+        <h2>{worries.length ? 'What to look at first' : 'How the plan holds up'}</h2>
         {worries.length
           ? <ul className="list">{worries.map((c) => <li key={c.id}>{c.text}</li>)}</ul>
-          : <p>It is paid for from cash you have, it leaves a cushion untouched, it survives going slowly, and the life at the end pays for itself.</p>}
+          : <p>It is paid for from savings you have, it leaves at least three months of costs untouched, it stays inside your limit even if it goes slowly, and the life at the end pays for itself.</p>}
+        <p>{diff === 0 ? 'The life you want costs about what you spend today.' : 'The life you want costs ' + money(Math.abs(diff)) + ' a month ' + (diff < 0 ? 'less' : 'more') + ' than the one you have now.'}{' '}
+          {j.afterSurplus >= 0 ? 'At the income you are aiming for, it pays for itself' + (j.afterSurplus > 0 ? ' with ' + money(j.afterSurplus) + ' a month to spare.' : '.') : ''}</p>
       </div>
 
-      <div className="nav no-print">
-        <button type="button" className="btn btn-ghost" onClick={() => setStep(0)}>Change my answers</button>
-        <button type="button" className="btn" onClick={() => window.print()}>Save or print</button>
+      <div className="card no-print">
+        <h2>Come back when something changes</h2>
+        <p>A raise, a debt paid off, a new expense, a first customer. Update your numbers and you will see how far it moved you and why.</p>
+        <div className="nav">
+          <button type="button" className="btn" onClick={update}>Update my numbers</button>
+        </div>
+        <p className="muted small">Answered {at ? 'on ' + longDate(at) : 'today'}. Saved in this browser only. You can <button type="button" className="linkish" onClick={() => window.print()}>save or print it</button>, <button type="button" className="linkish" onClick={() => setStep(0)}>fix a mistake</button> without starting a new comparison, or <button type="button" className="linkish" onClick={() => { clearPlan(); setWant(''); setRaw({}); setAt(undefined); setPrev(undefined); setFb({}); setStep(-1); }}>erase everything</button>.</p>
       </div>
-      <p className="muted small no-print">Your plan is saved in this browser only, so you can come back and update it. <button type="button" className="linkish" onClick={() => { clearPlan(); setWant(''); setRaw({}); setFb({}); setStep(-1); }}>Erase it and start over</button>.</p>
 
       <div className="card no-print">
         <h2>Two quick questions</h2>

@@ -1,6 +1,6 @@
 // Site-wide constants and env-backed settings. No secrets are read on the client.
 export const BRAND = 'First Principles Personal Finance';
-export const TAGLINE = 'What would you be doing if money weren\'t holding you in place?';
+export const TAGLINE = 'How far are you from the life you want?';
 export const DISCLAIMER =
   'Education and self-assessment only. Not investment, tax, or legal advice. For adults 18 and older.';
 

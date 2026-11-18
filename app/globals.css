@@ -93,8 +93,9 @@ p { margin: 0; }
 .want { display: flex; flex-direction: column; gap: 12px; max-width: 560px; }
 .want textarea { width: 100%; padding: 14px; border: 1px solid var(--line-strong); border-radius: 8px; font: 400 18px/1.4 var(--text); color: var(--ink); resize: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.example { gap: 12px; } .example .tag { align-self: flex-start; } .example .quote { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.25; color: var(--ink); }
+.example { gap: 12px; } .example .mon { padding: 16px; gap: 6px; } .example .mon .num { font-size: 34px; } .example .small { font-size: 15px; } .example .tag { align-self: flex-start; } .example .quote { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.25; color: var(--ink); }
 .money { display: flex; align-items: center; gap: 8px; } .money span { font-weight: 600; color: var(--muted); }
 .linkish { background: none; border: 0; padding: 0; font: inherit; color: var(--blue); text-decoration: underline; cursor: pointer; }
 @media (max-width: 600px) { .one-frame { padding-top: 4px; gap: 24px; align-items: flex-start; } .header { padding-top: 14px; padding-bottom: 10px; } }
 @media print { .no-print, .footer, .brand { display: none !important; } }
+@media (max-width: 600px) { .one-frame .lede { font-size: 17px; } .one-frame .hero-copy { gap: 14px; } .example { padding: 16px; gap: 10px; } .example .quote { font-size: 19px; } .example .mon { padding: 12px 14px; } .example .mon .num { font-size: 30px; } }

@@ -24,6 +24,7 @@ export type Journey = {
   reserve: number;               // cash left untouched if the whole boundary is spent
   reserveMonths: number;
   scenarios: Scenario[];
+  needed: number;                // cash this plan needs before starting: the limit, or the slow case if that costs more
   prepMonths: number | null;     // months of saving at today's surplus before the slow case fits. null = cannot get there at today's surplus
   afterSurplus: number;
   checks: Check[];
@@ -49,7 +50,8 @@ export function journey(i: JourneyInput): Journey {
   const slow = scenarios[2];
 
   // Cash needed before starting: enough to cover the slow case, and the boundary must exist as cash.
-  const shortfall = Math.max(0, Math.max(slow.cost, i.boundary) - i.cash);
+  const needed = Math.max(slow.cost, i.boundary);
+  const shortfall = Math.max(0, needed - i.cash);
   const prepMonths = shortfall === 0 ? 0 : surplusNow > 0 ? Math.ceil(shortfall / surplusNow) : null;
   const afterSurplus = i.incomeAfter - i.costAfter;
 
@@ -70,5 +72,22 @@ export function journey(i: JourneyInput): Journey {
         : 'The life you described costs more than the income you are aiming for. The gap is about ' + round(-afterSurplus) + ' a month.' },
   ];
 
-  return { surplusNow, burn, boundaryMonths, reserve, reserveMonths, scenarios, prepMonths, afterSurplus, checks };
+  return { surplusNow, burn, boundaryMonths, reserve, reserveMonths, scenarios, needed, prepMonths, afterSurplus, checks };
+}
+
+// What moved between two sets of answers. Each change is measured on its own: the months it would
+// have added or removed if nothing else had changed. The parts are approximate and need not sum to the total.
+export type Change = { key: keyof JourneyInput; from: number; to: number; months: number | null };
+export type Comparison = { before: number | null; after: number | null; changes: Change[] };
+
+export function compare(prev: JourneyInput, next: JourneyInput): Comparison {
+  const before = journey(prev).prepMonths;
+  const after = journey(next).prepMonths;
+  const changes: Change[] = [];
+  for (const key of Object.keys(next) as (keyof JourneyInput)[]) {
+    if (prev[key] === next[key]) continue;
+    const alone = journey({ ...prev, [key]: next[key] }).prepMonths;
+    changes.push({ key, from: prev[key], to: next[key], months: before === null || alone === null ? null : alone - before });
+  }
+  return { before, after, changes };
 }
