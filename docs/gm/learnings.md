@@ -27,3 +27,9 @@ Experiment results and learnings, newest first. No experiments are known to be r
 
 1. **The cloud session's network allowlist can block the product's own domain.** Live verification failed. Consequence: allow the domain in the environment, or ship only with the live check marked pending. Evidence: proxy refused firstprinciplesmoney.com.
 2. **Rule audits find gaps in copy, not in scoring.** R5, R7, R10 were missing from UI text while the scoring was clean. Consequence: audit UI strings against the rules before each ship.
+
+## 2026-11-18 (later in the first Claude Code run)
+
+3. **Check state before reporting it.** The GM said the old Cowork task was still enabled with no evidence, when the run log already said Andy had disabled it. Consequence: read the run log's State section before calling anything open, and say "unverified" when a state cannot be checked.
+4. **A redirect can break an authenticated job without any error.** The metrics workflow hit the apex host, which 308-redirects to `www`, so the feed stayed empty after the secret was set. Consequence: scheduled jobs call the canonical host directly.
+5. **Andy has said his feedback is welcome** when the GM wants it. Ask for it when a decision is a judgment call, not a lookup.
