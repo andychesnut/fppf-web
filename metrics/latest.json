@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-18T1536Z",
+  "collected_at": "2026-11-18T1829Z",
   "site": "https://firstprinciplesmoney.com",
   "home_status": "308",
   "health": {
@@ -8,6 +8,6 @@
   },
   "metrics": {
     "ok": false,
-    "error": "METRICS_TOKEN secret not set"
+    "error": "non-json metrics response"
   }
 }

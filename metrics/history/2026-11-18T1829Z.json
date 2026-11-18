@@ -1,0 +1,13 @@
+{
+  "collected_at": "2026-11-18T1829Z",
+  "site": "https://firstprinciplesmoney.com",
+  "home_status": "308",
+  "health": {
+    "ok": false,
+    "error": "non-json health response"
+  },
+  "metrics": {
+    "ok": false,
+    "error": "non-json metrics response"
+  }
+}
