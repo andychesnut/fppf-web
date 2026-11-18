@@ -20,12 +20,12 @@ export type Option = {
 export type Question = { id: string; stage: StageId; text: string; help?: string; options: Option[] };
 
 export const STAGES: { id: StageId; n: number; name: string; blurb: string }[] = [
-  { id: 'formation', n: 1, name: 'Formation', blurb: 'Your structure: who depends on you, how many incomes, how much time is yours.' },
-  { id: 'foundation', n: 2, name: 'Foundation', blurb: 'Who you are when things fail: facing reality, community, adaptability, practical skills.' },
-  { id: 'framing', n: 3, name: 'Framing', blurb: 'What your skills are worth: income they can earn and costs they can remove.' },
-  { id: 'fundamentals', n: 4, name: 'Fundamentals', blurb: 'Income against expenses: surplus, fixed obligations, cash on hand, debt.' },
-  { id: 'features', n: 5, name: 'Features', blurb: 'Investing in the right order, and telling building apart from gambling.' },
-  { id: 'freedom', n: 6, name: 'Freedom', blurb: 'Money and time spent on what matters to you, funded from surplus and never from debt.' },
+  { id: 'formation', n: 1, name: 'Your situation', blurb: 'Your structure: who depends on you, how many incomes, how much time is yours.' },
+  { id: 'foundation', n: 2, name: 'How you handle hard things', blurb: 'Who you are when things fail: facing reality, community, adaptability, practical skills.' },
+  { id: 'framing', n: 3, name: 'What your skills earn', blurb: 'What your skills are worth: income they can earn and costs they can remove.' },
+  { id: 'fundamentals', n: 4, name: 'Money in and out', blurb: 'Income against expenses: surplus, fixed obligations, cash on hand, debt.' },
+  { id: 'features', n: 5, name: 'Investing', blurb: 'Investing in the right order, and telling building apart from gambling.' },
+  { id: 'freedom', n: 6, name: 'What matters to you', blurb: 'Money and time spent on what matters to you, funded from surplus and never from debt.' },
 ];
 
 export const QUESTIONS: Question[] = [

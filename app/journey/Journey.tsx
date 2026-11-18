@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Mark } from '@/components/Mark.tsx';
 import { Track } from '@/components/Track.tsx';
 import { track } from '@/lib/client.ts';
@@ -34,6 +34,13 @@ export function Journey() {
   const [want, setWant] = useState('');
   const [fb, setFb] = useState<{ fresh?: boolean; trapped?: boolean }>({});
   const edited = useRef(false);
+  // Pick up the three numbers typed on the home page. They live in this browser tab only.
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.sessionStorage.getItem('fp_plan') || 'null');
+      if (saved && typeof saved === 'object') setRaw((r) => ({ ...r, ...Object.fromEntries(['costDip', 'incomeDip', 'boundary'].filter((k) => typeof saved[k] === 'string' && saved[k].length < 12).map((k) => [k, saved[k]])) }));
+    } catch { /* keep the example numbers */ }
+  }, []);
   const change = (key: keyof JourneyInput, value: string) => {
     if (!edited.current) { edited.current = true; track('journey_edit'); }
     setRaw({ ...raw, [key]: value });
@@ -54,9 +61,9 @@ export function Journey() {
       <Link href="/" className="brand"><Mark size={24} /><span>Plan a way out</span></Link>
       <div className="q">
         <span className="eyebrow">Free. No login. Nothing stored.</span>
-        <h1>Make the way out a bounded bet.</h1>
-        <p>Most changes worth making cost something first. Set what you want, how long it might take, and the most you are willing to spend. Then see whether the plan holds if it goes slowly.</p>
-        <p className="muted small">The numbers below are an example. Replace them with yours. Nothing you type leaves this page.</p>
+        <h1>See what the change would cost you, and where you would stop.</h1>
+        <p>Fill in what you want and what you have. You will see how it goes if things move quickly, as expected, or slowly, and when to check whether it is working.</p>
+        <p className="muted small">The numbers below are an example until you change them. Nothing you type leaves this page.</p>
       </div>
 
       <div className="card">

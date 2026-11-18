@@ -43,3 +43,12 @@ Experiment results and learnings, newest first. No experiments are known to be r
 - **Sample:** 100 planner views from real visitors.
 - **Kill rule:** at 100 views, if fewer than 25% change a number, or fewer than 30% of answers say "something new", put the Snapshot back as the lead and reopen the thesis. No early peeking, no extension.
 - **Known weakness:** traffic is near zero, so the sample may take weeks. The first views will include the Principal's and must be discounted.
+
+## 2026-11-18, the Principal's advice on public surfaces (binding on the GM's writing and design)
+
+1. **Write like a person.** Whole sentences, plain words, a real thought. The first landing rewrite led with a slogan ("Not broke. Trapped.") and fragments. It was replaced the same day.
+2. **Show beats tell.** The first rewrite described the planner in five sections. The home page now is the planner: three numbers in, one answer out.
+3. **Less is more.** The home page is one frame at phone and desktop size. If a message does not fit in one frame, the product or the message is not simple enough yet.
+4. **The six F's are cheesy and over-engineered for someone who just wants help.** They are now internal only (D-013). Public pages use plain names.
+
+**E-001 amended before any sample existed:** the landing page changed again on 2026-11-18 (one frame, with the calculator on it). New first metric: `landing_edit` over `landing_view`, predicted 20%. The planner metrics and the kill rule are unchanged.

@@ -59,7 +59,7 @@ export function Snapshot() {
     return (
       <main className="narrow flow">
         <div>
-          <div className="progress-head"><strong>Stage {stage.n} of 6 · {stage.name}</strong><span className="muted">{i + 1} of {QUESTIONS.length}</span></div>
+          <div className="progress-head"><strong>Part {stage.n} of 6 · {stage.name}</strong><span className="muted">{i + 1} of {QUESTIONS.length}</span></div>
           <div className="progress" role="img" aria-label={'Question ' + (i + 1) + ' of ' + QUESTIONS.length}>
             {STAGES.map((s) => <span key={s.id} className={s.n < stage.n ? 'done' : s.n === stage.n ? 'now' : ''} />)}
           </div>
@@ -120,18 +120,18 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
     <main className="narrow result">
       <Link href="/" className="brand"><Mark size={24} /><span>Your snapshot</span></Link>
       <div className="q">
-        <span className="eyebrow">Your stage</span>
-        <h1 ref={headingRef} tabIndex={-1}>{stage ? stage.name : 'All five stages are solid'}</h1>
+        <span className="eyebrow">Where to start</span>
+        <h1 ref={headingRef} tabIndex={-1}>{stage ? stage.name : 'Nothing here is holding you back'}</h1>
         <p>
           {!stage
-            ? 'Nothing is exposed. Freedom is where you keep building.'
+            ? 'Nothing is exposed. What matters to you is where you keep building.'
             : exposed
-              ? 'This is the lowest stage that is exposed, so this is where your next move is.' + (below > 0 ? ' The ' + (below === 1 ? 'stage' : below + ' stages') + ' below it ' + (below === 1 ? 'is' : 'are') + ' holding.' : '')
-              : 'Nothing is exposed. This is the lowest stage still building, so it is your next move.'}
+              ? 'This is the most basic area that is exposed, so this is where your next move is.' + (below > 0 ? ' The ' + (below === 1 ? 'area' : below + ' areas') + ' before it ' + (below === 1 ? 'is' : 'are') + ' holding.' : '')
+              : 'Nothing is exposed. This is the most basic area still building, so it is your next move.'}
         </p>
       </div>
       <Stack map={map} load={r.load} yours={r.yourStage} />
-      <p className="muted small">Formation is your structure, not a grade. A {r.load.toLowerCase()} load means {r.load === 'Heavy' ? 'more people and fewer incomes rest on each decision, so every stage above needs more margin.' : r.load === 'Moderate' ? 'some weight rests on each decision, so the stages above need steady margin.' : 'few obligations rest on each decision, which gives the stages above more room.'}</p>
+      <p className="muted small">Your situation is not a grade. A {r.load.toLowerCase()} load means {r.load === 'Heavy' ? 'more people and fewer incomes rest on each decision, so everything else needs more margin.' : r.load === 'Moderate' ? 'some weight rests on each decision, so everything else needs steady margin.' : 'few obligations rest on each decision, which gives everything else more room.'}</p>
 
       <div className="mon">
         <span className="label">Your runway, in months (an estimate from your own answers)</span>
@@ -166,7 +166,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
 
       <div className="card offer">
         <div className="card-head"><h2>The Full Assessment</h2><span className="tag">Not available yet</span></div>
-        <p>A deeper pass on every stage: your own income statement, balance sheet, and cash flow, a written report, and a step-by-step plan in the right order.</p>
+        <p>A deeper pass on every area: your own income statement, balance sheet, and cash flow, a written report, and a step-by-step plan in the right order.</p>
         <span className="price">${price}, one time</span>
         {wantsFull
           ? <p className="notice">Noted. Enter your email above and save, and we will tell you when it opens. Nothing is charged.</p>

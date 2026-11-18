@@ -4,8 +4,8 @@ import { BRAND, TAGLINE, siteUrl } from '@/lib/site.ts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: BRAND + ' | Plan your way out of a life your money locked in', template: '%s | ' + BRAND },
-  description: 'A decent income and no room to move. Say what you want instead, set the most you are willing to risk, and see whether your plan holds. Free. No login. Nothing you type is stored.',
+  title: { default: BRAND + ' | How long could you afford to try for the life you want?', template: '%s | ' + BRAND },
+  description: 'Leaving a job, starting something of your own, or cutting back your hours all cost money before they pay. Put in three numbers and see how long you could give it. Free, and nothing you type is stored.',
   openGraph: { title: TAGLINE, description: 'Free tools to plan a change you can afford: a bounded plan and a 6-minute self-assessment.', siteName: BRAND, type: 'website' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };

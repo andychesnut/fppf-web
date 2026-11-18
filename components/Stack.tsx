@@ -18,7 +18,7 @@ export function Stack({ map, load, yours }: { map: Partial<Record<StageId, Stage
         return (
           <li key={s.id} className={'layer ' + state.toLowerCase() + (isYours ? ' yours' : '')}>
             <span>{s.n} {s.name}</span>
-            <span className="state">{state}{isYours ? ' · your stage' : ''}</span>
+            <span className="state">{state}{isYours ? ' · start here' : ''}</span>
           </li>
         );
       })}

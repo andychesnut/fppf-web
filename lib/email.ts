@@ -11,7 +11,7 @@ export async function sendResultEmail(to: string, body: { stage: string; load: s
   const text = [
     'Your snapshot from ' + BRAND,
     '',
-    'Your stage: ' + body.stage,
+    'Where to start: ' + body.stage,
     'Your structure: ' + body.load + ' load',
     'Runway, in months: ' + body.monthsOfNo,
     '',
@@ -26,7 +26,7 @@ export async function sendResultEmail(to: string, body: { stage: string; load: s
   const res = await fetch('https://api.postmarkapp.com/email', {
     method: 'POST',
     headers: { Accept: 'application/json', 'Content-Type': 'application/json', 'X-Postmark-Server-Token': token },
-    body: JSON.stringify({ From: from, To: to, Subject: 'Your six-stage snapshot', TextBody: text, MessageStream: 'outbound' }),
+    body: JSON.stringify({ From: from, To: to, Subject: 'Your snapshot', TextBody: text, MessageStream: 'outbound' }),
   });
   return res.ok ? 'sent' : 'postmark error ' + res.status;
 }

@@ -62,6 +62,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 evening - interactive with the Principal: one-frame home page, plain language
+- **Principal's advice:** write like a person, show beats tell, less is more (try a single-frame home page), and the six F's are cheesy and over-engineered.
+- **Did:** replaced the long landing page with one frame: a question as the headline, one sentence, and a working three-number calculator that carries into the planner through the browser's session storage. Removed the F names and "six stages" from public pages (D-013). Plainer heading on the planner.
+- **Verified locally:** 20 tests pass, build passes, home page fits one frame at 390x844 and 1280x800 with no errors, the number recalculates, and the three numbers carry into the planner.
+- **Open:** the Snapshot is still a 24-question graded tool in a product that no longer leads with it. Decide rework or retire on E-001 data. The brand name itself was not revisited.
+
 ### 2026-11-18 late afternoon - interactive with the Principal: product direction, planner shipped
 - **Principal's direction:** help the trapped person model the journey and checkpoints, contain a loss inside a boundary, project aims, and reinforce sound principles. Projections are normal in this industry. Commit fully. Be bold.
 - **GM decided (D-012):** the product leads with a way-out planner. Experiment E-001 recorded in `docs/gm/learnings.md` before shipping.

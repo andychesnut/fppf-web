@@ -9,6 +9,7 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 
 | ID | Date | Title | Status |
 | --- | --- | --- | --- |
+| D-013 | 2026-11-18 | The six F's are internal only; public surfaces use plain words | GM DECISION |
 | D-012 | 2026-11-18 | Product direction: plan a way out, with a bounded loss | GM DECISION (hypothesis) |
 | D-011 | 2026-11-18 | Customer is the trapped person; product closes the gap | GM DECISION (hypothesis) |
 | D-010 | 2026-11-17 | Operating mode: chat-only, scheduled task declined | PROPOSED |
@@ -23,6 +24,8 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 | D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
 
 ## Entries
+
+**D-013, 2026-11-18, Public language.** Status: GM DECISION, on the Principal's feedback that the six F's read as cheesy and over-engineered to someone who just wants help. The six F's stay as the GM's internal model for ordering principles. No public page uses the F names or the phrase "six stages". The Snapshot's areas carry plain names (for example "Money in and out"). The home page is one frame that shows the product working. The Snapshot stays as a second door for now; rework or retire it on E-001 data. Revert: restore the names in `lib/snapshot.ts`.
 
 **D-012, 2026-11-18, Product direction.** Status: GM DECISION, a hypothesis under experiment E-001. The product helps the trapped person (D-011) plan a way out: name what they want, model the journey in phases, set a boundary on the loss, see a range of outcomes from their own assumptions, hit checkpoints, and check the plan against sound principles. The six F's become the principles under the plan. Longer-term shape, not built: regular updates on whether the person is moving toward or away from what they said they wanted, first from a manual check-in, later from read-only account connections. Connections and any subscription need a floor change by the Principal and counsel first. The Principal's direction on 2026-11-18: commit fully and be bold. Rule R1 revised the same day to allow labeled projections.
 
