@@ -62,6 +62,13 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 late night - brand angles for the Principal to react to
+- **Asked:** explore a few branding angles against competitors; feel more intelligent and more holistic than they do.
+- **Competitor positioning found (web search, 2026-11-18; mostly secondary sources, live home pages not read):** Monarch: money clarity, all accounts in one view, "build a life they love" in its mission. Copilot: accounts, spending, and investments tracked automatically. Boldin: do-it-yourself retirement and financial planning software with what-if scenarios. Wealthfront: low-cost, tax-efficient automated investing. YNAB and Rocket Money: no first-party line found. Pattern: all promise clarity, control, or one place for every account.
+- **Did:** four angles mocked up in the site's own type at `/angles` (not linked, not indexed): A alignment (the Principal's line), B everything you have, C reason it through, D leave the race. Nothing on the public home page changed.
+- **GM recommendation:** A as the headline, B as the proof, C as the voice. D kept as a supporting sentence only.
+- **Waiting on:** the Principal's reaction.
+
 ### 2026-11-18 late night - the Principal gives the brand line; spending map built to match it
 - **The Principal's words (D-014):** "Put Your Money Where Your Mind Is", and "First Principles Money is a personal finance platform to help you get untrapped from the endless rat race through mapping what you want against what you have and how you spend."
 - **Did:** brand changed to "First Principles Money" site-wide. Home page uses his headline and sentence. Because the sentence promises mapping wants against spending, the plan now asks where pay goes (fixed commitments, everyday costs, everything else) and opens with that map: what is left for what the person wants, as dollars and as a share of pay. The home example shows the same map.
