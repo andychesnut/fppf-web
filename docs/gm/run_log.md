@@ -62,6 +62,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 late night - the Principal: "This looks like 100% AI"
+- **He was right.** The site used the default startup template (white, blue button, rounded cards, pill labels, a dark block with a big number) and formula copy, produced at one version every half hour.
+- **Did:** restyled the whole site as paper and ink: serif type (Newsreader), monospace figures (IBM Plex Mono), no rounded cards, pills, or dark blocks, no logo mark. The home page is one left-aligned column, and the example is a worked sum. The plan page shows the same sum as its headline.
+- **Not solved by styling:** the page has no real person in it. The example is invented and labeled so. A true reason for building this, or a real plan shared with permission, is the thing that would make it read as human. Rule R6 and the floor forbid inventing one, and the GM may not use the Principal's name.
+- **Design direction in the 2026-11-17 ruling (Space Grotesk, Inter, action blue) is superseded** by this entry. Revert: restore `app/globals.css` and the font link in `app/layout.tsx` from commit 02e3ed6.
+
 ### 2026-11-18 late night - interactive with the Principal: the offer, built and shown
 - **Principal's direction this session:** measure a person's money against what they want; show progress and where it comes from; drop construction metaphors and name things literally; the original point of the layers was wealth that sits under the purely digital (things owned, relationships); imagine linking those as well as accounts; then come back to a home page that states and shows the offer.
 - **GM's reading of the offer:** tell us what you want and what you have, including what a bank account never shows. See how far away it is in months, and what moves it.

@@ -64,3 +64,5 @@ Experiment results and learnings, newest first. No experiments are known to be r
 7. **Calling the six F's cheesy was about the names, not the idea.** The idea worth keeping: wealth includes things owned, skills, and people, and they sit under the money.
 
 **E-001 note:** the plan now has eight questions and a distance headline. Metrics and kill rule unchanged. `journey_update` added: the share of completers who come back and update is the first retention signal. No prediction recorded for it yet because there is no baseline.
+
+8. **Speed produced a template.** Five home pages in one evening all came out as the same generic startup page with different words. A distinct look took one deliberate pass with a stated point of view (paper, ink, a worked sum). Consequence: decide the look and the voice on purpose before building, and do not ship a public page faster than it can be looked at critically.

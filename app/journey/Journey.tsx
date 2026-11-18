@@ -160,12 +160,13 @@ export function Journey() {
 
       <div className="mon">
         <span className="label">How far away you are</span>
-        <span className="num">{j.prepMonths === 0 ? 'You could start now' : j.prepMonths === null ? 'No date yet' : plural(j.prepMonths, 'month') + ' away'}</span>
-        <p>{j.prepMonths === 0
-          ? 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '.'
-          : j.prepMonths === null
-            ? 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '. Nothing is left over each month to close that gap, so that is the first thing to change.'
-            : 'This plan needs ' + money(j.needed) + ' in savings and you have ' + money(input.cash) + '. At the ' + money(j.surplusNow) + ' you keep each month, the rest takes ' + plural(j.prepMonths, 'month') + '.'}</p>
+        <dl className="sum">
+          <div><dt>Savings the plan needs</dt><dd>{money(j.needed)}</dd></div>
+          <div><dt>Savings today</dt><dd>{money(input.cash)}</dd></div>
+          <div><dt>Kept each month</dt><dd>{money(Math.max(0, j.surplusNow))}</dd></div>
+          <div className="total"><dt>{j.prepMonths === 0 ? 'You could start now' : j.prepMonths === null ? 'No date yet' : plural(j.prepMonths, 'month') + ' away'}</dt><dd /></div>
+        </dl>
+        {j.prepMonths === null ? <p>Nothing is left over each month to close the gap, so that is the first thing to change.</p> : null}
       </div>
 
       {since && prev ? (
