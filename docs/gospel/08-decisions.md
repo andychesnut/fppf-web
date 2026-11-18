@@ -1,0 +1,43 @@
+# FPPF - Decisions
+
+**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
+Gospel document 8 of 8. Modeled on the skookr Decisions log. Each entry records a ruling, its date, and its status. **Logging a decision entry needs the Principal's approval,** so every entry below is **PROPOSED, recorded from his statements and awaiting his confirmation.** A Principal ruling embedded in any document changes only through a new ruling from him.
+
+Entries use the studio's fields: ID, date, title, status, supersedes or amends, ruling.
+
+## Index (newest first)
+
+| ID | Date | Title | Status |
+| --- | --- | --- | --- |
+| D-010 | 2026-11-17 | Operating mode: chat-only, scheduled task declined | PROPOSED |
+| D-009 | 2026-11-17 | Framework principles are protected | PROPOSED |
+| D-008 | 2026-11-17 | Daily check-in at 7:00 AM Mountain | PROPOSED |
+| D-007 | 2026-11-17 | Legal gate sequence | PROPOSED |
+| D-006 | 2026-11-17 | Hosting on Vercel | PROPOSED |
+| D-005 | 2026-11-17 | Own brand and domain. The Principal's name is not used without his oversight | PROPOSED |
+| D-004 | 2026-11-17 | Ratified patterns P-1 and P-2 | PROPOSED |
+| D-003 | 2026-11-17 | Budget envelope of about $100 per month | PROPOSED |
+| D-002 | 2026-11-17 | Positioning: education and self-assessment, not advice | PROPOSED |
+| D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
+
+## Entries
+
+**D-010, 2026-11-17, Operating mode.** Status: PROPOSED. Amends: charter v1.1 section 9. Ruling: the Principal declined creation of a scheduled daily-brief task. Until he rules otherwise, there is no unattended operation. The brief is produced when he opens a chat. Open item I-003.
+
+**D-009, 2026-11-17, Framework principles are protected.** Status: PROPOSED. Ruling: the soul principle, behavior over self-rating, no shaming, and interest-rate arbitrage sequencing over zero-debt-first change only with the Principal's approval. Everything else in the framework is the GM's to reshape, with every change logged. (Recorded from charter v1.1 section 4, which the Principal has not objected to. Confirm.)
+
+**D-008, 2026-11-17, Daily check-in.** Status: PROPOSED. Ruling: the Principal checks in once a day at 7:00 AM Mountain. The GM does not treat him as a bottleneck. Blocked items are parked and the work moves on.
+
+**D-007, 2026-11-17, Legal gate sequence.** Status: PROPOSED. Ruling (the Principal, 2026-11-17): the GM runs its own internal legal review first. At that point the Principal decides go or no go on outside counsel. Detail in charter section 7, item 5.
+
+**D-006, 2026-11-17, Hosting.** Status: PROPOSED. Ruling: FPPF is hosted on Vercel. Other tools (AWS, Google, Postmark, others) are allowed where needed within the envelope. Deploy path: push to a GitHub repo, Vercel deploys. (Added by the GM: the GM's sandbox cannot reach Vercel directly.)
+
+**D-005, 2026-11-17, Brand and name use.** Status: PROPOSED. Ruling: FPPF goes live with its own brand and its own domain. The GM does not use the Principal's name without his oversight. Open item I-001 covers the brand name and domain.
+
+**D-004, 2026-11-17, Ratified patterns.** Status: PROPOSED. Ruling (the Principal, 2026-11-17): marketing tests and product enhancements that are legal need no approval. He gets a daily FYI of what is being tested and learned. Recorded as patterns P-1 and P-2 in charter section 2. **Not covered:** pricing, paid referral deals, spend beyond the envelope, use of his name (D-005). **Note:** charter v1.1 treated pricing tests as marketing tests. That was the GM's reading, not the Principal's words. Open item I-002.
+
+**D-003, 2026-11-17, Budget.** Status: PROPOSED. Ruling: about $100 per month, all-in, across hosting, email, AI inference, domain, and test spend. A new recurring cost over $20 per month, or anything that pushes a month past the envelope, goes to the Principal. (The $20 trigger is the GM's proposal from charter v1.1. Confirm.)
+
+**D-002, 2026-11-17, Positioning.** Status: PROPOSED. Ruling (the Principal): education and self-assessment, not personalized investment advice. The goal is aligning personal finances to principles.
+
+**D-001, 2026-11-17, Name.** Status: PROPOSED. Ruling (the Principal): the framework is called FPPF, First Principles Personal Finance. It supersedes "First Principles Finance". Rationale: the mirrored structure, and "Personal" is more precise about who it is for. Whether the consumer-facing brand is also "FPPF" is open (I-001).

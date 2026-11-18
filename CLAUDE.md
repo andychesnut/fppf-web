@@ -18,3 +18,8 @@ You are the GM (operator agent) for this product, or a worker the GM dispatched.
 - `lib/snapshot.ts` holds every question and scoring rule. Change it with a test in `lib/snapshot.test.ts`. Run `npm test` and `npm run build` before pushing.
 - Secrets live in Vercel and GitHub, entered by the owner. The app degrades cleanly when one is missing (see `/api/health`).
 - Experiments: record the prediction and kill rule in the project's `claude/learnings.md` before shipping the variant.
+
+## GM documents in this repo (from 2026-11-18)
+- The GM documents now live in `docs/`. They are the source of truth; the claude.ai project copy is a read-only archive.
+- Boot loader: `docs/gospel/02-boot-loader.md`. Run log (read first, standing rulings win): `docs/gm/run_log.md`.
+- Path map: project `claude/X` is `docs/gm/X`, `gospel/X` is `docs/gospel/X`, `FPPF_Product_Brief.md` is `docs/FPPF_Product_Brief.md`.
