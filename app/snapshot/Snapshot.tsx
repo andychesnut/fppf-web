@@ -134,7 +134,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
       <p className="muted small">Formation is your structure, not a grade. A {r.load.toLowerCase()} load means {r.load === 'Heavy' ? 'more people and fewer incomes rest on each decision, so every stage above needs more margin.' : r.load === 'Moderate' ? 'some weight rests on each decision, so the stages above need steady margin.' : 'few obligations rest on each decision, which gives the stages above more room.'}</p>
 
       <div className="mon">
-        <span className="label">Months of No</span>
+        <span className="label">Months of No (an estimate from your own answers)</span>
         <span className="num">{r.monthsOfNo.text}</span>
         <p>How long your household could go without its largest income source.</p>
         <p className="math">{r.monthsOfNo.math}</p>
@@ -153,6 +153,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
           <input ref={emailRef} id="email" type="email" required autoComplete="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <button type="submit" className="btn" disabled={status.kind === 'busy' || status.kind === 'ok'}>{status.kind === 'busy' ? 'Saving' : 'Save my map'}</button>
+        <p className="muted small">By saving your map you agree to the <Link href="/terms">Terms</Link> and <Link href="/privacy">Privacy Policy</Link>.</p>
         <div aria-live="polite">{status.text ? <p className="notice">{status.text}</p> : null}</div>
         <p className="muted small">We store your result, never your individual answers. <Link href="/delete">Delete your data</Link> any time.</p>
       </form>
@@ -164,7 +165,7 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
         {wantsFull
           ? <p className="notice">Noted. Enter your email above and save, and we will tell you when it opens. Nothing is charged.</p>
           : <button type="button" className="btn btn-ghost" onClick={() => { track('price_intent_click', { price }); setWantsFull(true); emailRef.current?.focus(); }}>Notify me when it opens</button>}
-        <p className="muted small">We are deciding whether to build this. Your tap tells us it is worth building.</p>
+        <p className="muted small">We are deciding whether to build this. The launch price may differ from the one shown, and nothing is charged now. Your tap tells us it is worth building.</p>
       </div>
 
       <button type="button" className="btn btn-ghost" onClick={onRestart}>Start over</button>

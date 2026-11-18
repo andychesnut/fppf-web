@@ -39,7 +39,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## State
 
-- **MIGRATION IN PROGRESS (2026-11-18).** Andy is setting up the Claude Code scheduled task with `docs/gm/scheduled_task_prompt.md` and the setup steps in `claude/claude_code_migration.md` (project). Until the new task's first run succeeds, the old Cowork task "FPPF GM run" keeps firing at 6:45, 14:45, and 22:45 Mountain and writes to the project. **If a Cowork run finds that `docs/gm/run_log.md` exists in the repo, or this note is more than 2 days old, it should do no work, write nothing, and notify Andy that the old task should be disabled.** (A Cowork run cannot see the repo, so in practice the age rule is the trigger.)
+- **MIGRATION: first Claude Code run succeeded 2026-11-18; repo read and pushed. Disable the old Cowork task.** (Older note follows.) Andy is setting up the Claude Code scheduled task with `docs/gm/scheduled_task_prompt.md` and the setup steps in `claude/claude_code_migration.md` (project). Until the new task's first run succeeds, the old Cowork task "FPPF GM run" keeps firing at 6:45, 14:45, and 22:45 Mountain and writes to the project. **If a Cowork run finds that `docs/gm/run_log.md` exists in the repo, or this note is more than 2 days old, it should do no work, write nothing, and notify Andy that the old task should be disabled.** (A Cowork run cannot see the repo, so in practice the age rule is the trigger.)
 - **LIVE SITE: the Snapshot is in production at `https://firstprinciplesmoney.com`** (verified by public fetch, 2026-11-18 about 07:00 Mountain). Landing page, `/snapshot` intro with the 18-or-older box, `/privacy`, `/terms`, and `/delete` all returned 200. Footer shows operator "ETHEUS LLC, 30 E Broadway Suite 203 1161 Salt Lake City, UT 84111". Links inside pages use the `www` host. The GM did not deploy it. Presumably deployed from Claude Code on Andy's Mac overnight (inference).
 - **Not verified on the live site:** completing the 24 questions, the result page, the price-intent button, saving a map, any email, the database, the metrics job, whether Start is blocked until the age box is ticked. The fetch tool does not run page scripts.
 - **Domain:** `firstprinciplesmoney.com`, attached and serving (verified 2026-11-18).
@@ -61,6 +61,15 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order (none need the repo):** (1) live-site check; (2) the gospel cleanup above, starting with rocks and issues, max 2 gospel changes per week under the loop unless the change only records a ruling already made; (3) distribution plan for the first 100 visitors on owned channels (site content and search), since the product is live with no traffic plan; (4) write the Full Assessment report template with no securities content, which counsel needs to see. **When repo access exists:** read `metrics/latest.json`, audit the 24 questions and result copy against rules R1 to R7 from the code, apply Part D of the legal pages draft.
 
 ## Entries
+
+### 2026-11-18 about 11:15 Mountain - first Claude Code cloud run
+- **Migration:** this run read the repo, so the Cowork task should now be disabled (Andy).
+- **Did:** audited the 24 questions, scoring, and result copy in code against R1 to R7. Found no R1, R2, R4, R6 violations. Fixed three gaps: R10 (added the "By saving your map you agree to the Terms and Privacy Policy" sentence), R7 and the 2026-11-17 ruling (price note now says the launch price may differ and nothing is charged), R5 (Months of No labeled an estimate). Changes in `app/snapshot/Snapshot.tsx`.
+- **Verified:** `npm test` passed, `npm run build` passed, both local. Save route stores bands only, matching the on-page claim.
+- **Metrics (ops-data, 2026-11-18 15:36 UTC):** unmeasured. Home returned 308, `/api/health` returned non-JSON, and the collector reported `METRICS_TOKEN secret not set` in GitHub. No `reviews/` verdicts exist.
+- **Failed:** live site check. This session's network allowlist refuses `firstprinciplesmoney.com` and `www`. The change is not verified live.
+- **Blocked on Andy:** add `firstprinciplesmoney.com` and `www.firstprinciplesmoney.com` to the cloud environment's allowed domains; set the `METRICS_TOKEN` GitHub secret (same value as Vercel).
+- **Gospel changes:** none. No brief (run outside 6:00 to 8:00 Mountain).
 
 ### 2026-11-18 about 07:30 Mountain - interactive: move the scheduled run to Claude Code
 - **Decided (Andy):** move the GM run to a Claude Code scheduled task in the cloud with `andychesnut/fppf-web` attached. He had already moved the app zip to Claude Code, which is how the site went live.

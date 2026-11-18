@@ -22,3 +22,8 @@ Experiment results and learnings, newest first. No experiments are known to be r
 4. **Auto-renewal is a legal cost, not only a pricing choice.** A fixed-term, one-payment program tests the same demand without renewal law. Consequence: recurring hypotheses are tested as fixed terms first. Source: memo section 9.
 5. **The brand was cleared against "FPPF" but not against "First Principles".** A 2023 application for "FIRST PRINCIPLES FINANCIAL" in financial advisory services turned up only when the GM searched the words actually used in public. Consequence: clear the name people will see, not the internal acronym. Status of that application: abandoned, see 2026-11-18 item 2.
 6. **Search results alone are not evidence.** The search tool returned titles and links only. Every claim in the memo had to be read from the page by a fetch step, and two official pages disagreed on a number (the CCPA revenue threshold). Consequence: mark each claim by how it was read, and report disagreements instead of picking one.
+
+## 2026-11-18 (first Claude Code run)
+
+1. **The cloud session's network allowlist can block the product's own domain.** Live verification failed. Consequence: allow the domain in the environment, or ship only with the live check marked pending. Evidence: proxy refused firstprinciplesmoney.com.
+2. **Rule audits find gaps in copy, not in scoring.** R5, R7, R10 were missing from UI text while the scoring was clean. Consequence: audit UI strings against the rules before each ship.
