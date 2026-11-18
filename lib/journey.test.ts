@@ -79,3 +79,15 @@ test('compare reports no months when nothing is left over each month', () => {
   assert.equal(c.before, null);
   assert.equal(c.changes.find((x) => x.key === 'incomeNow')!.months, null);
 });
+
+import { share } from './journey.ts';
+
+test('home page example: the spending map adds up', () => {
+  const pay = 7000, fixed = 3100, everyday = 2300, other = 600;
+  assert.equal(fixed + everyday + other, november.costNow);
+  assert.equal(pay - november.costNow, 1000);
+  assert.equal(share(1000, pay), 14);
+  assert.equal(share(fixed, pay), 44);
+  assert.equal(share(5, 0), 0);
+  assert.equal(share(-200, pay), 0);
+});

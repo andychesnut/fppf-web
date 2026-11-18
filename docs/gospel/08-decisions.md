@@ -9,6 +9,7 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 
 | ID | Date | Title | Status |
 | --- | --- | --- | --- |
+| D-014 | 2026-11-18 | Brand "First Principles Money"; line "Put your money where your mind is" | PRINCIPAL |
 | D-013 | 2026-11-18 | The six F's are internal only; public surfaces use plain words | GM DECISION |
 | D-012 | 2026-11-18 | Product direction: plan a way out, with a bounded loss | GM DECISION (hypothesis) |
 | D-011 | 2026-11-18 | Customer is the trapped person; product closes the gap | GM DECISION (hypothesis) |
@@ -24,6 +25,8 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 | D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
 
 ## Entries
+
+**D-014, 2026-11-18, Brand and positioning (the Principal's words).** Status: the Principal's direction, given in chat. The public name is "First Principles Money", matching the domain. The headline is "Put your money where your mind is". The description is: "First Principles Money is a personal finance platform to help you get untrapped from the endless rat race through mapping what you want against what you have and how you spend." He called the sentence incomplete and a working draft. The GM changed one word on the page ("through" to "by") and set the headline in sentence case. This supersedes the 2026-11-17 brand line ("First Principles Personal Finance", tagline "Are your finances built on first principles?"). The trademark cautions in `docs/gm/legal_memo_addenda.md` apply to the new name equally. Revert: restore `BRAND` and `TAGLINE` in `lib/site.ts`.
 
 **D-013, 2026-11-18, Public language.** Status: GM DECISION, on the Principal's feedback that the six F's read as cheesy and over-engineered to someone who just wants help. The six F's stay as the GM's internal model for ordering principles. No public page uses the F names or the phrase "six stages". The Snapshot's areas carry plain names (for example "Money in and out"). The home page is one frame that shows the product working. The Snapshot stays as a second door for now; rework or retire it on E-001 data. Revert: restore the names in `lib/snapshot.ts`.
 

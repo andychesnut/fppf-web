@@ -5,7 +5,7 @@ import { Mark } from '@/components/Mark.tsx';
 import { Track } from '@/components/Track.tsx';
 import { track } from '@/lib/client.ts';
 import { DISCLAIMER } from '@/lib/site.ts';
-import { compare, journey, type Change, type JourneyInput } from '@/lib/journey.ts';
+import { compare, journey, share, type Change, type JourneyInput } from '@/lib/journey.ts';
 import { clearPlan, loadPlan, longDate, savePlan, today, type Answers } from '@/lib/plan-store.ts';
 
 // One question at a time, then the plan. Everything is worked out in the browser and saved only there.
@@ -15,8 +15,13 @@ type Step = { title: string; help: string; fields: Field[] };
 const STEPS: Step[] = [
   { title: 'What would that life cost you each month?', help: 'Housing, food, insurance, everything. If you are not sure, start with what you spend now.',
     fields: [{ key: 'costAfter', label: 'Monthly cost of the life you want' }] },
-  { title: 'What comes in and goes out each month today?', help: 'Round numbers are fine.',
-    fields: [{ key: 'incomeNow', label: 'Take-home pay' }, { key: 'costNow', label: 'Spending' }] },
+  { title: 'Where does your money go each month today?', help: 'Round numbers are fine. Zero is a fine answer.',
+    fields: [
+      { key: 'incomeNow', label: 'Take-home pay' },
+      { key: 'fixed', label: 'Fixed commitments: rent or mortgage, loans, insurance, anything you cannot stop without a big decision' },
+      { key: 'everyday', label: 'Everyday costs: food, fuel, bills' },
+      { key: 'other', label: 'Everything else' },
+    ] },
   { title: 'What could you earn each month while you make the change?', help: 'From anything: part-time work, a partner’s income, first customers. Zero is a fine answer.',
     fields: [{ key: 'incomeDip', label: 'Monthly income while you get there' }] },
   { title: 'And once it is working?', help: 'The monthly income you are aiming for. It can be less than you earn now.',
@@ -44,7 +49,7 @@ const complete = (raw: Answers) => STEPS.every((s) => s.fields.every((f) => raw[
 
 function toInput(raw: Answers): JourneyInput {
   const n = (k: string) => Number(raw[k]);
-  return { incomeNow: n('incomeNow'), costNow: n('costNow'), cash: n('cash'), costDip: n('costAfter'), incomeDip: n('incomeDip'), months: Math.max(1, n('months')), boundary: n('boundary'), incomeAfter: n('incomeAfter'), costAfter: n('costAfter') };
+  return { incomeNow: n('incomeNow'), costNow: n('fixed') + n('everyday') + n('other'), cash: n('cash'), costDip: n('costAfter'), incomeDip: n('incomeDip'), months: Math.max(1, n('months')), boundary: n('boundary'), incomeAfter: n('incomeAfter'), costAfter: n('costAfter') };
 }
 function changeLine(c: Change): string {
   const amount = c.key === 'months' ? plural(c.from, 'month') + ' to ' + plural(c.to, 'month') : money(c.from) + ' to ' + money(c.to);
@@ -156,6 +161,19 @@ export function Journey() {
       <div className="q">
         <span className="eyebrow">What you want</span>
         <h1 ref={headingRef} tabIndex={-1}>{want}</h1>
+      </div>
+
+      <div className="mon">
+        <span className="label">Where your money goes each month</span>
+        <dl className="sum">
+          <div><dt>Take-home pay</dt><dd>{money(input.incomeNow)}</dd></div>
+          <div><dt>Fixed commitments</dt><dd>{money(Number(raw.fixed))}</dd></div>
+          <div><dt>Everyday costs</dt><dd>{money(Number(raw.everyday))}</dd></div>
+          <div><dt>Everything else</dt><dd>{money(Number(raw.other))}</dd></div>
+          <div><dt>{j.surplusNow >= 0 ? 'Left for what you want' : 'Short each month'}</dt><dd>{money(Math.abs(j.surplusNow))}</dd></div>
+          <div className="total"><dt>{j.surplusNow > 0 ? share(j.surplusNow, input.incomeNow) + '% of your pay goes toward what you want' : 'None of your pay goes toward what you want yet'}</dt><dd /></div>
+        </dl>
+        <p>Fixed commitments take {share(Number(raw.fixed), input.incomeNow)}% of your pay. Those are the payments that hold your current life in place.</p>
       </div>
 
       <div className="mon">

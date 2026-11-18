@@ -4,9 +4,9 @@ import { BRAND, TAGLINE, siteUrl } from '@/lib/site.ts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: BRAND + ' | How far are you from the life you want?', template: '%s | ' + BRAND },
-  description: 'Tell us what you want and what you have, including what never shows up in a bank account. See the distance in months, and what moves it. Free, and your answers stay in your browser.',
-  openGraph: { title: TAGLINE, description: 'See how far you are from the life you want, in months, and what moves it.', siteName: BRAND, type: 'website' },
+  title: { default: BRAND + ' | Put your money where your mind is', template: '%s | ' + BRAND },
+  description: 'First Principles Money is a personal finance platform to help you get untrapped from the endless rat race by mapping what you want against what you have and how you spend.',
+  openGraph: { title: TAGLINE, description: 'Get untrapped from the endless rat race by mapping what you want against what you have and how you spend.', siteName: BRAND, type: 'website' },
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
 

@@ -7,5 +7,5 @@ import { loadPlan } from '@/lib/plan-store.ts';
 export function StartButton() {
   const [hasPlan, setHasPlan] = useState(false);
   useEffect(() => { setHasPlan(loadPlan()?.done === true); }, []);
-  return <Link href="/journey" className="btn">{hasPlan ? 'Open my plan' : 'Work out mine'}</Link>;
+  return <Link href="/journey" className="btn">{hasPlan ? 'Open my plan' : 'Map mine'}</Link>;
 }

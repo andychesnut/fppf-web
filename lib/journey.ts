@@ -91,3 +91,8 @@ export function compare(prev: JourneyInput, next: JourneyInput): Comparison {
   }
   return { before, after, changes };
 }
+
+// Whole-number percentage of a whole, for "how much of your pay goes where". 0 when there is no whole.
+export function share(part: number, whole: number): number {
+  return whole > 0 ? Math.round((Math.max(0, part) / whole) * 100) : 0;
+}

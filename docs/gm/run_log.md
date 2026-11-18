@@ -62,6 +62,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 late night - the Principal gives the brand line; spending map built to match it
+- **The Principal's words (D-014):** "Put Your Money Where Your Mind Is", and "First Principles Money is a personal finance platform to help you get untrapped from the endless rat race through mapping what you want against what you have and how you spend."
+- **Did:** brand changed to "First Principles Money" site-wide. Home page uses his headline and sentence. Because the sentence promises mapping wants against spending, the plan now asks where pay goes (fixed commitments, everyday costs, everything else) and opens with that map: what is left for what the person wants, as dollars and as a share of pay. The home example shows the same map.
+- **Verified locally:** 24 tests pass (one holds the home example to the arithmetic), build passes, phone-sized walk gives "14% of your pay goes toward what you want" and "5 months away".
+- **Open:** legal pages now say "First Principles Money"; the trademark addendum was written for the longer name and should be re-read against the shorter one. The Snapshot still uses its own framing and was not reworked.
+
 ### 2026-11-18 late night - the Principal: "This looks like 100% AI"
 - **He was right.** The site used the default startup template (white, blue button, rounded cards, pill labels, a dark block with a big number) and formula copy, produced at one version every half hour.
 - **Did:** restyled the whole site as paper and ink: serif type (Newsreader), monospace figures (IBM Plex Mono), no rounded cards, pills, or dark blocks, no logo mark. The home page is one left-aligned column, and the example is a worked sum. The plan page shows the same sum as its headline.
