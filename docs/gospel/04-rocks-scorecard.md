@@ -1,7 +1,7 @@
 # FPPF - Rocks and Scorecard
 
 **Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
-Gospel document 4 of 8. Modeled on the skookr Rocks and Scorecard. Every numeric goal below is **PROPOSED** except where marked as the Principal's own. Goals marked "set at baseline" cannot be responsibly numbered until real data exists. Nothing here is a forecast.
+Gospel document 4 of 8. Every numeric goal below is **PROPOSED** except where marked as the Principal's own. Goals marked "set at baseline" cannot be responsibly numbered until real data exists. Nothing here is a forecast.
 
 ## The goal period
 
@@ -31,7 +31,7 @@ Values never live in this document. They come from instrumentation, are reconcil
 | 9 | **Gross margin** | Revenue minus cost of goods (AI inference for reports, email, hosting, payment fees). | Proposed 85% |
 | 10 | **Spend vs envelope** | Total monthly spend against the approved envelope. Envelope today: about $100 per month (the Principal's ruling, 2026-11-17). | Within envelope, always |
 
-**Arithmetic behind metric 4 (a hypothesis to test, not a plan):** at an assumed $15 per month membership ($180 per year), $1,000,000 ARR needs about 5,600 paying members. The price is untested and pricing is pending the Principal's ruling (I-002).
+**Arithmetic behind metric 4 (a hypothesis to test, not a plan):** at an assumed $15 per month membership ($180 per year), $1,000,000 ARR needs about 5,600 paying members. The price is untested and pricing is the GM's call (I-002).
 
 **Bench metrics** (watched in the briefs, not on the 10): activation rate, sign-up-to-paid rate, snapshot completion rate, report-to-membership conversion, cost per paying customer, cost per completed assessment (inference), email opt-in rate, envelope burn.
 
@@ -46,8 +46,8 @@ Values never live in this document. They come from instrumentation, are reconcil
 ### Proposed rocks - for the Principal to set (first month: 2026-11-17 to 2026-12-17)
 
 1. **Stand up the minimum stack.** A private repo, a deploy pipeline, email sending, and payments in test mode. *Done-test: a push to the main branch deploys to production, a test-mode checkout completes end to end, and analytics events arrive. Serves metrics 1, 2, 10. Owner: the Principal (accounts, keys, and billing are his by the floor), GM supporting with exact steps and the build.*
-2. **Ship the free snapshot live.** Formation and Foundation questions, a scored result, and email capture, on the brand's own domain, measured at every step. *Done-test: a visitor can complete the snapshot in production, each step reports live numbers, and the Principal has signed the surfaces. Serves metrics 1, 2. Owner: GM. Depends on rock 1 and on open item I-001 (name and domain).*
-3. **Complete the internal legal and regulatory memo.** All seven areas in the floor's legal gate sequence, with a go or no go recommendation on outside counsel and a cost estimate. *Done-test: the memo is saved to the project, covers every listed area with cited sources, and the Principal has the recommendation in his decision queue. Serves the floor and unlocks metrics 3 and 4. Owner: GM.*
+2. **Ship the free tools live.** The one-frame home calculator, the planner at `/journey`, and the 24-question Snapshot with a scored result and email capture, on the brand's own domain, measured at every step. *Done-test: a visitor can use the calculator, planner, and Snapshot in production, and each step reports live numbers (verified 2026-11-18 18:30 UTC: the metrics feed returns counts). Serves metrics 1, 2. Owner: GM. Live as of 2026-11-18. Real traffic is near zero.*
+3. **Complete the internal legal and regulatory memo. DONE 2026-11-18.** All seven areas in the floor's legal gate sequence, with a go or no go recommendation on outside counsel and a cost estimate. *Done-test: the memo is saved to the project, covers every listed area with cited sources, and the Principal has the recommendation in his decision queue. Serves the floor and unlocks metrics 3 and 4. Owner: GM.*
 
 ## References
 

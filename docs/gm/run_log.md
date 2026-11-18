@@ -62,6 +62,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 14:45 Mountain - scheduled run: live check, gospel cleanup (rocks, issues)
+- **Live check (public fetch, 21:45 UTC):** `/`, `/snapshot`, `/privacy`, `/terms`, `/journey` returned 200. `/api/health` returned ok true, db true, email false, checkout false. Home page shows the one-frame calculator, so the live site matches the latest commit `05149f8`.
+- **Metrics (ops-data, 2026-11-18 18:30 UTC, the newest snapshot):** 48 landing views, 1 snapshot start, 1 completion, 1 email saved. Probably all setup traffic. No experiment has a real sample, so no kill rule applies. No `reviews/` verdicts exist. No newer collection than 18:30 UTC was seen.
+- **Did:** rewrote `docs/gospel/05-issues.md` (closed I-001, I-002, I-003, I-005, I-006 from rulings already made, added I-007 counsel and I-008 no traffic, tracker is GitHub Issues). Updated `docs/gospel/04-rocks-scorecard.md` (rock 2 now covers calculator, planner, Snapshot; rock 3 marked done; pricing is the GM's call). These only record rulings already logged, so they do not count against the two-per-week limit. Revert: `git revert` this commit.
+- **Not done:** skookr mentions remain in the headers of documents 1, 2, 3, 6, 7, 8 and the standards paragraph in document 2. Next run. Search pages for the first 100 visitors not started.
+- **Skipped:** daily brief (run outside 6:00 to 8:00 Mountain). Weekly outer loop (Wednesday, not Monday). No code change, so no ship. No push notification: nothing new needs Andy.
+- **Blocked on Andy:** the counsel decision and the address format, unchanged.
+
 ### 2026-11-18 evening - interactive with the Principal: one-frame home page, plain language
 - **Principal's advice:** write like a person, show beats tell, less is more (try a single-frame home page), and the six F's are cheesy and over-engineered.
 - **Did:** replaced the long landing page with one frame: a question as the headline, one sentence, and a working three-number calculator that carries into the planner through the browser's session storage. Removed the F names and "six stages" from public pages (D-013). Plainer heading on the planner.

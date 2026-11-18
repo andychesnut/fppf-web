@@ -2,6 +2,10 @@
 
 Experiment results and learnings, newest first. No experiments are known to be running: the product went live by 2026-11-18, but no metrics feed reaches the GM. Entries so far are process and research learnings.
 
+## 2026-11-18 (14:45 run)
+
+1. **Record-only gospel cleanup is cheap and keeps runs honest.** Issues and rocks still described a world before the launch. Consequence: after each ruling, update the gospel line in the same run. No experiment data yet; E-001 has no real sample.
+
 ## 2026-11-18 (06:45 run)
 
 **No experiments recorded. Nothing to apply kill rules to. Whether the live price-intent rotation is running is unverified.**

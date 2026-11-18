@@ -1,17 +1,14 @@
 # FPPF - Issues
 
-**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
-Gospel document 5 of 8. Modeled on the skookr Issues document.
-
+**Status: updated 2026-11-18 by the GM (records rulings already made).**
+Gospel document 5 of 8. 
 ## What the issues list is
 
 The issues list is where the business's real obstacles and open questions live, one level above execution. Execution work (features, bugs, tasks) flows through the Process (document 6). The issues list holds what must be decided or solved, worked **IDS: Identify, Discuss, Solve.**
 
 ## Where it lives
 
-The studio uses Linear: one project "FPPF - IDS (issues list)" with three labels carrying the state: **Identified** (on the list, not yet worked), **Discussed** (worked in a brief at least once, not yet solved), **Solved** (see definition below).
-
-A Linear connector exists on the Principal's account but needs reconnecting (decision queue). **Until Linear is reconnected, this document is the list.** When it is, the issues below move to Linear with their IDs.
+GitHub Issues on the FPPF repo is the tracker (ruling 2026-11-17, not Linear). Until issues are filed there, this document is the list.
 
 ## What earns the list
 
@@ -26,16 +23,18 @@ An issue belongs here if it meets any of these:
 
 A shipped fix, a recorded decision, or a deliberate recorded choice to go another direction. Nothing is left stranded and nothing is silently deleted.
 
-## The list (as of 2026-11-17)
+## The list (as of 2026-11-18)
 
-| ID | State | Issue | Why it is here | GM recommendation |
-| --- | --- | --- | --- | --- |
-| I-001 | Identified | **Brand name and domain.** FPPF is the framework name. The Principal ruled the product launches under its own brand and domain. Is the brand "FPPF", or a consumer-facing name? Trademark and domain availability are unchecked. | Blocks rock 2 (criterion 1) | Run the name-collision and availability check, then bring 3 ranked variants to the decision queue. |
-| I-002 | Identified | **Pricing authority.** Charter v1.1 treated pricing tests as marketing tests. The studio default is recommend-and-wait. Which applies? | Criterion 3 and 4 | Studio default until ruled: recommend and wait. Offer: ratify a pricing pattern (a bounded price range and test rules). |
-| I-003 | Identified | **Real-time channel.** The Principal checks in once a day and declined the scheduled task. There is no unattended brief and no push channel. | Blocks the cadence in charter section 3 | Either (a) chat-only, brief produced each morning on open, or (b) re-approve the scheduled task with changes. |
-| I-004 | Identified | **Seat set.** Which of the six studio seats activate for FPPF? | Criterion 3, and creating a seat needs the Principal | Variant B in document 7 (lean). |
-| I-005 | Identified | **Studio standards for FPPF.** Engineering, brand, design, and writing standards live in the skookr repo and are not adapted. | Blocks conformance checks at Verify | Adopt the studio writing standard now. Draft a short FPPF brand standard after I-001. |
-| I-006 | Identified | **Studio overlap check.** The studio brand "skookr" is a standalone consumer brand with its own funnel. Does FPPF share anything (accounts, analytics, vendors, brand surfaces) with it? | Criterion 4 (keeps brands and data separate) | Default: fully separate. Confirm. |
+| ID | State | Issue | Resolution or GM recommendation |
+| --- | --- | --- | --- |
+| I-001 | Solved 2026-11-17 | Brand name and domain. | Brand "First Principles Personal Finance", domain `firstprinciplesmoney.com`. Trademark caution in the run log (2026-11-18). |
+| I-002 | Solved 2026-11-17 | Pricing authority. | Setting and testing prices is the GM's call. The legal gate on paid checkout is unchanged. |
+| I-003 | Solved 2026-11-17 | Real-time channel. | The GM runs three times a day as a cloud routine and sends a push notification when something needs Andy. |
+| I-004 | Identified | Seat set. | Lean variant (document 7). No seat has been needed yet. |
+| I-005 | Solved 2026-11-18 | Standards for FPPF. | Principal's writing and design advice recorded in `docs/gm/learnings.md` (2026-11-18). Adopt that as the standard. |
+| I-006 | Solved 2026-11-17 | Overlap with other ventures. | Fully separate (isolation ruling, run log). |
+| I-007 | Identified | Outside counsel before paid checkout. | In Andy's decision queue. Cost estimate $1,500 to $4,000, unmeasured. |
+| I-008 | Identified | Traffic is near zero, so E-001 has no sample. | No distribution yet. Next: pages in the trapped person's own words that lead to the planner. |
 
 ## Working an issue
 
