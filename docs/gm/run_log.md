@@ -62,6 +62,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 night - StoryBrand narrative rewritten with the Principal
+- **Path here:** six brand angles on a design canvas (private artifact, not in the repo). The Principal's thread: rat race, paths, route, way out, map. Three people to hold in mind: the would-be founder, the 40-year-old who feels the ground shifting, the mother of three who has to ask whether she can make it alone. His point: the maze and the trapped feeling are the same for her; people stay out of fear the new world is worse.
+- **His verdict on the mock-ups:** not visually compelling enough. Back up and write the story first.
+- **Did:** rewrote the story section of `docs/gospel/03-vision-strategy-culture.md` in StoryBrand form. Hero is the person trapped in a life their money locked in. Villain is the maze. Plan is take stock, say where you want to be, see your routes. Old text kept at the bottom of that document. Revert: move it back.
+- **Open and stated in the document:** the guide has no true founder story and little authority yet. Neither may be invented.
+- **Requirements noted if the product reaches people leaving abuse:** no trace unless chosen, a quick exit, a plain pointer to real help, and no push either way. Not built.
+- **Product now lags the story:** the live site still opens with the spending map and one plan. Taking stock first and showing several routes are not built.
+
 ### 2026-11-18 late night - brand angles for the Principal to react to
 - **Asked:** explore a few branding angles against competitors; feel more intelligent and more holistic than they do.
 - **Competitor positioning found (web search, 2026-11-18; mostly secondary sources, live home pages not read):** Monarch: money clarity, all accounts in one view, "build a life they love" in its mission. Copilot: accounts, spending, and investments tracked automatically. Boldin: do-it-yourself retirement and financial planning software with what-if scenarios. Wealthfront: low-cost, tax-efficient automated investing. YNAB and Rocket Money: no first-party line found. Pattern: all promise clarity, control, or one place for every account.

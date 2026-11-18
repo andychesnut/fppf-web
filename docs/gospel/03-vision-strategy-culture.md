@@ -41,32 +41,39 @@ Nobody ever gave them a map. And the deepest cost is not financial. It is a quie
 
 **Changelog:** 2026-11-18, added this section and the studio goal. No earlier text removed. Revert: delete both sections.
 
-## The hero: the trapped middle manager
+## The story (StoryBrand, rewritten 2026-11-18 with the Principal)
 
-Age 32 to 45. Decent income, lifestyle expanded to meet it. Mortgage, car payments, maybe kids, a 401k they contribute to but do not understand. Not broke. Financially trapped.
+**The hero.** Someone who feels trapped in a life their money has locked in. It might be a job they cannot afford to leave, a career the world is moving away from, or a marriage they stay in because they cannot see how they would manage alone. Three people we hold in mind: the would-be founder working out where and how to jump; the 40-year-old who can feel the ground shifting; the mother of three who set her career aside and now has to ask whether she can make it on her own.
 
-- **What they want:** to stop feeling that the job owns them. Room to say no, take a risk, be sick or slow or fully human.
-- **Their external problem:** obligations outrunning margin, with no honest picture of where they stand.
-- **Their internal problem:** the anxiety of not looking, the shame of how it got here, the 2am question of whether this is all there is.
-- **The philosophical problem:** people deserve finances built to serve a life, not a life built to serve their finances.
+**What they want.** To make the change without wrecking what they and their family depend on. Underneath that: to know there is a way out they can afford.
 
-## The stakes
+**The villain: the maze.** Every wall was a reasonable decision at the time. From inside, you cannot see over them.
+- **External problem:** what comes in is already spoken for, and they have no clear picture of what they have, what leaving would cost, or what the ways out are.
+- **Internal problem:** fear that the new world will be worse than this one. So they stay, and feel ashamed of staying.
+- **Philosophical problem:** nobody should have to stay in a life because they cannot see the way out of it. And a bank balance is not the measure of what a person has to work with.
 
-**With the map:** they see their full picture honestly, sequence the next moves correctly, and build margin. **Without it:** the obligations keep compounding, every decision narrows, and the person calculates what they can afford to say before they say it.
+**The guide: First Principles Money.**
+- **Empathy:** we know the sum you do at 2am and never finish. (This needs a true story from a real person behind the product. It is not written yet.)
+- **Authority:** we show our working, every number with its sum and every change with its cause. We count what a bank cannot see. We never hold your money, never sell you a product, and never tell you what to do. (Authority is thin until real people have used it. Say so internally and do not fake it publicly.)
 
-## The guide: FPPF
+**The plan.**
+1. **Take stock.** Everything you have to work with: money, what you own, what you can do, who would back you.
+2. **Say where you want to be.** In a sentence, and what that life costs.
+3. **See your routes.** Each way out, what it costs, how long it takes, and what it leans on. Come back and see what moved.
 
-The hero is the person. FPPF is the guide. **Empathy:** we know what it feels like to be too busy and too anxious to look. **Authority:** a structured, evidence-based framework across six stages, scored on what a person has done, not how they feel about themselves.
+**The promises that make it safe to start.** It is free. What you type stays on your device and leaves no trace unless you choose. Staying is a legitimate route too.
 
-**The guide's promise: a clear map from where you are to where your finances serve your life, with no shame on the way.**
+**The call to action.** Direct: "Map your way out." Softer: "See an example map."
 
-## The plan
+**What failure looks like.** Another year passes. The commitments grow and the options narrow. Or they jump blind, and it costs more than it had to.
 
-1. Take the free snapshot (Formation and Foundation).
-2. See where you stand across the six F's.
-3. Get a prioritized action plan built for your situation.
+**What success looks like.** They know what they have. They can see their routes. They choose one on purpose, and that includes choosing to stay. They take the first step this week, and a few months later they can see they have moved.
 
-**Success:** seen, clear, and equipped, with a next action. **Failure:** the person stays unseen to themselves. **The transformation:** from reactive and obligated to deliberate and free to choose.
+**The transformation.** From trapped and guessing to someone who knows their options and chose.
+
+**The one-liner.** Most people who feel trapped cannot see what they would be leaving for. First Principles Money maps what you have against what you want, so you can see your ways out and choose one.
+
+**Lines in play.** "The rat race is a maze. This is the map." "Put your money where your mind is." (the Principal's, for the alignment reading).
 
 ## The mission
 
@@ -105,3 +112,33 @@ The hero is the person. FPPF is the guide. **Empathy:** we know what it feels li
 ## References
 
 Gospel documents may reference each other. No other document is a strategic reference, except `FPPF_Product_Brief.md`, which is the detailed source for this document's framework content.
+
+## Superseded text, kept for the record (replaced 2026-11-18)
+
+### The hero: the trapped middle manager
+
+Age 32 to 45. Decent income, lifestyle expanded to meet it. Mortgage, car payments, maybe kids, a 401k they contribute to but do not understand. Not broke. Financially trapped.
+
+- **What they want:** to stop feeling that the job owns them. Room to say no, take a risk, be sick or slow or fully human.
+- **Their external problem:** obligations outrunning margin, with no honest picture of where they stand.
+- **Their internal problem:** the anxiety of not looking, the shame of how it got here, the 2am question of whether this is all there is.
+- **The philosophical problem:** people deserve finances built to serve a life, not a life built to serve their finances.
+
+### The stakes
+
+**With the map:** they see their full picture honestly, sequence the next moves correctly, and build margin. **Without it:** the obligations keep compounding, every decision narrows, and the person calculates what they can afford to say before they say it.
+
+### The guide: FPPF
+
+The hero is the person. FPPF is the guide. **Empathy:** we know what it feels like to be too busy and too anxious to look. **Authority:** a structured, evidence-based framework across six stages, scored on what a person has done, not how they feel about themselves.
+
+**The guide's promise: a clear map from where you are to where your finances serve your life, with no shame on the way.**
+
+### The plan
+
+1. Take the free snapshot (Formation and Foundation).
+2. See where you stand across the six F's.
+3. Get a prioritized action plan built for your situation.
+
+**Success:** seen, clear, and equipped, with a next action. **Failure:** the person stays unseen to themselves. **The transformation:** from reactive and obligated to deliberate and free to choose.
+
