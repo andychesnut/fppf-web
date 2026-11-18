@@ -17,6 +17,28 @@ Most people are living at stage five of financial maturity while their stage one
 
 Nobody ever gave them a map. And the deepest cost is not financial. It is a quiet loss of the freedom to speak, to refuse, and to live fully.
 
+## The studio's goal for this venture (the Principal, 2026-11-18)
+
+**Build a profitable venture that creates positive impact for as many people as possible.** Both halves bind. Profit without impact fails it. Impact that cannot pay for itself fails it.
+
+## Working customer and product thesis (GM decision D-011, 2026-11-18, a hypothesis)
+
+**The customer is the trapped person:** a large gap between how they spend their time, energy, and money and how they want to, with too little resilience to close it. The hero below (the trapped middle manager) is the first segment, because that person has income to redirect and can pay.
+
+**The product's job is to help that person close the gap,** not to grade them. The six F's are the engine under the product, not the thing we sell.
+
+**Known gaps between this thesis and the live product (to fix in order):**
+1. The Snapshot never asks what the person wants. It measures resilience but not the gap. Only question 24 touches it.
+2. Freedom is scored last, as stage 6. For this customer it is the reason to start. The target comes first; the stages are the path to it.
+3. The result names the lowest weak stage. A trapped person needs the first move toward their own exit, tied to their own target.
+4. Customer success is defined as a higher six-F score. It should be: the person reports the gap is smaller, or took the step.
+5. The paid offer is a report with financial statements. This customer more likely wants a path out: what the life they want costs, and the sequence to get there, as education built on their own inputs (rules R1 to R4 still bind).
+6. The headline number ("Months of No") is jargon for a number most people already know.
+
+**Kill rule:** after about 100 real completions, if fewer than 30% say they feel trapped, or fewer than 30% say the result told them something new, drop this thesis and reopen the customer question.
+
+**Changelog:** 2026-11-18, added this section and the studio goal. No earlier text removed. Revert: delete both sections.
+
 ## The hero: the trapped middle manager
 
 Age 32 to 45. Decent income, lifestyle expanded to meet it. Mortgage, car payments, maybe kids, a 401k they contribute to but do not understand. Not broke. Financially trapped.

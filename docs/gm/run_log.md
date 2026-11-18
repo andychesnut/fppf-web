@@ -62,6 +62,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 afternoon - interactive with the Principal: customer and thesis
+- **Principal stated the studio goal:** profitable ventures with positive impact for as many people as possible. Recorded in `docs/gospel/03-vision-strategy-culture.md`.
+- **GM decided (D-011):** customer is the trapped person; the product closes the gap; six alignment gaps listed in document 3 with a kill rule. Hypothesis, no customer data behind it.
+- **GM error, corrected:** earlier in this session the GM said the customer had never been narrowed. Document 3 already named the trapped middle manager. The GM had not read it closely.
+- **Principal's feedback taken:** "Months of No" is confusing, and people already know their runway, so the number is not the value.
+- **Next runs, replacing the old order:** (1) live check; (2) add two result-screen questions ("did this tell you something new", "do you feel trapped") with the prediction recorded in learnings first; (3) redesign the Snapshot opening around what the person wants (gap 1 and 2), tested on a local build; (4) plain-language runway wording (gap 6); (5) search pages in the trapped person's own words; (6) rethink the paid offer as a path out (gap 5) before counsel sees it.
+- **Gospel changes:** document 3 (two sections added, revert: delete), document 8 (D-011 added, revert: delete).
+
 ### 2026-11-18 about 11:15 Mountain - first Claude Code cloud run
 - **Migration:** this run read the repo, so the Cowork task should now be disabled (Andy).
 - **Did:** audited the 24 questions, scoring, and result copy in code against R1 to R7. Found no R1, R2, R4, R6 violations. Fixed three gaps: R10 (added the "By saving your map you agree to the Terms and Privacy Policy" sentence), R7 and the 2026-11-17 ruling (price note now says the launch price may differ and nothing is charged), R5 (Months of No labeled an estimate). Changes in `app/snapshot/Snapshot.tsx`.

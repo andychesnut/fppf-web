@@ -9,6 +9,7 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 
 | ID | Date | Title | Status |
 | --- | --- | --- | --- |
+| D-011 | 2026-11-18 | Customer is the trapped person; product closes the gap | GM DECISION (hypothesis) |
 | D-010 | 2026-11-17 | Operating mode: chat-only, scheduled task declined | PROPOSED |
 | D-009 | 2026-11-17 | Framework principles are protected | PROPOSED |
 | D-008 | 2026-11-17 | Daily check-in at 7:00 AM Mountain | PROPOSED |
@@ -21,6 +22,8 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 | D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
 
 ## Entries
+
+**D-011, 2026-11-18, Customer and product thesis.** Status: GM DECISION, a hypothesis with a kill rule. The Principal stated the studio goal (a profitable venture with positive impact for as many people as possible) and told the GM to decide. Decision: the customer is the trapped person, first segment the trapped middle manager already named in document 3. The product's job is closing the gap between the life they fund and the life they want. The six F's stay as the engine. Six alignment gaps and the kill rule are listed in document 3. Alternatives considered and ranked lower: people in a money shock (urgent but least able to pay, and closest to the advice line), young adults starting out (large, crowded, low willingness to pay), employers (pays, but needs outreach the floor forbids and a long sales cycle). Evidence: reasoning and the Principal's direction only. No customer data yet.
 
 **D-010, 2026-11-17, Operating mode.** Status: PROPOSED. Amends: charter v1.1 section 9. Ruling: the Principal declined creation of a scheduled daily-brief task. Until he rules otherwise, there is no unattended operation. The brief is produced when he opens a chat. Open item I-003.
 
