@@ -56,14 +56,14 @@ export function journey(i: JourneyInput): Journey {
   const checks: Check[] = [
     { id: 'funded', ok: i.boundary <= i.cash,
       text: i.boundary <= i.cash
-        ? 'Your boundary is covered by cash you already hold.'
-        : 'Your boundary is larger than your cash. A common principle is to fund a transition from savings or surplus, not from borrowing.' },
+        ? 'Your limit is covered by cash you already have.'
+        : 'Your limit is more than the cash you have. A common rule is to pay for a change like this from savings, not from borrowing.' },
     { id: 'reserve', ok: reserveMonths >= 3,
-      text: 'If you spent the whole boundary, about ' + reserveMonths + (reserveMonths === 1 ? ' month' : ' months') + ' of costs would remain untouched. Many people keep a separate cushion of a few months so essentials are never part of the bet.' },
+      text: 'If you used your whole limit, you would have about ' + reserveMonths + (reserveMonths === 1 ? ' month' : ' months') + ' of costs left. Many people keep at least three months aside that the plan never touches.' },
     { id: 'slow', ok: slow.withinBoundary,
       text: slow.withinBoundary
-        ? 'Even the slow case stays inside your boundary.'
-        : 'The slow case costs more than your boundary. People in this position often lengthen the preparation phase, lower costs during the transition, or raise income during it before starting.' },
+        ? 'Even if it goes slowly, it stays inside your limit.'
+        : 'If it goes slowly, it costs more than your limit. People in this spot often save for longer first, spend less along the way, or line up more income before they start.' },
     { id: 'target', ok: afterSurplus >= 0,
       text: afterSurplus >= 0
         ? 'The life you described pays for itself at the income you are aiming for.'

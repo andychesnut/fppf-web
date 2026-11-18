@@ -16,8 +16,8 @@ export default function Page() {
       <ul className="list">
         <li><strong>Your snapshot answers.</strong> They are scored in your browser. If you save your map, they are sent once to be scored again and are then discarded. We do not store individual answers.</li>
         <li><strong>Your saved result,</strong> only if you ask us to save it: your email address, the state of each area, your situation load, and your runway range in months.</li>
-        <li><strong>The way-out planner.</strong> The numbers and the sentence you type are used in your browser only. They are never sent to us and never stored.</li>
-        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether the planner was opened or changed, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
+        <li><strong>The way-out planner.</strong> The sentence and the numbers you type are worked out in your browser and saved only there, so you can come back to your plan. They are never sent to us. You can erase them from the plan page.</li>
+        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether the plan page was opened and which question was reached, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
       </ul>
       <h2>What we never collect</h2>
       <p>Account balances, account numbers, Social Security numbers, or passwords.</p>

@@ -87,11 +87,14 @@ p { margin: 0; }
 .offer .price { font-family: var(--display); font-weight: 700; font-size: 28px; color: var(--ink); }
 
 /* Home page: one frame */
-.one-frame { min-height: calc(100vh - 84px); min-height: calc(100svh - 84px); padding-top: 16px; padding-bottom: 32px; gap: 40px; }
-.one-frame h1 { font-size: clamp(30px, 4.6vw, 50px); line-height: 1.08; }
-.one-frame .hero-copy { gap: 16px; }
-.mini { gap: 12px; padding: 16px; }
-.mini .mon { padding: 16px; }
-.mini .field { gap: 4px; } .mini .field input { min-height: 44px; }
-@media (max-width: 600px) { .one-frame { gap: 20px; } .one-frame .lede { font-size: 17px; } .mini .mon .num { font-size: 36px; } }
-@media (max-width: 600px) { .one-frame { padding-top: 4px; } .header { padding-top: 14px; padding-bottom: 10px; } .mini .mon { padding: 12px 16px; gap: 4px; } .mini .field input { min-height: 40px; } }
+.one-frame { min-height: calc(100vh - 84px); min-height: calc(100svh - 84px); padding-top: 16px; padding-bottom: 32px; gap: 48px; }
+.one-frame h1 { font-size: clamp(30px, 4.4vw, 48px); line-height: 1.1; }
+.one-frame .hero-copy { gap: 24px; }
+.want { display: flex; flex-direction: column; gap: 12px; max-width: 560px; }
+.want textarea { width: 100%; padding: 14px; border: 1px solid var(--line-strong); border-radius: 8px; font: 400 18px/1.4 var(--text); color: var(--ink); resize: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.example { gap: 12px; } .example .tag { align-self: flex-start; } .example .quote { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.25; color: var(--ink); }
+.money { display: flex; align-items: center; gap: 8px; } .money span { font-weight: 600; color: var(--muted); }
+.linkish { background: none; border: 0; padding: 0; font: inherit; color: var(--blue); text-decoration: underline; cursor: pointer; }
+@media (max-width: 600px) { .one-frame { padding-top: 4px; gap: 24px; align-items: flex-start; } .header { padding-top: 14px; padding-bottom: 10px; } }
+@media print { .no-print, .footer, .brand { display: none !important; } }

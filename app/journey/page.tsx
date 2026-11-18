@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Journey } from './Journey.tsx';
 
 export const metadata: Metadata = {
-  title: 'Plan a way out',
-  description: 'Say what you want to change, how long it might take, and the most you are willing to spend. See whether the plan holds if it goes slowly. Nothing you type is stored.',
+  title: 'Your plan',
+  description: 'Six questions, then a plan: what the life you want costs, how long you could give it, and where you would stop. Saved only in your browser.',
 };
 
 export default function Page() {

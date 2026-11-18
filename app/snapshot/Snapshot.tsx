@@ -146,9 +146,9 @@ function ResultView({ answers, adult, headingRef, onRestart }: { answers: Answer
       </div>
 
       <div className="card">
-        <h2>Plan a way out</h2>
-        <p>Knowing where you stand is half of it. Say what you want instead, set the most you are willing to risk, and see whether the plan holds.</p>
-        <Link href="/journey" className="btn">Build my plan</Link>
+        <h2>What would you be doing instead?</h2>
+        <p>Say what you want, and work out what it would cost, how long you could give it, and where you would stop.</p>
+        <Link href="/" className="btn">Work it out</Link>
       </div>
 
       <form className="card" onSubmit={save}>

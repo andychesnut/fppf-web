@@ -62,6 +62,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-18 night - interactive with the Principal: home page starts with what the person wants
+- **Principal asked "why is this the home page?"** The GM's answer: it should not have been. The one-frame calculator was the runway number again, which the Principal had already said people do not need, and it never asked what the person wants. He said that if he likes the product he will be its first user.
+- **Did:** the home page is now one question ("What would you be doing if money weren't holding you in place?"), one box, one button, and a labeled example plan. The plan page asks six questions one at a time and ends with a plan in the person's own words: what the life costs against today, how long they could give it, three ways it could go, when to look up, and what to look at first. The plan is saved in the person's browser only, so they can return and update it, and can be printed or erased.
+- **Floor check:** nothing typed is sent to us. Events carry a step number at most. The example is labeled "Not a real person" (rule R6). Privacy page updated to say the plan is saved in the browser.
+- **Verified locally:** 20 tests pass, build passes, a full walk on a phone-sized local browser produced the expected plan, the plan survived a reload, and the home page offered "Open my plan" on return.
+- **E-001 metrics now:** `landing_edit`, `journey_view`, `journey_step` (by question), `journey_complete`, and the two feedback answers. Prediction and kill rule unchanged, with "change a number" read as "reach question 2".
+- **Next:** the Principal's reaction as first user; then the monthly "toward or away" check-in on the saved plan.
+
 ### 2026-11-18 14:45 Mountain - scheduled run: live check, gospel cleanup (rocks, issues)
 - **Live check (public fetch, 21:45 UTC):** `/`, `/snapshot`, `/privacy`, `/terms`, `/journey` returned 200. `/api/health` returned ok true, db true, email false, checkout false. Home page shows the one-frame calculator, so the live site matches the latest commit `05149f8`.
 - **Metrics (ops-data, 2026-11-18 18:30 UTC, the newest snapshot):** 48 landing views, 1 snapshot start, 1 completion, 1 email saved. Probably all setup traffic. No experiment has a real sample, so no kill rule applies. No `reviews/` verdicts exist. No newer collection than 18:30 UTC was seen.
