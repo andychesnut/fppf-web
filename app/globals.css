@@ -232,3 +232,16 @@ body:has(.a-screen) { background: var(--a-ground); }
 .p-app-copy h2 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; letter-spacing: -0.015em; margin: 0; }
 .p-app-copy p { font-size: 19px; line-height: 1.45; color: var(--a-body); margin: 0; } .p-app-copy .p-trust { font-size: 15px; color: var(--a-quiet); }
 .p-screen .a-three strong { font-size: 19px; white-space: nowrap; }
+
+.p-lede strong { font-weight: 700; color: var(--a-ink); }
+.p-future, .p-proof { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; padding-bottom: 56px; color: var(--a-ink); }
+.p-future h2, .p-proof h2 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; letter-spacing: -0.015em; margin: 0; }
+.p-future-sub { font-size: 19px; line-height: 1.45; color: var(--a-body); max-width: 34em; margin: 0; }
+.p-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 720px; }
+.p-steps li { background: #fff; border: 1px solid var(--a-line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.p-steps span { font-size: 14px; font-weight: 600; color: var(--a-quiet); } .p-steps strong { font-size: 30px; line-height: 1.1; } .p-steps em { font-style: normal; font-size: 14px; color: var(--a-quiet); }
+.p-steps li:last-child { background: var(--a-ink); border-color: var(--a-ink); } .p-steps li:last-child span, .p-steps li:last-child em { color: #b9bdc4; } .p-steps li:last-child strong { color: #fff; }
+.p-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.p-facts div { border-top: 2px solid var(--a-ink); padding-top: 12px; } .p-facts strong { font-size: 19px; } .p-facts p { margin: 6px 0 0; font-size: 16px; line-height: 1.4; color: var(--a-body); }
+.p-proof .a-btn { align-self: flex-start; }
+@media (max-width: 700px) { .p-steps { grid-template-columns: 1fr; } .p-steps li { padding: 14px 16px; } .p-steps strong { font-size: 26px; } }

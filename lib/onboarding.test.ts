@@ -90,3 +90,10 @@ test('since last time: says what moved, in both directions, with no advice', () 
   assert.ok(worse.some((x) => / down from /.test(x)));
   for (const x of [...better, ...worse]) assert.ok(!/should|must|need to|recommend/i.test(x) && !x.includes('\u2014'));
 });
+
+test('landing page future strip: saving what is left each month moves 2.5 months to 4, then 5.5', () => {
+  const n = { pay: 4000, bills: 2200, daily: 1000, savings: 8000 };
+  assert.equal(month(n).sayNoMonths, 2.5);
+  assert.equal(month({ ...n, savings: 8000 + 6 * 800 }).sayNoMonths, 4);
+  assert.equal(month({ ...n, savings: 8000 + 12 * 800 }).sayNoMonths, 5.5);
+});

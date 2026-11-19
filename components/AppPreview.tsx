@@ -47,3 +47,38 @@ export function AppPreview() {
     </section>
   );
 }
+
+// The same example month, a few months on, if what is left each month goes to savings. Arithmetic on made-up numbers, not a forecast.
+export function Future() {
+  const steps = [0, 6, 12].map((k) => ({ k, m: month({ ...N, savings: N.savings + k * month(N).left }) }));
+  return (
+    <section className="wrap p-future" aria-labelledby="p-future-h">
+      <h2 id="p-future-h">And where it could go</h2>
+      <p className="p-future-sub">The same example month, if the {money(month(N).left)} left each month goes to savings and nothing else changes.</p>
+      <ol className="p-steps">
+        {steps.map((x) => (
+          <li key={x.k}><span>{x.k === 0 ? 'Today' : x.k + ' months on'}</span><strong>{monthsText(x.m.sayNoMonths)}</strong><em>you could say no for</em></li>
+        ))}
+      </ol>
+      <p className="p-trust">An example with made-up numbers, not a forecast. Yours will be different.</p>
+    </section>
+  );
+}
+
+// Facts a visitor can check on this site. No testimonials and no numbers we do not have.
+export function Proof() {
+  const facts: [string, string][] = [
+    ['Your answers stay on your device', 'Nothing you type is sent to us. The privacy page says exactly what is.'],
+    ['No account, no email', 'You can use all of it without giving either.'],
+    ['Every number is plain arithmetic', 'Savings divided by what you spend. Bills divided by your pay. You can check each one by hand.'],
+    ['Nobody pays us to recommend anything', 'We never touch your money, and we never name a product to buy.'],
+  ];
+  return (
+    <section className="wrap p-proof" aria-labelledby="p-proof-h">
+      <h2 id="p-proof-h">Why you can trust it</h2>
+      <div className="p-facts">{facts.map(([h, t]) => <div key={h}><strong>{h}</strong><p>{t}</p></div>)}</div>
+      <Link href="/start" className="a-btn">See where you stand</Link>
+      <p className="p-trust">Education and self-assessment only, not advice. What you do is your call.</p>
+    </section>
+  );
+}

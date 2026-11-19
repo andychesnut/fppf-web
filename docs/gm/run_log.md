@@ -63,6 +63,13 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-19 - the Principal: home page structure (statement, literal sub, future, proof)
+- **His direction:** big statement; a literal subheadline that says what it is and why to care; visuals that show the future; proof points.
+- **Changed:** subheadline now reads "A free app that shows how many months you could go without a paycheck, what's eating your pay, and what a new payment would do. So you decide on the numbers, not a guess." The page runs: headline and maze, phone preview of Home, a "where it could go" strip (2½, then 4, then 5½ months, if what is left each month goes to savings; labelled made-up and not a forecast; a test checks the arithmetic), then four proof points, then a last button.
+- **Proof points are checkable facts only:** answers stay on the device, no account or email, every number is plain arithmetic, nobody pays us to recommend anything. No testimonials and no statistics, because there are none (rule R4).
+- **Verified:** 40 tests, build, rendered at desktop and phone width. Phone layout stacks the three future cards.
+- **Rule:** the five-second test now has a fourth question: what proof is there. Only facts a visitor can check on the page.
+
 ### 2026-11-19 - the Principal: the home page does not look like software
 - **His words:** the dashboard mock-up exists but is not on the page, so it is not clear this is a web app.
 - **Changed:** a phone-framed picture of the real Home screen sits under the hero, drawn in code with the same arithmetic the app uses (made-up numbers, labelled as an example), with "It works like an app, and it stays on your device" and a second Start button. `components/AppPreview.tsx`.
