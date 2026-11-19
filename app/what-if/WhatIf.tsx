@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { NumbersForm } from '@/components/NumbersForm.tsx';
 import { track } from '@/lib/client.ts';
 import { monthsText, whatIf } from '@/lib/onboarding.ts';
-import { EMPTY, loadMe, saveMe, type Me } from '@/lib/me-store.ts';
+import { EMPTY, loadMe, saveMe, withNumbers, type Me } from '@/lib/me-store.ts';
+import { today } from '@/lib/plan-store.ts';
 
 const money = (n: number) => (n < 0 ? '-$' : '$') + Math.abs(Math.round(n)).toLocaleString('en-US');
 const digits = (s: string) => s.replace(/[^0-9]/g, '').slice(0, 7);
@@ -25,7 +26,7 @@ export function WhatIf() {
         <Link href="/home" className="a-back">Home</Link>
         <h1 className="a-h1">First, four numbers.</h1>
         <p className="a-help">To show what a new payment does, we need to know where you are now.</p>
-        <NumbersForm start={null} cta="Next" onSave={(n) => { const next = { ...me, numbers: n }; setMe(next); saveMe(next); track('numbers_saved'); }} />
+        <NumbersForm start={null} cta="Next" onSave={(n) => { const next = withNumbers(me, n, today()); setMe(next); saveMe(next); track('numbers_saved'); }} />
       </main>
     );
   }

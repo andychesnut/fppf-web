@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { NumbersForm } from '@/components/NumbersForm.tsx';
 import { track } from '@/lib/client.ts';
-import { month, reading, sharpen } from '@/lib/onboarding.ts';
-import { EMPTY, clearMe, loadMe, saveMe, type Me } from '@/lib/me-store.ts';
+import { month, reading, sharpen, sinceLast } from '@/lib/onboarding.ts';
+import { EMPTY, clearMe, loadMe, saveMe, withNumbers, type Me } from '@/lib/me-store.ts';
+import { longDate, today } from '@/lib/plan-store.ts';
 
 const money = (n: number) => (n < 0 ? '-$' : '$') + Math.abs(Math.round(n)).toLocaleString('en-US');
 
@@ -29,6 +30,7 @@ export function Home() {
   const m = me.numbers ? month(me.numbers) : null;
   const r = me.numbers ? sharpen(reading(me.answers), me.numbers) : reading(me.answers);
   const sayNo = r.sayNo;
+  const moved = me.numbers && me.prev ? sinceLast(me.prev.numbers, me.numbers) : [];
   const share = (part: number) => (me.numbers && me.numbers.pay > 0 ? Math.max(0, Math.min(100, (part / me.numbers.pay) * 100)) : 0);
 
   return (
@@ -44,7 +46,7 @@ export function Home() {
       {m && me.numbers ? (
         <section className="a-card">
           <div className="a-cardhead"><h2>This month</h2><button type="button" className="a-link" onClick={() => setEditing(!editing)}>{editing ? 'Close' : 'Change'}</button></div>
-          {editing ? <NumbersForm start={me.numbers} cta="Save" onSave={(n) => { const next = { ...me, numbers: n }; setMe(next); saveMe(next); setEditing(false); track('numbers_saved'); }} /> : (
+          {editing ? <NumbersForm start={me.numbers} cta="Save" onSave={(n) => { const next = withNumbers(me, n, today()); setMe(next); saveMe(next); setEditing(false); track('numbers_saved'); }} /> : (
             <>
               <div className="a-three">
                 <div><span>Money in</span><strong>{money(me.numbers.pay)}</strong></div>
@@ -60,10 +62,17 @@ export function Home() {
         <section className="a-card">
           <div className="a-cardhead"><h2>Want real numbers?</h2></div>
           {editing
-            ? <NumbersForm start={null} cta="Save" onSave={(n) => { const next = { ...me, numbers: n }; setMe(next); saveMe(next); setEditing(false); track('numbers_saved'); }} />
+            ? <NumbersForm start={null} cta="Save" onSave={(n) => { const next = withNumbers(me, n, today()); setMe(next); saveMe(next); setEditing(false); track('numbers_saved'); }} />
             : <><p className="a-help">So far this is from rough answers. Four numbers make it exact.</p><button type="button" className="a-btn a-ghost" onClick={() => setEditing(true)}>Add my numbers</button></>}
         </section>
       )}
+
+      {me.numbers && me.prev && moved.length ? (
+        <section className="a-card">
+          <div className="a-cardhead"><h2>Since {longDate(me.prev.at)}</h2></div>
+          <div className="a-rows">{moved.map((x) => <div className="a-row" key={x}><span>{x}</span></div>)}</div>
+        </section>
+      ) : null}
 
       {r.inTheWay.length ? (
         <section className="a-card">

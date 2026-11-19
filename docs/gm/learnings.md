@@ -85,3 +85,7 @@ Experiment results and learnings, newest first. No experiments are known to be r
 - **Sample:** 100 real `start_view` events, not counting the Principal's own testing.
 - **Kill rule:** at 100 starts, if fewer than 25% finish, cut part one (about you) to two questions and re-test. If fewer than 10% of finishers ever add numbers, drop the exact-numbers path and rethink "what if".
 - **Known weakness:** no traffic source exists. The first events will be the Principal's testing and must be discounted.
+
+## 2026-11-19 (14:00 UTC run)
+- Check-in is built before any person has used the first reading. Prediction: a returning visitor who changes numbers will see the card. Not testable until real traffic. No kill rule applies yet; if `numbers_saved` stays at zero real events after 50 real `home_view` events, the numbers form is too heavy and Home should ask for one number at a time.
+- A test of my own had the wrong expectation (month still positive, so "What's left", not "shortfall"). Run tests before reading the output as a bug in the code.

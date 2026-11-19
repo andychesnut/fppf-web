@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { QUESTIONS, partQuestions, reading, sharpen, told, month, whatIf, monthsText, type Answers } from './onboarding.ts';
+import { QUESTIONS, partQuestions, reading, sharpen, told, month, whatIf, monthsText, sinceLast, type Answers } from './onboarding.ts';
 
 test('15 questions, ids unique, parts sized 5, 6, 4', () => {
   assert.equal(QUESTIONS.length, 15);
@@ -75,4 +75,18 @@ test('exact numbers replace the rough ranges for savings and bills', () => {
   const well = sharpen(rough, { pay: 7000, bills: 2000, daily: 1500, savings: 30000 });
   assert.deepEqual(well.inTheWay.map((i) => i.id), ['onejob']);
   assert.deepEqual(well.goingForYou, ['Six months or more of savings', 'No expensive debt', 'Bills take less than half your pay']);
+});
+
+test('since last time: says what moved, in both directions, with no advice', () => {
+  const a = { pay: 4000, bills: 2400, daily: 1000, savings: 6800 };
+  assert.deepEqual(sinceLast(a, a), []);
+  const better = sinceLast(a, { pay: 4000, bills: 2200, daily: 1000, savings: 8000 });
+  assert.ok(better.includes('What\'s left each month improved by $200'));
+  assert.ok(better.includes('Savings grew by $1,200'));
+  assert.ok(better.includes("Bills you can't skip went from 60% to 55% of your pay"));
+  const worse = sinceLast(a, { pay: 4000, bills: 2900, daily: 1000, savings: 6000 });
+  assert.ok(worse.includes('What\'s left each month got worse by $500'));
+  assert.ok(worse.some((x) => x.startsWith('Savings fell by $800')));
+  assert.ok(worse.some((x) => / down from /.test(x)));
+  for (const x of [...better, ...worse]) assert.ok(!/should|must|need to|recommend/i.test(x) && !x.includes('\u2014'));
 });

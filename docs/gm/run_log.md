@@ -43,6 +43,8 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Runs:** Claude Code cloud routine "FPPF GM run (Claude Code)" (`trig_015SGNynFXUAeQEbcanh7zAc`), repo `andychesnut/fppf-web` attached, 6:45, 14:45, and 22:45 America/Denver. The old Cowork task was disabled by the Principal (his report, not verified). No other run pushed to the repo between 2026-11-18 11:15 Mountain and this entry: the first run's session stayed open as a working session with the Principal the whole time.
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
 - **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment. Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
+- **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
+- **Metrics feed:** last commit 2026-11-19 00:19 UTC; the 6-hourly job skipped at least two runs (noted 2026-11-19).
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
 - **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
 - **Experiment E-002** is live (recorded in `docs/gm/learnings.md` on 2026-11-19). E-001 is superseded. No real traffic yet, and the first events are the Principal's testing.
@@ -59,6 +61,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 14:00 UTC (07:00 Mountain) - scheduled run: monthly check-in shipped
+- **Verified live (public fetch):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/home`, `/what-if`, `/api/health` all 200. Health: db true, email false, checkout false. Home title matches the log. No new commits on `main` since the last run, so no feedback from the Principal landed in the repo.
+- **Metrics:** `ops-data` latest is still 2026-11-19 00:19 UTC. The workflow is meant to run every 6 hours, so the 06:17 and 12:17 UTC runs did not commit. Cause unknown (GitHub cron delay or a failing job). Numbers unchanged: 77 landing views, 1 completion, 1 email, none from real traffic. No `reviews/verdicts/` exist.
+- **Built:** "Since <date>" card on Home. When the person saves changed numbers on a later day, Home keeps the last set and says what moved in plain arithmetic (left each month, savings, how long they could say no, share of pay to bills). `sinceLast` in `lib/onboarding.ts`, `withNumbers` in `lib/me-store.ts`, one new test (36 pass, 0 fail). Stored only in the person's browser. No advice wording.
+- **Verified locally:** `npm test` 36 pass, `npm run build` passes, rendered `/home` at phone width with seeded storage and looked at it. No page errors.
+- **Blocked on:** the Principal's feedback (decision queue unchanged); the metrics feed not refreshing.
+- **Next:** the "what do you want" path for someone who does not know; check why the metrics job skipped; then traffic.
 
 ### 2026-11-19 05:45 UTC (2026-11-18 22:45 Mountain) - scheduled run: live check, no build
 - **Chose not to build.** The Principal is testing the 2026-11-19 build and will send feedback. Another page now would be guessing, and the next item (monthly check-in) depends on what he says.

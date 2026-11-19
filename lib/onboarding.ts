@@ -137,3 +137,20 @@ export function sharpen(r: Reading, n: Numbers): Reading {
   else goingForYou.push('Bills take less than half your pay');
   return { ...r, inTheWay: [...first, ...inTheWay], goingForYou, sayNo: monthsText(m.sayNoMonths) };
 }
+
+// What moved between two sets of numbers. Plain sentences, arithmetic only, nothing about what to do.
+export function sinceLast(before: Numbers, now: Numbers): string[] {
+  const a = month(before), b = month(now);
+  const usd = (n: number) => '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
+  const out: string[] = [];
+  const diff = Math.round(b.left - a.left);
+  if (diff !== 0) out.push((b.left >= 0 ? 'What\'s left each month' : 'The shortfall each month') + (diff > 0 ? ' improved by ' : ' got worse by ') + usd(diff));
+  const sv = Math.round(now.savings - before.savings);
+  if (sv !== 0) out.push('Savings ' + (sv > 0 ? 'grew by ' : 'fell by ') + usd(sv));
+  if (monthsText(a.sayNoMonths) !== monthsText(b.sayNoMonths)) {
+    const up = (b.sayNoMonths ?? Infinity) > (a.sayNoMonths ?? Infinity);
+    out.push('You could say no for ' + monthsText(b.sayNoMonths) + ', ' + (up ? 'up' : 'down') + ' from ' + monthsText(a.sayNoMonths));
+  }
+  if (a.billsShare !== b.billsShare) out.push("Bills you can't skip went from " + a.billsShare + '% to ' + b.billsShare + '% of your pay');
+  return out;
+}
