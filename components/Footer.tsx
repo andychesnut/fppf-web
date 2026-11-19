@@ -7,6 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap">
         <nav aria-label="Legal">
+          <Link href="/guides">Guides</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/delete">Delete my data</Link>

@@ -62,6 +62,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-19 later - the Principal: "You need to be the one growing this"
+- **His challenge:** ARR is $0 and the self-improvement loop is weak. Two constraints, growth and product. The GM owns growth.
+- **GM diagnosis (recorded):** the site had no sitemap, no robots file, no per-page descriptions and no content pages, so it could not be found. The check-in card shipped earlier the same day was a retention feature before any acquisition: wrong priority. Checkout is gated by the floor, so ARR cannot move until the counsel decision and the owner's flag. Product is unvalidated: nobody but the Principal has used it, and email is off so nobody can be pulled back.
+- **Shipped:** `/guides` with six plain-language guides (months of savings, quitting a job, what a new payment does to a month, share of pay to bills, paycheck to paycheck, the four numbers), each with a worked sum that matches the app arithmetic and a link to `/start` or `/what-if`; `sitemap.xml`; `robots.txt` (blocks `/api/`, `/home`, `/angles`); Article data and canonical addresses; a Guides link in the footer; default site address set to `www` because the bare domain redirects there. 3 new tests (39 pass). Voice and floor rules are tested: no em-dashes, no advice or outcome words, education line in every guide.
+- **Rule from this (standing):** every run names the binding constraint (growth or product), does one growth action and one product-learning action, and may not end as a no-build run when nothing is blocked. Target: 20 real people through the first reading in 30 days. Kill rules: under 30 percent of starters finishing part one means rework the questions; under 1 in 5 finishers saying the reading was accurate means rework the reading before more distribution.
+- **GM cannot do, by the floor:** create accounts (search console, forums, social), contact people unasked, spend beyond the envelope. Those are the limits on growth, stated plainly.
+- **Next:** confirm live and measure landing views on `/guides/*`; add the opt-in "was this accurate" prompt; more guides from the questions the product answers; fix the metrics feed skipping runs.
+
 ### 2026-11-19 14:00 UTC (07:00 Mountain) - scheduled run: monthly check-in shipped
 - **Verified live (public fetch):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/home`, `/what-if`, `/api/health` all 200. Health: db true, email false, checkout false. Home title matches the log. No new commits on `main` since the last run, so no feedback from the Principal landed in the repo.
 - **Metrics:** `ops-data` latest is still 2026-11-19 00:19 UTC. The workflow is meant to run every 6 hours, so the 06:17 and 12:17 UTC runs did not commit. Cause unknown (GitHub cron delay or a failing job). Numbers unchanged: 77 landing views, 1 completion, 1 email, none from real traffic. No `reviews/verdicts/` exist.

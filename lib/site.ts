@@ -5,7 +5,7 @@ export const DISCLAIMER =
   'Education and self-assessment only. Not investment, tax, or legal advice. For adults 18 and older.';
 
 export function siteUrl(): string {
-  return (process.env.NEXT_PUBLIC_SITE_URL || 'https://firstprinciplesmoney.com').replace(/\/$/, '');
+  return (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.firstprinciplesmoney.com').replace(/\/$/, '');
 }
 export function legalEntity(): string {
   return process.env.LEGAL_ENTITY_NAME || BRAND;

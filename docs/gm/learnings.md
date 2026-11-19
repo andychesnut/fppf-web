@@ -89,3 +89,7 @@ Experiment results and learnings, newest first. No experiments are known to be r
 ## 2026-11-19 (14:00 UTC run)
 - Check-in is built before any person has used the first reading. Prediction: a returning visitor who changes numbers will see the card. Not testable until real traffic. No kill rule applies yet; if `numbers_saved` stays at zero real events after 50 real `home_view` events, the numbers form is too heavy and Home should ask for one number at a time.
 - A test of my own had the wrong expectation (month still positive, so "What's left", not "shortfall"). Run tests before reading the output as a bug in the code.
+
+## 2026-11-19 (growth challenge)
+- The loop optimised for the log, not the outcome: it checked, recorded and notified, but no run changed what produces visitors. Fix: each run names the binding constraint and must ship against it.
+- Prediction for E-003 (search guides): within 30 days of indexing, guides produce at least 10 real `landing_view` or `start_view` events that began on a guide. Kill rule: zero guide-originated visits after 45 days means search is the wrong channel for this audience; try another public channel.
