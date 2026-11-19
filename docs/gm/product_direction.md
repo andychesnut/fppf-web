@@ -78,3 +78,21 @@ As of 2026-11-19: `/` (headline, maze, one button), `/start` (onboarding), `/hom
 4. Part 1 reflection with fixed-choice questions first (no free-text reading yet).
 5. Home page with the maze, generated in code so it resizes.
 6. Re-record experiment E-001 against the new home page before shipping it.
+
+## Interview 1 with the Principal (2026-11-19): themes only, no figures
+
+Recorded as themes because the product's own rule is to store bands and never raw numbers.
+
+- **The drift is by single item, not by category.** Large costs for things he does not use (a home he does not need, a car he does not drive) and a one-off purchase for someone who would never use it. A "does this category serve me" screen misses all of these. The useful question is "do I use this, and would I choose it again today?"
+- **Two of the three run quietly.** Recurring costs continue without a decision. Nothing prompts a review.
+- **The impulse purchase was not a knowledge gap.** He knew. It happened on a bad day, at an auction, without thinking. More information would not have changed it. A rule written in advance might have.
+- **What he wants is not a number.** Contribute to people changing the world, hands-on, "enough" not rich. He is close to living that now, so the felt gap is small but real.
+- **His idea: a card with principle-based limits.** Merchant-type limits exist technically, but a real card means issuing and lending, a bank partner, compliance, cost above the envelope, and a floor change. Also a merchant-type block would not have caught the auction purchase. Not buildable now.
+- **What the idea points at:** pre-commitment. Principles written when calm, shown at the moment of weakness.
+
+### Candidate builds from this
+1. Rules I set for myself: the person writes their own rules while calm; the app shows them back, on the device.
+2. A still-want-this review of things that keep running (per item: do I use it, would I choose it again today).
+3. Rework `/align` from category groups to specific things.
+
+Open question for him: if a rule had been written in advance, what would it have said?
