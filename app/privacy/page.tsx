@@ -10,14 +10,15 @@ export default function Page() {
     <main className="prose">
       <Link href="/">Back to home</Link>
       <h1>Privacy</h1>
-      <p className="muted small">Last updated November 18, 2026.</p>
+      <p className="muted small">Last updated November 19, 2026.</p>
       <p>{BRAND} is operated by {legalEntity()}{address ? ', ' + address : ''}. This page says what we collect and what we do with it.</p>
       <h2>What we collect</h2>
       <ul className="list">
         <li><strong>Your snapshot answers.</strong> They are scored in your browser. If you save your map, they are sent once to be scored again and are then discarded. We do not store individual answers.</li>
         <li><strong>Your saved result,</strong> only if you ask us to save it: your email address, the state of each area, your situation load, and your runway range in months.</li>
-        <li><strong>The way-out planner.</strong> The sentence and the numbers you type are worked out in your browser and saved only there, so you can come back to your plan. They are never sent to us. You can erase them from the plan page.</li>
-        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether the plan page was opened and which question was reached, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
+        <li><strong>The questions, your own words, and your numbers.</strong> Everything you answer or type at Start, Home, and What if is kept in your browser and nowhere else. It is never sent to us. You can erase it from the Home screen.</li>
+        <li><strong>The earlier planner.</strong> The sentence and the numbers you type are worked out in your browser and saved only there, so you can come back to your plan. They are never sent to us. You can erase them from the plan page.</li>
+        <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether a page was opened and which question was reached, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
       </ul>
       <h2>What we never collect</h2>
       <p>Account balances, account numbers, Social Security numbers, or passwords.</p>

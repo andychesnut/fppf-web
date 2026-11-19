@@ -42,10 +42,10 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **READ NEXT: `docs/gm/product_direction.md`.** It holds the product, onboarding, look, and voice the Principal and the GM settled on 2026-11-18 and 2026-11-19. Mock-ups are in `docs/design/`. The live site is behind it.
 - **Runs:** Claude Code cloud routine "FPPF GM run (Claude Code)" (`trig_015SGNynFXUAeQEbcanh7zAc`), repo `andychesnut/fppf-web` attached, 6:45, 14:45, and 22:45 America/Denver. The old Cowork task was disabled by the Principal (his report, not verified). No other run pushed to the repo between 2026-11-18 11:15 Mountain and this entry: the first run's session stayed open as a working session with the Principal the whole time.
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
-- **Live site (verified by fetch 2026-11-18, not re-checked 2026-11-19):** `/` has the Principal's headline with a spending-map example; `/journey` is an eight-question plan saved in the browser; `/snapshot` is the original 24 questions with plain names; `/angles` is unlinked. `/api/health`: ok true, db true, email false, checkout false.
+- **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment. Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
 - **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
-- **Experiment E-001:** recorded against an earlier home page. Stale. Re-record before the next home page ships.
+- **Experiment E-002** is live (recorded in `docs/gm/learnings.md` on 2026-11-19). E-001 is superseded. No real traffic yet, and the first events are the Principal's testing.
 - **Legal:** memo version 1 and addendum 1 in `docs/gm/`. Rule R1 loosened by the GM on 2026-11-18 to allow labelled projections; counsel has not confirmed. Legal pages draft not applied.
 - **Legal entity and address:** filled in production. The address format "Suite 203 1161" is still unconfirmed.
 - **Rocks:** (1) minimum stack: deploy and metrics work; email and checkout off. (2) snapshot live: yes, about zero real use. (3) legal memo: done.
@@ -59,6 +59,15 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 - the Principal hands over the build; first build of the new product shipped
+- **His instruction:** take over the build. He will test the app and give another round of feedback.
+- **Built and shipped:** `lib/onboarding.ts` (15 questions, the reading, exact-number sharpening, the what-if arithmetic) with 11 tests in `lib/onboarding.test.ts`; `/start`, `/home`, `/what-if`; a new home page with the maze drawn in code for wide and narrow screens; the app look (grey ground, white cards, dark card for what the person wants); fonts changed to Source Serif 4 and Source Sans 3 site-wide; privacy page updated; seven anonymous event names added.
+- **How it differs from the mock-ups:** part one has five fixed-choice questions and says the answers back in plain sentences, because nothing reads free text yet. Part two has six questions, not nine. Home has no tab bar because the other tabs do not exist. No account balances. The "62% of the way" number was left out because there is no honest way to compute it yet.
+- **Floor check:** nothing a person answers or types is sent to us; events carry a name and at most a step number. Education wording and the "your call" line are on the reading, Home, and what-if. No securities content. Thresholds are the GM's assumptions and are written down in `lib/onboarding.ts`.
+- **Verified locally by rendering and looking:** 35 tests pass, build passes, a full walk on a phone-sized browser from the home page through all questions to Home, exact numbers, and a $520 what-if gave the expected values with no page errors and no sideways scroll. Desktop home page looked at.
+- **Waiting on:** the Principal's testing and feedback.
+- **Next, in order:** his feedback; the monthly check-in ("what moved since last time") on Home; the "what do you want" path for someone who does not know; then traffic.
 
 ### 2026-11-19 - working session with the Principal, saved to the repo
 - **Why this entry exists:** a day of design work lived only in a private design canvas and in the session. A scheduled run could not have seen any of it. It is now in the repo.

@@ -68,7 +68,7 @@ The Principal's standing complaint is copy that sounds like AI. Rules that came 
 
 ## What is live today (and behind this document)
 
-`/` has the Principal's headline with a spending-map example. `/journey` is the eight-question plan saved in the browser. `/snapshot` is the original 24 questions with plain names. `/angles` is an unlinked comparison page. Paper-and-ink styling.
+As of 2026-11-19: `/` (headline, maze, one button), `/start` (onboarding), `/home`, `/what-if`. See the run log entry of that date for how the build differs from the mock-ups. The older `/journey`, `/snapshot`, and `/angles` still exist, unlinked.
 
 ## Build order the GM proposes
 

@@ -74,3 +74,14 @@ Experiment results and learnings, newest first. No experiments are known to be r
 11. **Designing without looking produces faults the Principal finds first.** Several boards had a hidden headline or a confusing layout. Consequence: render and look before showing anything, and ask for permission up front where a tool forbids it.
 12. **A text box is not a design for a hard question.** "What do you want?" needed indirect questions, time, and a reflected draft. Consequence: where the product asks something personal, design the path to the answer, not the field.
 13. **The original 24 questions held the story all along.** Question 22 is the Principal's second paragraph. Consequence: read old work for what it was reaching for before replacing it.
+
+## Experiment E-002: the rebuilt product (recorded 2026-11-19, before shipping)
+
+- **Supersedes E-001**, which was recorded against a home page that no longer exists and never reached a sample.
+- **Change:** home page with the Principal's headline and the maze; a new flow at `/start` (15 questions in three parts, a first draft in the person's words, a first reading); `/home` with what is in the way and what they have going for them; `/what-if` for trying a new monthly payment.
+- **Hypothesis:** a person who feels stuck will answer questions about themselves before their money, and finds the reading worth coming back to.
+- **Metrics:** `start_view` over `landing_view`; `start_done` over `start_view`; `numbers_saved` over `start_done`; `whatif_try` over `home_view`.
+- **Prediction:** 20% of landing visitors start. 45% of starters finish. 25% of finishers add real numbers. 20% of Home visitors try a decision.
+- **Sample:** 100 real `start_view` events, not counting the Principal's own testing.
+- **Kill rule:** at 100 starts, if fewer than 25% finish, cut part one (about you) to two questions and re-test. If fewer than 10% of finishers ever add numbers, drop the exact-numbers path and rethink "what if".
+- **Known weakness:** no traffic source exists. The first events will be the Principal's testing and must be discounted.
