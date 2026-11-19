@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer.tsx';
 import { Track } from '@/components/Track.tsx';
 import { StartButton } from '@/components/StartButton.tsx';
 import { Maze } from '@/components/Maze.tsx';
+import { AppPreview } from '@/components/AppPreview.tsx';
 import { BRAND, TAGLINE } from '@/lib/site.ts';
 
 // The headline is the Principal's. The picture shows the idea. One button.
@@ -25,6 +26,7 @@ export default function Home() {
         </div>
         <Maze />
       </main>
+      <AppPreview />
       <Footer />
     </>
   );

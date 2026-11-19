@@ -63,6 +63,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-19 - the Principal: the home page does not look like software
+- **His words:** the dashboard mock-up exists but is not on the page, so it is not clear this is a web app.
+- **Changed:** a phone-framed picture of the real Home screen sits under the hero, drawn in code with the same arithmetic the app uses (made-up numbers, labelled as an example), with "It works like an app, and it stays on your device" and a second Start button. `components/AppPreview.tsx`.
+- **Verified:** 39 tests, build, rendered at desktop and phone width. Fixed a wrapped stat and a caption that said "on the left" on a layout where it sits above.
+- **Open:** a real screenshot of the app, rather than a drawing of it, would be more honest once real use exists.
+
 ### 2026-11-19 - the Principal's first feedback: the home page does not say what it is
 - **His words:** layout is great, but he could not tell what he had landed on. A tool, an idea, a methodology? Why care? What is being asked of him?
 - **Diagnosis:** the headline and picture were right, but nothing named the thing, what it gives, or the cost to the visitor. The copy also leaned on a metaphor the visitor does not have yet.
