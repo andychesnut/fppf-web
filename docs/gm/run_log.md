@@ -4,6 +4,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Standing rulings (latest first)
 
+- **2026-11-19. The Principal's time has a price.** Any work asked of the Principal beyond feedback or advice is treated as costing $5 per request against the spend envelope. Batch asks, make each one count, and ask rarely. Also: hold traffic work until he has tested the live experience and given feedback (his instruction, 2026-11-19).
 - **2026-11-18. The GM's scheduled run moves to Claude Code in the cloud, with the repo attached.** Andy's choice, made live on 2026-11-18 at about 07:30 Mountain, over a run on his Mac. From the first successful Claude Code run, the repo's `docs/` folder is the source of truth for every GM document. The claude.ai project copy becomes a read-only archive. Path map: `claude/X` is now `docs/gm/X`, `gospel/X` is now `docs/gospel/X`, `FPPF_Product_Brief.md` is now `docs/FPPF_Product_Brief.md`. Older text that names the old paths means the new ones.
 - **2026-11-17. The GM is in control.** The Principal (Andy) supports setup on the evening of 2026-11-17 only. After that the GM decides and reports. Do not queue decisions for him that the GM can make.
 - **2026-11-17. The GM may rewrite the Product Brief** (`FPPF_Product_Brief.md`) when it disagrees with it, and is expected to as it learns from the market. Changes follow the RSI loop: evidence, a logged change, the old text kept in a changelog.
