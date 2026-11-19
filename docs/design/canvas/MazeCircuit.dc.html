@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The route that delivers: maze and circuit together</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+body{margin:0}
+@keyframes move{from{stroke-dashoffset:0}to{stroke-dashoffset:-17}}
+@keyframes s-fixed{0%,18%{stroke-width:10px}30%,43%{stroke-width:8px}55%,68%{stroke-width:7px}80%,100%{stroke-width:5px}}
+@keyframes s-leak{0%,18%{stroke-width:5px}30%,43%{stroke-width:4px}55%,100%{stroke-width:3px}}
+@keyframes s-a{0%,18%{opacity:0}30%,100%{opacity:1}}
+@keyframes s-b{0%,43%{opacity:0}55%,100%{opacity:1}}
+@keyframes s-c{0%,76%{opacity:0}84%,100%{opacity:1}}
+@keyframes s-tank{0%,18%{transform:scaleY(.06)}30%,43%{transform:scaleY(.33)}55%,68%{transform:scaleY(.66)}80%,100%{transform:scaleY(1)}}
+@keyframes s-switch{0%,72%{transform:rotate(-30deg)}80%,100%{transform:rotate(0deg)}}
+@keyframes c1{0%,18%{opacity:1}24%,100%{opacity:0}}
+@keyframes c2{0%,24%{opacity:0}30%,43%{opacity:1}49%,100%{opacity:0}}
+@keyframes c3{0%,49%{opacity:0}55%,68%{opacity:1}74%,100%{opacity:0}}
+@keyframes c4{0%,74%{opacity:0}80%,100%{opacity:1}}
+.flow{fill:none;stroke-linecap:round;stroke-dasharray:1 16;animation:move .9s linear infinite}
+.leak{stroke-width:3px;animation:move .9s linear infinite,s-leak 9sease-in-out infinite}
+.fixed{stroke-width:5px;animation:move .9s linear infinite,s-fixed 9sease-in-out infinite}
+.seg-a{animation:s-a 9sease-in-out infinite}
+.seg-b{animation:s-b 9sease-in-out infinite}
+.seg-c{animation:s-c 9sease-in-out infinite}
+.flow.seg-a{animation:move .9s linear infinite,s-a 9sease-in-out infinite}
+.flow.seg-b{animation:move .9s linear infinite,s-b 9sease-in-out infinite}
+.flow.seg-c{animation:move .9s linear infinite,s-c 9sease-in-out infinite}
+.tank-fill{transform-box:fill-box;transform-origin:50% 100%;animation:s-tank 9sease-in-out infinite}
+.switch-arm{transform-box:view-box;transform-origin:1004px 364px;animation:s-switch 9sease-in-out infinite}
+.cap1{opacity:0;animation:c1 9slinear infinite}
+.cap2{opacity:0;animation:c2 9slinear infinite}
+.cap3{opacity:0;animation:c3 9slinear infinite}
+.cap4{opacity:1;animation:c4 9slinear infinite}
+@media (prefers-reduced-motion: reduce){.flow,.leak,.fixed,.seg-a,.seg-b,.seg-c,.flow.seg-a,.flow.seg-b,.flow.seg-c,.tank-fill,.switch-arm,.cap1,.cap2,.cap3,.cap4{animation:none}}
+</style>
+</helmet>
+<div style="position: relative; width: 1280px; height: 800px; background: #ffffff; color: #15171a; font-family: 'Source Sans 3', system-ui, sans-serif; overflow: hidden">
+
+<svg aria-hidden="true" width="1280" height="800" viewBox="0 0 1280 800" style="position: absolute; left: 0; top: 0; width: 1280px; height: 800px; fill: none; stroke-linecap: round; stroke-linejoin: round">
+<path d="M208 256H280M352 256H496M568 256H640M712 256H856M928 256H1000M280 328H352M424 328H496M712 328H784M928 328H1144M64 400H208M280 400H352M424 400H496M712 400H784M928 400H1144M136 472H208M352 472H496M640 472H712M784 472H856M928 472H1072M136 544H424M496 544H712M784 544H928M1000 544H1072M1144 544H1216M136 616H208M280 616H352M424 616H496M568 616H640M784 616H856M928 616H1072M1144 616H1216M136 688H280M640 688H712M784 688H856M928 688H1072M1144 688H1216M136 184V256M136 328V400M136 688V760M208 256V400M208 472V688M280 400V616M352 184V256M352 328V400M352 472V544M352 616V688M424 256V328M424 400V472M424 544V616M424 688V760M496 616V688M568 256V400M568 472V544M568 616V688M640 184V328M640 400V688M712 184V256M712 400V472M712 544V616M784 256V400M856 328V688M928 544V616M1000 184V328M1000 400V472M1000 616V688M1072 256V328M1072 472V616M1072 688V760M1144 184V256M1144 472V544M64 184H1216V616M1216 688V760H64V472M64 400V184" style="stroke: #15171a; stroke-width: 2; stroke-linecap: square; opacity: 0.2"></path>
+
+<path class="flow leak" d="M28 436L244 436L244 292L388 292L388 364L532 364L532 508L460 508L460 580L532 580L532 724" style="stroke: #6b7077"></path>
+<path class="flow leak" d="M100 436L100 652L172 652" style="stroke: #6b7077"></path>
+<path class="flow" d="M316 292L316 220L172 220L172 292L100 292L100 220" style="stroke: #6b7077; stroke-width: 5px"></path>
+<path class="flow leak" d="M532 364L532 220L388 220" style="stroke: #6b7077"></path>
+<path class="flow" d="M532 436L604 436L604 364L676 364L676 292L748 292" style="stroke: #6b7077; stroke-width: 4px"></path>
+<path class="flow fixed" d="M532 724L460 724L460 652L388 652L388 724L316 724L316 652L244 652L244 580" style="stroke: #6b7077"></path>
+<path class="flow leak" d="M748 724L892 724L892 580" style="stroke: #6b7077"></path>
+<path class="flow leak" d="M892 364L892 508L964 508L964 580L1036 580" style="stroke: #6b7077"></path>
+
+<circle cx="172" cy="652" r="4" style="fill: #6b7077"></circle>
+<circle cx="100" cy="220" r="5" style="fill: #6b7077"></circle>
+<circle cx="388" cy="220" r="4" style="fill: #6b7077"></circle>
+<circle cx="748" cy="292" r="5" style="fill: #6b7077"></circle>
+<circle cx="244" cy="580" r="6" style="fill: #6b7077"></circle>
+<circle cx="892" cy="580" r="4" style="fill: #6b7077"></circle>
+<circle cx="1036" cy="580" r="4" style="fill: #6b7077"></circle>
+
+<path class="seg-a" d="M28 436L244 436L244 292L388 292L388 364L532 364L532 508L460 508L460 580L532 580L532 724L608 724" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="seg-b" d="M672 724L748 724L748 436L820 436L820 292L892 292L892 364L1004 364" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="seg-c" d="M1068 364L1180 364L1180 436L1108 436L1108 652L1198 652" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="flow seg-a" d="M28 436L244 436L244 292L388 292L388 364L532 364L532 508L460 508L460 580L532 580L532 724L604 724" style="stroke: {{live}}; stroke-width: 7px"></path>
+<path class="flow seg-b" d="M676 724L748 724L748 436L820 436L820 292L892 292L892 364L1000 364" style="stroke: {{live}}; stroke-width: 7px"></path>
+<path class="flow seg-c" d="M1072 364L1180 364L1180 436L1108 436L1108 652L1190 652" style="stroke: {{live}}; stroke-width: 7px"></path>
+
+<rect x="608" y="702" width="64" height="44" style="fill: #ffffff; stroke: none"></rect>
+<rect class="tank-fill" x="609" y="703" width="62" height="42" style="fill: {{live}}; opacity: 0.3"></rect>
+<rect x="608" y="702" width="64" height="44" style="stroke: #15171a; stroke-width: 2.5"></rect>
+
+<line class="switch-arm" x1="1004" y1="364" x2="1068" y2="364" style="stroke: #15171a; stroke-width: 3.5"></line>
+<circle cx="1004" cy="364" r="6" style="fill: #ffffff; stroke: #15171a; stroke-width: 2.5"></circle>
+<circle cx="1068" cy="364" r="6" style="fill: #ffffff; stroke: #15171a; stroke-width: 2.5"></circle>
+
+<circle cx="1198" cy="652" r="10" style="fill: #ffffff; stroke: {{live}}; stroke-width: 3"></circle>
+<circle class="seg-c" cx="1198" cy="652" r="10" style="fill: {{live}}"></circle>
+</svg>
+
+<div style="position: absolute; left: 64px; top: 44px; width: 700px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 38px; line-height: 42px; letter-spacing: -0.015em">Money has endless ways in and out.<br>One route delivers what you want.</div>
+
+<div class="cap1" style="position: absolute; left: 820px; top: 44px; width: 396px; text-align: right"><span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #555a61">STATE 1 OF 4</span><br><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 38px">Stuck</span><br><span style="font-size: 17px; line-height: 23px">It all goes down the same dead ends.</span></span></div>
+<div class="cap2" style="position: absolute; left: 820px; top: 44px; width: 396px; text-align: right"><span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #555a61">STATE 2 OF 4</span><br><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 38px">Making room</span><br><span style="font-size: 17px; line-height: 23px">A little gets through and starts to stay.</span></span></div>
+<div class="cap3" style="position: absolute; left: 820px; top: 44px; width: 396px; text-align: right"><span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #555a61">STATE 3 OF 4</span><br><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 38px">Building</span><br><span style="font-size: 17px; line-height: 23px">Costs are covered for longer. The choice is in reach.</span></span></div>
+<div class="cap4" style="position: absolute; left: 820px; top: 44px; width: 396px; text-align: right"><span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: #555a61">STATE 4 OF 4</span><br><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 38px">Solid ground</span><br><span style="font-size: 17px; line-height: 23px">The switch is yours. Money reaches what you want.</span></span></div>
+
+<div style="position: absolute; left: 68px; top: 404px; width: 76px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 16px; color: #555a61; background: #ffffff">COMES IN</div>
+<div style="position: absolute; left: 64px; top: 158px; width: 150px; font-size: 15px; line-height: 20px; color: #2b2e33">Everyday costs</div>
+<div style="position: absolute; left: 664px; top: 228px; width: 124px; text-align: center; font-size: 15px; line-height: 20px; color: #2b2e33; background: #ffffff">Everything else</div>
+<div style="position: absolute; left: 146px; top: 518px; width: 142px; text-align: center; font-size: 15px; line-height: 20px; color: #2b2e33; background: #ffffff">Fixed commitments</div>
+<div style="position: absolute; left: 578px; top: 664px; width: 124px; text-align: center; font-size: 15px; line-height: 20px; font-weight: 600; background: #ffffff">Costs covered</div>
+<div class="cap1" style="position: absolute; left: 608px; top: 714px; width: 64px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 20px; font-weight: 500">&lt;1 mo</div>
+<div class="cap2" style="position: absolute; left: 608px; top: 714px; width: 64px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 20px; font-weight: 500">2 mo</div>
+<div class="cap3" style="position: absolute; left: 608px; top: 714px; width: 64px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 20px; font-weight: 500">4 mo</div>
+<div class="cap4" style="position: absolute; left: 608px; top: 714px; width: 64px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 20px; font-weight: 500">6 mo</div>
+<div style="position: absolute; left: 986px; top: 384px; width: 100px; text-align: center; font-size: 15px; line-height: 20px; font-weight: 600; background: #ffffff">Your choice</div>
+<div style="position: absolute; left: 1088px; top: 690px; width: 124px; text-align: center; font-size: 16px; line-height: 22px; font-weight: 600; background: #ffffff">What you want</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"live":{"editor":"color","default":"#1d4ed8"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { live: this.props.live ?? '#1d4ed8' };
+}
+}
+</script>
+</body>
+</html>

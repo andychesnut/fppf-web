@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angle D: Leave the race</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800&display=swap">
+<style>
+body{margin:0}
+a{color:#101010}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="min-height: 800px; box-sizing: border-box; padding: 36px 64px 64px; display: flex; flex-direction: column; gap: 64px; background: #101010; color: #f4f1ea; font-family: Archivo, system-ui, sans-serif">
+<div style="font-size: 17px; font-weight: 500">First Principles Money</div>
+<div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start; max-width: 1180px">
+<div style="flex: 1.2 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<h1 style="margin: 0; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.02em">Other apps help you run the rat race more efficiently.</h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.45; color: #d6d2c8; max-width: 28em">This one helps you get untrapped from it, by mapping what you want against what you have and how you spend.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: {{accent}}; color: #101010; font-size: 18px; font-weight: 800; text-decoration: none; border-radius: 2px">Find your way out</a>
+<span style="font-size: 15px; color: #b8b3a7">Free. Your answers stay in your browser.</span>
+</div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 26px; padding-top: 8px">
+<div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #b8b3a7">An example with made-up numbers</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; color: #d6d2c8"><span>August</span><span>14 months away</span></div>
+<div style="height: 14px; width: 100%; background: #5c5a55"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; color: #d6d2c8"><span>October</span><span>9 months away</span></div>
+<div style="height: 14px; width: 64%; background: #9c9990"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 16px; font-size: 22px; font-weight: 800"><span>Today</span><span>5 months away</span></div>
+<div style="height: 14px; width: 36%; background: {{accent}}"></div>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.5; color: #d6d2c8">The car loan ended. The first two furniture orders came in.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#ffd23f"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#ffd23f' };
+}
+}
+</script>
+</body>
+</html>

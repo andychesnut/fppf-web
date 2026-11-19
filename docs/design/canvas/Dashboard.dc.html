@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Phone dashboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;800&display=swap">
+<style>
+body{margin:0}
+a{color:#16181d}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; overflow: hidden; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 16px; background: #f6f7f4; color: #16181d; font-family: Barlow, system-ui, sans-serif">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 15px">
+<span style="font-weight: 600">First Principles Money</span>
+<span style="color: #565b66">November 18</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">Where you want to be</div>
+<div style="font-weight: 800; font-size: 24px; line-height: 1.12">Teaching again, on my own income.</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 4px; border-top: 2px solid #16181d; padding-top: 12px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">Where you are</div>
+<div style="font-weight: 800; font-size: 38px; line-height: 1">4½ months covered</div>
+<div style="font-size: 16px; color: #363a42">2 weeks more than on October 18.</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">What moved it</div>
+<div style="display: flex; gap: 12px; font-size: 16px; line-height: 1.3"><span style="flex: 0 0 78px; font-weight: 600; color: {{routeB}}">+ 3 weeks</span><span>First $900 from paid work</span></div>
+<div style="display: flex; gap: 12px; font-size: 16px; line-height: 1.3"><span style="flex: 0 0 78px; font-weight: 600; color: {{routeA}}">− 1 week</span><span>New phone plan, $140 a month</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #c9ccd2; padding-top: 12px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">Your route: paid work now, teaching by autumn</div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.3"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: #16181d; margin-top: 3px"></span><span><span style="font-weight: 600">Paid work started.</span> November 4.</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.3"><span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: #16181d; margin-top: 3px"></span><span><span style="font-weight: 600">Certificate renewal sent.</span> About 8 weeks to hear.</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.3"><span aria-hidden="true" style="flex: 0 0 14px; box-sizing: border-box; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #16181d; margin-top: 3px"></span><span><span style="font-weight: 600">Apply for teaching posts.</span> From January.</span></div>
+<div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.3"><span aria-hidden="true" style="flex: 0 0 14px; box-sizing: border-box; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #16181d; margin-top: 3px"></span><span><span style="font-weight: 600">First salary.</span> About June.</span></div>
+<a href="#routes" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 600">Compare your other two routes</a>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #c9ccd2; padding-top: 12px">
+<div style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">What you have to work with</div>
+<div style="font-size: 16px; line-height: 1.4">$7,300 of your own. A paid-off car. A certificate being renewed. Two people sending work. A sister's spare room, not needed so far.</div>
+</div>
+
+<div style="font-size: 16px; line-height: 1.35; border-top: 1px solid #c9ccd2; padding-top: 12px"><span style="font-weight: 800">11 cents of every dollar</span> that came in this month went toward teaching again.</div>
+
+<a href="#update" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 52px; background: #16181d; color: #ffffff; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 4px">Update my numbers</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"routeA":{"editor":"color","default":"#b3390a"},"routeB":{"editor":"color","default":"#1e3a8a"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { routeA: this.props.routeA ?? '#b3390a', routeB: this.props.routeB ?? '#1e3a8a' };
+}
+}
+</script>
+</body>
+</html>

@@ -39,28 +39,34 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## State
 
-- **MIGRATION FINISHED (2026-11-18).** The GM now runs as the Claude Code cloud routine "FPPF GM run (Claude Code)" (`trig_015SGNynFXUAeQEbcanh7zAc`), with `andychesnut/fppf-web` attached, at 6:45, 14:45, and 22:45 America/Denver. Its first run on 2026-11-18 at about 11:15 Mountain read this log and the repo and pushed `b769d6f` to main. The repo `docs/` folder is now the source of truth; the claude.ai project copy is a read-only archive. The old Cowork task "FPPF GM run" (`trig_01USCQ2zKTxd2sZn3wM1SYU5`) was disabled, not deleted, by Andy on 2026-11-18 (reported in chat, not verified by the GM: the setup session could not reach that task). Its history stays in Cowork.
-- **LIVE SITE: the Snapshot is in production at `https://firstprinciplesmoney.com`** (verified by public fetch, 2026-11-18 about 07:00 Mountain). Landing page, `/snapshot` intro with the 18-or-older box, `/privacy`, `/terms`, and `/delete` all returned 200. Footer shows operator "ETHEUS LLC, 30 E Broadway Suite 203 1161 Salt Lake City, UT 84111". Links inside pages use the `www` host. The GM did not deploy it. Presumably deployed from Claude Code on Andy's Mac overnight (inference).
-- **Not verified on the live site:** completing the 24 questions, the result page, the price-intent button, saving a map, any email, the database, the metrics job, whether Start is blocked until the age box is ticked. The fetch tool does not run page scripts.
-- **Domain:** `firstprinciplesmoney.com`, attached and serving (verified 2026-11-18).
-- **Repo:** `andychesnut/fppf-web` (private). **Scheduled runs have NO access at all, read or write** (verified 2026-11-17 22:46 Mountain: the GitHub tool answered "GitHub access to this repository is not enabled for this session" and said a scheduled run cannot add repositories). The 2026-11-18 06:45 run had no GitHub tool attached at all and did not retry. Do not retry in later runs until this line changes. The fix is Andy's: in a new chat on claude.ai, ask Claude to add `andychesnut/fppf-web`, then replace the "FPPF GM run" scheduled task from that chat.
-- **Repo contents:** last known WRONG as of 2026-11-17 21:10 Mountain. Since the real app is now live from the linked Vercel project, the repo has probably been replaced with the real app. That is an inference, not verified.
-- **Vercel:** project `fppf-web` on a Pro team, serving the real app at the domain. Whether the wrong deployment from the incident was deleted is not confirmed.
-- **Legal entity and address:** filled in production (seen on the live pages). The entity's state of formation is unknown to the GM. The address format "Suite 203 1161" is queued for Andy to confirm.
-- **Unknown, because launch work on the Mac writes nothing back here:** Neon Postgres, Postmark, Stripe, OpenAI and Anthropic keys, GitHub secrets, the two GitHub Actions.
-- **Legal memo:** `claude/legal_memo.md`, version 1, plus `claude/legal_memo_addenda.md` (addendum 1, trademark, 2026-11-18). **Rock 3 is done:** the counsel recommendation reached Andy's decision queue in the 2026-11-18 daily brief.
-- **Legal pages:** `claude/legal_pages_draft.md`, draft 1. Full replacement text for `/privacy` and `/terms` plus a 15-item gap list against the live pages (Part D). Not deployed.
-- **Rocks:** (1) minimum stack: partly met, deploy works, checkout and analytics unverified. (2) snapshot live: live, numbers unmeasured. (3) legal memo: done.
-- **Decision queue for Andy (protected core or needs his hands):**
-  1. Give scheduled runs access to the repo (steps above). Age: since 2026-11-17.
-  2. Outside counsel before paid checkout: GM recommends go, limited scope, three questions (memo section 12, question 3 widened by addendum 1). New spend above the envelope. GM cost estimate $1,500 to $4,000, unmeasured. Age: since 2026-11-17.
-  3. Confirm the postal address format. Age: since 2026-11-18.
-- **Ask of the Mac session (not a decision):** append a dated line to this log whenever it deploys or changes the stack.
-- **Spend, month one, estimated:** domain about $16, Vercel Pro about $20. Prices unverified. The mailbox address and any entity costs are unknown and not counted.
-- **Known cleanup:** remove skookr references from `gospel/05-issues.md` and `gospel/07-team.md`. Update `claude/FPPF_RSI_Loop.md` and `gospel/01-gm-charter.md` to match the standing rulings above (both still say the GM may not change gospel, the charter still says no scheduled task exists). Fold the rulings into `gospel/08-decisions.md`. Update the brand, domain, and monetization lines in `claude/FPPF_v1_Plan.md` and `gospel/03-vision-strategy-culture.md`. Rewrite rock 2 in `gospel/04-rocks-scorecard.md` (it still says Formation and Foundation only). Close issues I-001, I-002, I-003 in `gospel/05-issues.md` (all three were settled on 2026-11-17).
-- **Next runs, in order (none need the repo):** (1) live-site check; (2) the gospel cleanup above, starting with rocks and issues, max 2 gospel changes per week under the loop unless the change only records a ruling already made; (3) distribution plan for the first 100 visitors on owned channels (site content and search), since the product is live with no traffic plan; (4) write the Full Assessment report template with no securities content, which counsel needs to see. **When repo access exists:** read `metrics/latest.json`, audit the 24 questions and result copy against rules R1 to R7 from the code, apply Part D of the legal pages draft.
+- **READ NEXT: `docs/gm/product_direction.md`.** It holds the product, onboarding, look, and voice the Principal and the GM settled on 2026-11-18 and 2026-11-19. Mock-ups are in `docs/design/`. The live site is behind it.
+- **Runs:** Claude Code cloud routine "FPPF GM run (Claude Code)" (`trig_015SGNynFXUAeQEbcanh7zAc`), repo `andychesnut/fppf-web` attached, 6:45, 14:45, and 22:45 America/Denver. The old Cowork task was disabled by the Principal (his report, not verified). No other run pushed to the repo between 2026-11-18 11:15 Mountain and this entry: the first run's session stayed open as a working session with the Principal the whole time.
+- **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
+- **Live site (verified by fetch 2026-11-18, not re-checked 2026-11-19):** `/` has the Principal's headline with a spending-map example; `/journey` is an eight-question plan saved in the browser; `/snapshot` is the original 24 questions with plain names; `/angles` is unlinked. `/api/health`: ok true, db true, email false, checkout false.
+- **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
+- **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
+- **Experiment E-001:** recorded against an earlier home page. Stale. Re-record before the next home page ships.
+- **Legal:** memo version 1 and addendum 1 in `docs/gm/`. Rule R1 loosened by the GM on 2026-11-18 to allow labelled projections; counsel has not confirmed. Legal pages draft not applied.
+- **Legal entity and address:** filled in production. The address format "Suite 203 1161" is still unconfirmed.
+- **Rocks:** (1) minimum stack: deploy and metrics work; email and checkout off. (2) snapshot live: yes, about zero real use. (3) legal memo: done.
+- **Decision queue for the Principal (protected core or needs his hands):**
+  1. Outside counsel before paid checkout: GM recommends go. Scope has grown: the "what if" screen, thresholds, the loosened R1, connected accounts, a subscription. Age: since 2026-11-17.
+  2. Whether to change the floor to allow connected accounts and stored balances. Not needed for the next builds. Raised 2026-11-18.
+  3. A true reason for building this, in his words, for the public page. Raised 2026-11-18.
+  4. Confirm the postal address format. Age: since 2026-11-18.
+- **Spend, month one, estimated:** domain about $16, Vercel Pro about $20. Unverified.
+- **Known cleanup, still open:** the gospel documents other than document 3 are out of date against the standing rulings (charter, RSI loop, rocks, issues, team, decisions status lines). The v1 plan and Product Brief still describe the six F's as the public framework.
+- **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 - working session with the Principal, saved to the repo
+- **Why this entry exists:** a day of design work lived only in a private design canvas and in the session. A scheduled run could not have seen any of it. It is now in the repo.
+- **Saved:** `docs/gm/product_direction.md` (the product, onboarding, look, voice, risks, build order), `docs/design/canvas/` (26 mock-up source files), `docs/design/README.md`. The State section above was rewritten because most of it was stale.
+- **Settled with the Principal since the last entry:** the maze and money-flow animation as the home page visual; the product must look like a finance app; four jobs for the product including testing a decision before making it; onboarding in three parts with 18 of the 24 Snapshot questions kept; far less text per screen; copy must not sound like AI.
+- **His feedback on the GM, for the record:** headline hidden, copy confusing, phone mock-up did not look like a finance app, the "what do you want" box too simplistic for soul-searching, too much text, copy "SO AI sounding". Each was acted on in the canvas.
+- **Not verified:** nothing on the canvas was rendered by the GM. The design tool's rules forbade it without the Principal's say, and he did not answer when asked.
+- **Nothing shipped to the live site in this entry.**
 
 ### 2026-11-18 night - the Principal states the story himself
 - **His words are now in `docs/gospel/03-vision-strategy-culture.md`, verbatim, as the source.** The GM's StoryBrand was rewritten to follow them (second version). The first version from earlier tonight is replaced; it is in git history at commit 10a2b01.

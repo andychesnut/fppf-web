@@ -66,3 +66,11 @@ Experiment results and learnings, newest first. No experiments are known to be r
 **E-001 note:** the plan now has eight questions and a distance headline. Metrics and kill rule unchanged. `journey_update` added: the share of completers who come back and update is the first retention signal. No prediction recorded for it yet because there is no baseline.
 
 8. **Speed produced a template.** Five home pages in one evening all came out as the same generic startup page with different words. A distinct look took one deliberate pass with a stated point of view (paper, ink, a worked sum). Consequence: decide the look and the voice on purpose before building, and do not ship a public page faster than it can be looked at critically.
+
+## 2026-11-19, from the long session with the Principal
+
+9. **Work that is not in the repo does not exist for the next run.** A day of design sat in a private canvas and a scratch folder. Consequence: save design sources and decisions to the repo before ending any session, and say so.
+10. **The GM writes like AI by default.** Clipped pairs, abstract nouns, tidy neutral labels. The Principal's own phrases were the only lines that sounded real. Consequence: the voice rules in `docs/gm/product_direction.md` bind all public copy; when unsure, use his words.
+11. **Designing without looking produces faults the Principal finds first.** Several boards had a hidden headline or a confusing layout. Consequence: render and look before showing anything, and ask for permission up front where a tool forbids it.
+12. **A text box is not a design for a hard question.** "What do you want?" needed indirect questions, time, and a reflected draft. Consequence: where the product asks something personal, design the path to the answer, not the field.
+13. **The original 24 questions held the story all along.** Question 22 is the Principal's second paragraph. Consequence: read old work for what it was reaching for before replacing it.

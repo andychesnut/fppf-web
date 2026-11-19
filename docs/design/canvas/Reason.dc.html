@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angle C: Reason it through</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+body{margin:0}
+a{color:#14213d}a:hover{color:#0b1530}
+</style>
+</helmet>
+<div style="min-height: 800px; box-sizing: border-box; padding: 36px 64px 64px; display: flex; flex-direction: column; gap: 72px; background: #fbfbfd; color: #14213d; font-family: 'IBM Plex Sans', system-ui, sans-serif">
+<div style="font-size: 17px; font-weight: 600">First Principles Money</div>
+<div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start; max-width: 1180px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<h1 style="margin: 0; font-weight: 700; font-size: 66px; line-height: 1.02; letter-spacing: -0.025em">Start with what you want. Work backwards.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; color: #33405c; max-width: 29em">Most money tools start with a budget. This starts with the life you want and works back to what has to be true, one step at a time, with every step shown.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: {{accent}}; color: #ffffff; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 2px">Work yours through</a>
+<span style="font-size: 15px; color: #4d5a75">Free. Your answers stay in your browser.</span>
+</div>
+</div>
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 0; font-family: 'IBM Plex Mono', monospace; font-size: 17px; line-height: 1.5">
+<div style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #4d5a75; padding-bottom: 14px">An example with made-up numbers</div>
+<div style="display: flex; gap: 18px; padding: 14px 0; border-top: 1px solid #c9cfdc"><span style="color: {{accent}}; font-weight: 500; flex: 0 0 22px">1</span><span>I want to build furniture full time.</span></div>
+<div style="display: flex; gap: 18px; padding: 14px 0; border-top: 1px solid #c9cfdc"><span style="color: {{accent}}; font-weight: 500; flex: 0 0 22px">2</span><span>That life costs $5,000 a month. I could earn $2,000 of it while I get going.</span></div>
+<div style="display: flex; gap: 18px; padding: 14px 0; border-top: 1px solid #c9cfdc"><span style="color: {{accent}}; font-weight: 500; flex: 0 0 22px">3</span><span>So each month would take $3,000 from savings. I will give it nine months at most: $27,000.</span></div>
+<div style="display: flex; gap: 18px; padding: 14px 0; border-top: 1px solid #c9cfdc"><span style="color: {{accent}}; font-weight: 500; flex: 0 0 22px">4</span><span>I have $22,000 and keep $1,000 a month.</span></div>
+<div style="padding: 18px 0 0; border-top: 2px solid #14213d; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-weight: 700; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em">So I am 5 months away.</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1d3fbf"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#1d3fbf' };
+}
+}
+</script>
+</body>
+</html>

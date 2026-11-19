@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Money in, money out, and what stays</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1280px; height: 800px; box-sizing: border-box; padding: 44px 56px; display: flex; flex-direction: column; gap: 30px; background: #ffffff; color: #15171a; font-family: 'Source Sans 3', system-ui, sans-serif">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 44px; line-height: 1.05; letter-spacing: -0.015em">Money in, money out, and what stays.</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.4; color: #2b2e33">The same picture at four points. What stays each month becomes the ground you stand on. Illustration with made-up numbers.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px; flex: 1 1 auto">
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; min-height: 96px">
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 26px">1. Stuck</div>
+<div style="font-size: 16px; line-height: 1.35; color: #2b2e33">Everything that comes in goes out. One employer pays all of it.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">In</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 100%; box-sizing: border-box; border: 2px solid #15171a; background: #e3e5e8"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Employer 100</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">Out</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 62%; background: #15171a"></span><span style="flex: 0 0 30%; background: #6b7077"></span><span style="flex: 0 0 8%; background: #c4c7cc"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Fixed 62 · Everyday 30 · Other 8</div>
+</div>
+<div style="font-size: 17px; font-weight: 600; color: {{redline}}">Stays: nothing</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px">
+<div style="height: 132px; box-sizing: border-box; border: 2px dashed {{redline}}; display: flex; flex-direction: column; justify-content: flex-end">
+<div style="height: 10px; border-top: 3px solid #15171a; background: repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></div>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Costs covered: under 1 month of 6</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; min-height: 96px">
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 26px">2. Making room</div>
+<div style="font-size: 16px; line-height: 1.35; color: #2b2e33">One commitment ends or shrinks. A little stays each month.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">In</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 100%; box-sizing: border-box; border: 2px solid #15171a; background: #e3e5e8"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Employer 100</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">Out</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 56%; background: #15171a"></span><span style="flex: 0 0 28%; background: #6b7077"></span><span style="flex: 0 0 8%; background: #c4c7cc"></span><span style="flex: 0 0 8%; box-sizing: border-box; border: 2px solid #15171a; background: repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Fixed 56 · Everyday 28 · Other 8</div>
+</div>
+<div style="font-size: 17px; font-weight: 600">Stays: 8 of every 100</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px">
+<div style="height: 132px; box-sizing: border-box; border: 2px dashed {{redline}}; display: flex; flex-direction: column; justify-content: flex-end">
+<div style="height: 42px; border-top: 3px solid #15171a; background: repeating-linear-gradient(0deg, #15171a 0, #15171a 1px, transparent 1px, transparent 21px), repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></div>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Costs covered: 2 months of 6</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; min-height: 96px">
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 26px">3. Building</div>
+<div style="font-size: 16px; line-height: 1.35; color: #2b2e33">What stays adds up, month on month. A second income starts.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">In</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 88%; box-sizing: border-box; border: 2px solid #15171a; background: #e3e5e8"></span><span style="flex: 0 0 12%; box-sizing: border-box; border: 2px solid #15171a; border-left: 0; background: #ffffff"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Employer 88 · Your own 12</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">Out</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 52%; background: #15171a"></span><span style="flex: 0 0 26%; background: #6b7077"></span><span style="flex: 0 0 7%; background: #c4c7cc"></span><span style="flex: 0 0 15%; box-sizing: border-box; border: 2px solid #15171a; background: repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Fixed 52 · Everyday 26 · Other 7</div>
+</div>
+<div style="font-size: 17px; font-weight: 600">Stays: 15 of every 100</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px">
+<div style="height: 132px; box-sizing: border-box; border: 2px dashed {{redline}}; display: flex; flex-direction: column; justify-content: flex-end">
+<div style="height: 84px; border-top: 3px solid #15171a; background: repeating-linear-gradient(0deg, #15171a 0, #15171a 1px, transparent 1px, transparent 21px), repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></div>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Costs covered: 4 months of 6</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; min-height: 96px">
+<div style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 26px">4. Solid ground</div>
+<div style="font-size: 16px; line-height: 1.35; color: #2b2e33">Six months covered. No single payer decides for you. Room to say no.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">In</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 65%; box-sizing: border-box; border: 2px solid #15171a; background: #e3e5e8"></span><span style="flex: 0 0 35%; box-sizing: border-box; border: 2px solid #15171a; border-left: 0; background: #ffffff"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Employer 65 · Your own 35</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #555a61">Out</div>
+<div style="display: flex; height: 28px"><span style="flex: 0 0 46%; background: #15171a"></span><span style="flex: 0 0 24%; background: #6b7077"></span><span style="flex: 0 0 6%; background: #c4c7cc"></span><span style="flex: 0 0 24%; box-sizing: border-box; border: 2px solid #15171a; background: repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></span></div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555a61">Fixed 46 · Everyday 24 · Other 6</div>
+</div>
+<div style="font-size: 17px; font-weight: 600">Stays: 24 of every 100, for what you want</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px">
+<div style="height: 132px; box-sizing: border-box; border: 3px solid #15171a; display: flex; flex-direction: column; justify-content: flex-end">
+<div style="height: 126px; background: repeating-linear-gradient(0deg, #15171a 0, #15171a 1px, transparent 1px, transparent 21px), repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 8px)"></div>
+</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px">Costs covered: 6 months of 6</div>
+</div>
+</div>
+
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #2b2e33; border-top: 1px solid #c9ccd1; padding-top: 16px">
+<span style="display: inline-flex; gap: 8px; align-items: center"><span style="width: 16px; height: 16px; background: #15171a"></span>Fixed commitments</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><span style="width: 16px; height: 16px; background: #6b7077"></span>Everyday costs</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><span style="width: 16px; height: 16px; background: #c4c7cc"></span>Everything else</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><span style="width: 16px; height: 16px; box-sizing: border-box; border: 2px solid #15171a; background: repeating-linear-gradient(135deg, #8b9096 0, #8b9096 1px, transparent 1px, transparent 6px)"></span>What stays, and the ground it builds</span>
+<span style="display: inline-flex; gap: 8px; align-items: center"><span style="width: 16px; height: 16px; box-sizing: border-box; border: 2px dashed {{redline}}"></span>Still to build</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"redline":{"editor":"color","default":"#c2261c"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { redline: this.props.redline ?? '#c2261c' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angle F: The map out</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;800&display=swap">
+<style>
+body{margin:0}
+a{color:#16181d}a:hover{color:#000000}
+@keyframes way-out{0%{stroke-dashoffset:3960}70%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.way-out{stroke-dasharray:3960;stroke-dashoffset:3960;animation:way-out 16s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.way-out{animation:none;stroke-dashoffset:0}}
+</style>
+</helmet>
+<div style="position: relative; overflow: hidden; min-height: 800px; box-sizing: border-box; padding: 36px 64px 64px; display: flex; flex-direction: column; gap: 60px; background: #f6f7f4; color: #16181d; font-family: Barlow, system-ui, sans-serif">
+<svg aria-hidden="true" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMid slice" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none">
+<path d="M240 80H800M960 80H1120M800 160H880M1040 160H1120M240 240H400M480 240H560M880 240H960M1120 240H1200M80 320H240M400 320H480M560 320H640M720 320H880M0 400H80M160 400H320M400 400H560M720 400H880M1040 400H1200M80 480H160M400 480H480M640 480H800M880 480H1040M1200 480H1280M160 560H240M320 560H480M560 560H720M800 560H1200M80 640H160M240 640H320M480 640H640M880 640H1040M1120 640H1200M0 720H240M320 720H560M720 720H960M1040 720H1280M80 0V240M80 320V640M160 80V320M240 80V240M240 400V720M320 80V160M320 240V560M400 160V240M400 400V480M400 560V720M480 160V320M560 80V240M560 320V640M640 160V320M640 400V480M640 640V720M720 80V400M720 560V720M800 160V240M800 480V640M880 0V160M880 240V320M880 400V480M880 640V720M960 80V240M960 320V480M1040 160V400M1040 640V720M1120 80V160M1120 240V320M1120 400V560M1200 0V240M1200 320V400M1200 560V640M0 0H1280V160M1280 240V800H0V480M0 400V0" style="fill: none; stroke: #16181d; stroke-width: 2; stroke-linecap: square; opacity: 0.09"></path>
+<path class="way-out" d="M-20 440L40 440L40 680L200 680L200 600L120 600L120 520L200 520L200 440L120 440L120 360L280 360L280 280L200 280L200 40L840 40L840 120L760 120L760 280L840 280L840 200L920 200L920 40L1160 40L1160 200L1080 200L1080 360L1160 360L1160 280L1240 280L1240 200L1300 200" style="fill: none; stroke: {{routeA}}; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.4"></path>
+</svg>
+<div style="position: relative; font-size: 18px; font-weight: 600">First Principles Money</div>
+<div style="position: relative; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; max-width: 1180px">
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<h1 style="margin: 0; font-weight: 800; font-size: 72px; line-height: 0.98; letter-spacing: -0.015em">The rat race is a maze. This is the map.</h1>
+<p style="margin: 0; font-size: 21px; line-height: 1.45; color: #363a42; max-width: 27em">See where you are, where you want to be, and the routes between them: what each one costs, how long it takes, and what it leans on.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: #16181d; color: #ffffff; font-size: 19px; font-weight: 600; text-decoration: none; border-radius: 4px">Map your way out</a>
+<span style="font-size: 16px; color: #565b66">Free. Your answers stay in your browser.</span>
+</div>
+</div>
+<div style="flex: 1.15 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #565b66">An example with made-up details</div>
+<div style="display: flex; gap: 14px; align-items: flex-start">
+<span aria-hidden="true" style="flex: 0 0 18px; width: 18px; height: 18px; border-radius: 50%; background: #16181d; margin-top: 5px"></span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-weight: 800; font-size: 22px">You are here</div>
+<div style="font-size: 17px; line-height: 1.45; color: #363a42">$6,400 of my own, a paid-off car, a lapsed teaching certificate, two offers of work, a sister with a spare room. Four months covered.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 0">
+<span aria-hidden="true" style="flex: 0 0 14%; height: 8px; background: {{routeA}}"></span>
+<span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: {{routeA}}"></span>
+</div>
+<div style="font-weight: 600; font-size: 19px">Route 1. Take the paid work both friends offered.</div>
+<div style="font-size: 16px; color: #363a42">First income in 1 month. Covers about half the bills. Leans on two friends.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 0">
+<span aria-hidden="true" style="flex: 0 0 82%; height: 8px; background: {{routeB}}"></span>
+<span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: {{routeB}}"></span>
+</div>
+<div style="font-weight: 600; font-size: 19px">Route 2. Renew the certificate and teach.</div>
+<div style="font-size: 16px; color: #363a42">A salary in 7 months. Runs past the four months covered unless the spare room is used.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 0">
+<span aria-hidden="true" style="flex: 0 0 14%; height: 8px; background: {{routeA}}"></span>
+<span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: {{routeA}}"></span>
+<span aria-hidden="true" style="flex: 0 0 64%; height: 8px; background: {{routeB}}"></span>
+<span aria-hidden="true" style="flex: 0 0 14px; width: 14px; height: 14px; border-radius: 50%; background: {{routeB}}"></span>
+</div>
+<div style="font-weight: 600; font-size: 19px">Route 3. Both: paid work now, teaching by autumn.</div>
+<div style="font-size: 16px; color: #363a42">Covered the whole way. The longest hours of the three.</div>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"routeA":{"editor":"color","default":"#c2410c"},"routeB":{"editor":"color","default":"#1e3a8a"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { routeA: this.props.routeA ?? '#c2410c', routeB: this.props.routeB ?? '#1e3a8a' };
+}
+}
+</script>
+</body>
+</html>

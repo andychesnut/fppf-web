@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angle E: What you have to work with</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800&display=swap">
+<style>
+body{margin:0}
+a{color:#1a1a1a}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="min-height: 800px; box-sizing: border-box; padding: 36px 64px 64px; display: flex; flex-direction: column; gap: 64px; background: #ffffff; color: #1a1a1a; font-family: 'Libre Franklin', system-ui, sans-serif">
+<div style="font-size: 17px; font-weight: 600">First Principles Money</div>
+<div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start; max-width: 1180px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<h1 style="margin: 0; font-weight: 800; font-size: 68px; line-height: 1.02; letter-spacing: -0.025em">What do you have to work with?</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.5; color: #3a3a3a; max-width: 28em">Before a big change, whether you chose it or not, a bank balance is one line of the answer. Take stock of all of it: money, what you own, what you know how to do, and who would back you. Then see how far it carries you.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center">
+<a href="#start" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: {{accent}}; color: #ffffff; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 4px">Take stock of yours</a>
+<span style="font-size: 15px; color: #595959">Free. Your answers stay in your browser.</span>
+</div>
+</div>
+<div style="flex: 1.1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 0; font-size: 17px; line-height: 1.45">
+<div style="font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #595959; padding-bottom: 6px">An example with made-up details</div>
+<div style="font-weight: 600; font-size: 21px; padding-bottom: 16px">Fifteen years at home with three kids. Now on my own.</div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>Money in my own name</span><span style="font-weight: 600; white-space: nowrap">$6,400</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>A car, paid off</span><span style="font-weight: 600; white-space: nowrap">$11,000</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>My share of the house</span><span style="font-weight: 600; white-space: nowrap">not settled yet</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>A teaching certificate, lapsed in 2014</span><span style="font-weight: 600; white-space: nowrap">renewable</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>Ran a household of five on one income</span><span style="font-weight: 600; white-space: nowrap">15 years</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>Friends who have offered paid work</span><span style="font-weight: 600; white-space: nowrap">2</span></div>
+<div style="display: flex; justify-content: space-between; gap: 24px; padding: 12px 0; border-top: 1px solid #d0d0d0"><span>A sister with a spare room</span><span style="font-weight: 600; white-space: nowrap">1</span></div>
+<div style="border-top: 2px solid #1a1a1a; padding-top: 16px; font-weight: 800; font-size: 28px; line-height: 1.15; letter-spacing: -0.01em">Four months covered today, and three ways to start earning.</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1a1a1a"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#1a1a1a' };
+}
+}
+</script>
+</body>
+</html>

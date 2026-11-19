@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home page, phone</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+body{margin:0}
+a{color:#15171a}a:hover{color:#000000}
+@keyframes move{from{stroke-dashoffset:0}to{stroke-dashoffset:-17}}
+@keyframes s-fixed{0%,18%{stroke-width:9px}30%,43%{stroke-width:7px}55%,68%{stroke-width:6px}80%,100%{stroke-width:4px}}
+@keyframes s-leak{0%,18%{stroke-width:5px}30%,43%{stroke-width:4px}55%,100%{stroke-width:3px}}
+@keyframes s-a{0%,18%{opacity:0}30%,100%{opacity:1}}
+@keyframes s-b{0%,43%{opacity:0}55%,100%{opacity:1}}
+@keyframes s-c{0%,76%{opacity:0}84%,100%{opacity:1}}
+@keyframes s-tank{0%,18%{transform:scaleY(.06)}30%,43%{transform:scaleY(.33)}55%,68%{transform:scaleY(.66)}80%,100%{transform:scaleY(1)}}
+@keyframes s-switch{0%,72%{transform:rotate(-30deg)}80%,100%{transform:rotate(0deg)}}
+@keyframes c1{0%,18%{opacity:1}24%,100%{opacity:0}}
+@keyframes c2{0%,24%{opacity:0}30%,43%{opacity:1}49%,100%{opacity:0}}
+@keyframes c3{0%,49%{opacity:0}55%,68%{opacity:1}74%,100%{opacity:0}}
+@keyframes c4{0%,74%{opacity:0}80%,100%{opacity:1}}
+.flow{fill:none;stroke-linecap:round;stroke-dasharray:1 16;animation:move .9s linear infinite}
+.leak{stroke-width:3px;animation:move .9s linear infinite,s-leak 9s ease-in-out infinite}
+.fixed{stroke-width:4px;animation:move .9s linear infinite,s-fixed 9s ease-in-out infinite}
+.seg-a{animation:s-a 9s ease-in-out infinite}
+.seg-b{animation:s-b 9s ease-in-out infinite}
+.seg-c{animation:s-c 9s ease-in-out infinite}
+.flow.seg-a{animation:move .9s linear infinite,s-a 9s ease-in-out infinite}
+.flow.seg-b{animation:move .9s linear infinite,s-b 9s ease-in-out infinite}
+.flow.seg-c{animation:move .9s linear infinite,s-c 9s ease-in-out infinite}
+.tank-fill{transform-box:fill-box;transform-origin:50% 100%;animation:s-tank 9s ease-in-out infinite}
+.switch-arm{transform-box:view-box;transform-origin:199px 392px;animation:s-switch 9s ease-in-out infinite}
+.cap1{opacity:0;animation:c1 9s linear infinite}
+.cap2{opacity:0;animation:c2 9s linear infinite}
+.cap3{opacity:0;animation:c3 9s linear infinite}
+.cap4{opacity:1;animation:c4 9s linear infinite}
+@media (prefers-reduced-motion: reduce){.flow,.leak,.fixed,.seg-a,.seg-b,.seg-c,.flow.seg-a,.flow.seg-b,.flow.seg-c,.tank-fill,.switch-arm,.cap1,.cap2,.cap3,.cap4{animation:none}}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 2180px; background: #ffffff; color: #15171a; font-family: 'Source Sans 3', system-ui, sans-serif; overflow: hidden">
+
+<div style="position: absolute; left: 20px; top: 20px; width: 300px; font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 22px; font-weight: 600">First Principles Money</div>
+<h1 style="position: absolute; left: 20px; top: 60px; width: 350px; margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 44px; line-height: 44px; letter-spacing: -0.025em">Put your money where your mind is.</h1>
+<p style="position: absolute; left: 20px; top: 160px; width: 350px; margin: 0; font-size: 17px; line-height: 24px; color: #2b2e33">You know something has to change. The bills still have to get paid. See whether you can afford the change you want, and what's standing in the way.</p>
+<a href="#start" style="position: absolute; left: 20px; top: 276px; width: 350px; height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #15171a; color: #ffffff; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 4px">See where you stand</a>
+<div style="position: absolute; left: 20px; top: 338px; width: 350px; text-align: center; font-size: 15px; line-height: 20px; color: #555a61">It's free. About ten minutes.</div>
+
+<div class="cap1" style="position: absolute; left: 20px; top: 378px; width: 350px"><span><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 28px">1. Stuck</span><br><span style="font-size: 15px; line-height: 20px">Money comes in and it's already gone.</span></span></div>
+<div class="cap2" style="position: absolute; left: 20px; top: 378px; width: 350px"><span><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 28px">2. Making room</span><br><span style="font-size: 15px; line-height: 20px">There's a little left at the end of the month.</span></span></div>
+<div class="cap3" style="position: absolute; left: 20px; top: 378px; width: 350px"><span><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 28px">3. Building</span><br><span style="font-size: 15px; line-height: 20px">You could go a few months without a paycheck.</span></span></div>
+<div class="cap4" style="position: absolute; left: 20px; top: 378px; width: 350px"><span><span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 28px">4. Solid ground</span><br><span style="font-size: 15px; line-height: 20px">You can say no, and pay for what you want.</span></span></div>
+
+<svg aria-hidden="true" width="390" height="530" viewBox="0 0 390 530" style="position: absolute; left: 0; top: 440px; width: 390px; height: 530px; fill: none; stroke-linecap: round; stroke-linejoin: round">
+<path d="M35 40H163M227 40H355M163 104H227M35 168H227M35 232H99M163 232H227M291 232H355M35 296H99M163 296H227M227 360H355M99 424H227M35 488H291M35 40V488M99 104V168M99 296V360M99 424V488M163 168V232M163 296V360M227 40V104M227 296V360M291 40V104M291 168V232M291 296V360M291 424V488M355 40V488" style="stroke: #15171a; stroke-width: 2; stroke-linecap: square; opacity: 0.2"></path>
+<path class="flow leak" d="M195 12L195 72L131 72L131 136L259 136L259 264L131 264L131 392" style="stroke: #6b7077"></path>
+<path class="flow fixed" d="M131 72L67 72L67 136" style="stroke: #6b7077"></path>
+<path class="flow" d="M259 136L323 136L323 72" style="stroke: #6b7077; stroke-width: 4px"></path>
+<path class="flow" d="M259 264L323 264L323 328" style="stroke: #6b7077; stroke-width: 3px"></path>
+<path class="flow leak" d="M131 264L131 200L67 200" style="stroke: #6b7077"></path>
+<path class="flow leak" d="M131 392L67 392L67 456" style="stroke: #6b7077"></path>
+<circle cx="67" cy="136" r="5" style="fill: #6b7077"></circle>
+<circle cx="323" cy="72" r="5" style="fill: #6b7077"></circle>
+<circle cx="323" cy="328" r="4" style="fill: #6b7077"></circle>
+<circle cx="67" cy="200" r="4" style="fill: #6b7077"></circle>
+<circle cx="67" cy="456" r="4" style="fill: #6b7077"></circle>
+<path class="seg-a" d="M195 12L195 72L131 72L131 136L259 136L259 264L223 264" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="seg-b" d="M167 264L131 264L131 392L199 392" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="seg-c" d="M255 392L323 392L323 516" style="stroke: {{live}}; stroke-width: 3; stroke-opacity: 0.35"></path>
+<path class="flow seg-a" d="M195 12L195 72L131 72L131 136L259 136L259 264L227 264" style="stroke: {{live}}; stroke-width: 6px"></path>
+<path class="flow seg-b" d="M163 264L131 264L131 392L195 392" style="stroke: {{live}}; stroke-width: 6px"></path>
+<path class="flow seg-c" d="M259 392L323 392L323 508" style="stroke: {{live}}; stroke-width: 6px"></path>
+<rect x="167" y="244" width="56" height="40" style="fill: #ffffff; stroke: none"></rect>
+<rect class="tank-fill" x="168" y="245" width="54" height="38" style="fill: {{live}}; opacity: 0.3"></rect>
+<rect x="167" y="244" width="56" height="40" style="stroke: #15171a; stroke-width: 2.5"></rect>
+<line class="switch-arm" x1="199" y1="392" x2="255" y2="392" style="stroke: #15171a; stroke-width: 3.5"></line>
+<circle cx="199" cy="392" r="6" style="fill: #ffffff; stroke: #15171a; stroke-width: 2.5"></circle>
+<circle cx="255" cy="392" r="6" style="fill: #ffffff; stroke: #15171a; stroke-width: 2.5"></circle>
+<circle cx="323" cy="516" r="8" style="fill: #ffffff; stroke: {{live}}; stroke-width: 3"></circle>
+<circle class="seg-c" cx="323" cy="516" r="8" style="fill: {{live}}"></circle>
+</svg>
+
+<div style="position: absolute; left: 212px; top: 446px; width: 76px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 16px; color: #555a61">COMES IN</div>
+<div style="position: absolute; left: 40px; top: 588px; width: 54px; text-align: center; font-size: 13px; line-height: 16px; color: #2b2e33; background: #ffffff">Fixed</div>
+<div style="position: absolute; left: 293px; top: 484px; width: 60px; text-align: center; font-size: 13px; line-height: 16px; color: #2b2e33; background: #ffffff">Everyday</div>
+<div style="position: absolute; left: 298px; top: 780px; width: 50px; text-align: center; font-size: 13px; line-height: 16px; color: #2b2e33; background: #ffffff">Other</div>
+<div style="position: absolute; left: 142px; top: 662px; width: 106px; text-align: center; font-size: 14px; line-height: 18px; font-weight: 600; background: #ffffff">Savings</div>
+<div class="cap1" style="position: absolute; left: 167px; top: 694px; width: 56px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; font-weight: 500">&lt;1 mo</div>
+<div class="cap2" style="position: absolute; left: 167px; top: 694px; width: 56px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; font-weight: 500">2 mo</div>
+<div class="cap3" style="position: absolute; left: 167px; top: 694px; width: 56px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; font-weight: 500">4 mo</div>
+<div class="cap4" style="position: absolute; left: 167px; top: 694px; width: 56px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; font-weight: 500">6 mo</div>
+<div style="position: absolute; left: 180px; top: 846px; width: 94px; text-align: center; font-size: 14px; line-height: 18px; font-weight: 600; background: #ffffff">Your call</div>
+<div style="position: absolute; left: 190px; top: 946px; width: 120px; text-align: right; font-size: 14px; line-height: 18px; font-weight: 600">What you want</div>
+
+<div style="position: absolute; left: 20px; top: 1000px; width: 350px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 30px; line-height: 34px; letter-spacing: -0.015em">Here's what you get.</div>
+<div style="position: absolute; left: 20px; top: 1040px; width: 350px; font-size: 17px; line-height: 24px; color: #2b2e33">Your money in and out, next to what you said you want.</div>
+
+<div style="position: absolute; left: 28px; top: 1104px; width: 334px; height: 720px; box-sizing: border-box; border: 3px solid #15171a; border-radius: 28px; overflow: hidden; background: #f3f4f6">
+<div style="width: 390px; height: 844px; transform: scale(0.841); transform-origin: 0 0">
+<dc-import name="AppHome" hint-size="390px,844px"></dc-import>
+</div>
+</div>
+
+<div style="position: absolute; left: 20px; top: 1984px; width: 350px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 20px; color: #2b2e33"><span>We never touch your money.<br>Nobody pays us to recommend anything.<br>This is education, not advice. It's your call.</span></div>
+<a href="#start" style="position: absolute; left: 20px; top: 2096px; width: 350px; height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #15171a; color: #ffffff; font-size: 18px; font-weight: 600; text-decoration: none; border-radius: 2px">Find your route</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"live":{"editor":"color","default":"#1d4ed8"},"$preview":{"width":390,"height":2180}}'>
+class Component extends DCLogic {
+renderVals() {
+return { live: this.props.live ?? '#1d4ed8' };
+}
+}
+</script>
+</body>
+</html>

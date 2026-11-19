@@ -1,0 +1,41 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-11-18T22:34:25Z" },
+  "title": "First Principles Money - brand angles",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1280, "h": 800, "title": "A. Alignment", "expand": "fill" },
+    "Everything.dc.html": { "x": 1360, "y": 0, "w": 1280, "h": 800, "title": "B. Everything you have", "expand": "fill" },
+    "Reason.dc.html": { "x": 0, "y": 920, "w": 1280, "h": 800, "title": "C. Reason it through", "expand": "fill" },
+    "Leave.dc.html": { "x": 1360, "y": 920, "w": 1280, "h": 800, "title": "D. Leave the race", "expand": "fill" },
+    "Stock.dc.html": { "x": 0, "y": 1840, "w": 1280, "h": 800, "title": "E. What you have to work with", "expand": "fill" },
+    "Map.dc.html": { "x": 1360, "y": 1840, "w": 1280, "h": 800, "title": "F. The map out", "expand": "fill" },
+    "Dashboard.dc.html": { "x": 2720, "y": 1840, "w": 390, "h": 844, "title": "F. Phone: what you see when you open it", "radius": 28 },
+    "Ground.dc.html": { "x": 0, "y": 2880, "w": 1280, "h": 1180, "title": "G. Solid ground (the Principal's story)", "expand": "fill" },
+    "GroundPhone.dc.html": { "x": 1360, "y": 2880, "w": 390, "h": 1000, "title": "G. Phone: your ground and your gaps", "radius": 28 },
+    "Buildup.dc.html": { "x": 1830, "y": 2880, "w": 1280, "h": 800, "title": "G. Money in, money out, and what stays" },
+    "Circuit.dc.html": { "x": 1830, "y": 3760, "w": 1280, "h": 800, "title": "G. The same thing as an animated system diagram" },
+    "MazeCircuit.dc.html": { "x": 1830, "y": 4640, "w": 1280, "h": 800, "title": "H. Maze and circuit together: the route that delivers" },
+    "PageDesk.dc.html": { "x": 3190, "y": 4640, "w": 1280, "h": 1920, "title": "H. Home page, desktop (second pass)" },
+    "PageMobile.dc.html": { "x": 4550, "y": 4640, "w": 390, "h": 2180, "title": "H. Home page, phone", "radius": 28 },
+    "Start.dc.html": { "x": 3190, "y": 6940, "w": 390, "h": 844, "title": "1. Start (replaced by the onboarding row below)", "radius": 28 },
+    "AppHome.dc.html": { "x": 3660, "y": 6940, "w": 390, "h": 844, "title": "2. Home", "radius": 28 },
+    "GapDetail.dc.html": { "x": 4130, "y": 6940, "w": 390, "h": 844, "title": "3. One gap, opened", "radius": 28 },
+    "TryDecision.dc.html": { "x": 4600, "y": 6940, "w": 390, "h": 844, "title": "4. Try a decision", "radius": 28 },
+    "On1Welcome.dc.html": { "x": 3190, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 1. Three parts", "radius": 28 },
+    "On2Feeling.dc.html": { "x": 3660, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 2. You: an open question", "radius": 28 },
+    "On3Silent.dc.html": { "x": 4130, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 3. You: a question kept from the 24", "radius": 28 },
+    "On4Heard.dc.html": { "x": 4600, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 4. What we heard, and your draft", "radius": 28 },
+    "On5Situation.dc.html": { "x": 5070, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 5. Your situation, in ranges", "radius": 28 },
+    "On6Money.dc.html": { "x": 5540, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 6. Your money, in ranges", "radius": 28 },
+    "On7Reading.dc.html": { "x": 6010, "y": 8140, "w": 390, "h": 844, "title": "Onboarding 7. Your first reading", "radius": 28 }
+  },
+  "order": ["Main.dc.html", "Everything.dc.html", "Reason.dc.html", "Leave.dc.html", "Stock.dc.html", "Map.dc.html", "Dashboard.dc.html", "Ground.dc.html", "GroundPhone.dc.html", "Buildup.dc.html", "Circuit.dc.html", "MazeCircuit.dc.html", "PageDesk.dc.html", "PageMobile.dc.html", "Start.dc.html", "AppHome.dc.html", "GapDetail.dc.html", "TryDecision.dc.html", "On1Welcome.dc.html", "On2Feeling.dc.html", "On3Silent.dc.html", "On4Heard.dc.html", "On5Situation.dc.html", "On6Money.dc.html", "On7Reading.dc.html"],
+  "notes": {
+    "heading": { "x": 0, "y": -300, "text": "Six brand angles, one product", "kind": "title1", "maxW": 2640 },
+    "product": { "x": 3190, "y": 6650, "text": "The product: four screens", "kind": "title1", "maxW": 1800 },
+    "onboarding": { "x": 3190, "y": 7890, "text": "Onboarding: you, your situation, your money", "kind": "title1", "maxW": 3200 }
+  },
+  "designSystems": []
+}
