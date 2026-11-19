@@ -106,4 +106,5 @@ Open question for him: if a rule had been written in advance, what would it have
 - **He cannot see the split between experiences and stuff today.** That is part of the value. Getting the data conflicts with the floor (no connected accounts). Options: manual entry with tags now; a local-only statement import (file read in the browser, never sent to us) only if the Principal rules it allowed.
 
 ### Build order from the interview
+**HOLD (2026-11-19, the Principal): item 1 is not to be built until he says it is validated.**
 1. "Sleep on it" with the formula. 2. The bet panel (target, checkpoint, share tied up in things that fail the person's tests). 3. The experiences-versus-stuff view, manual tags first.
