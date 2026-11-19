@@ -4,6 +4,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Standing rulings (latest first)
 
+- **2026-11-19. The core value is money against mind.** The Principal's ruling: months of savings does not need software and is a sub-line. What the product offers is helping a person see where their money is misaligned with what matters to them. Every surface leads with that. Months, "what if", and the check-in are supporting measures. The person is the judge of alignment; no scores, no invented thresholds.
 - **2026-11-19. The Principal's time has a price.** Any work asked of the Principal beyond feedback or advice is treated as costing $5 per request against the spend envelope. Batch asks, make each one count, and ask rarely. Also: hold traffic work until he has tested the live experience and given feedback (his instruction, 2026-11-19).
 - **2026-11-18. The GM's scheduled run moves to Claude Code in the cloud, with the repo attached.** Andy's choice, made live on 2026-11-18 at about 07:30 Mountain, over a run on his Mac. From the first successful Claude Code run, the repo's `docs/` folder is the source of truth for every GM document. The claude.ai project copy becomes a read-only archive. Path map: `claude/X` is now `docs/gm/X`, `gospel/X` is now `docs/gospel/X`, `FPPF_Product_Brief.md` is now `docs/FPPF_Product_Brief.md`. Older text that names the old paths means the new ones.
 - **2026-11-17. The GM is in control.** The Principal (Andy) supports setup on the evening of 2026-11-17 only. After that the GM decides and reports. Do not queue decisions for him that the GM can make.
@@ -62,6 +63,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 - the Principal: months of savings is a sub-bullet; the value is money against mind
+- **His ruling:** see the standing ruling at the top. I had led with months because it was the number I could compute easily and a leftover of my first brand, not because a customer asked for it.
+- **Built:** `/align` (three steps then a result): pick up to three things that matter most from a fixed list; enter rough monthly amounts for nine spending groups; say for each whether it serves what matters most (yes, partly, no); see the mirror. `lib/alignment.ts` with 4 tests. The person is the judge, so nothing is scored and no thresholds are invented. Home has a "Money and mind" card first. The home page subheadline, bullets and phone preview now lead with it. Stored in the browser only; two new anonymous events (`align_view`, `align_done`).
+- **Verified:** 44 tests, build, walked the whole flow on a phone-sized local browser and looked at the questions and the result. Not yet walked on the live site, by rule.
+- **Known weak spots:** the priority list is mine and fixed (no free text yet); the nine groups are mine; the result is descriptive and modest; Start still comes first and `/align` is reached from Home, so the order of the whole flow needs his feedback.
+- **Also:** the months-based "where it could go" strip was taken off the home page (component kept in `components/AppPreview.tsx`) because it contradicts the new ruling. The future visual should show a gap closing; not built.
+- **Next:** his feedback on the flow; make Start lead into `/align`; add the gap to the monthly check-in (what moved in the share that serves what matters).
 
 ### 2026-11-19 - the Principal: home page structure (statement, literal sub, future, proof)
 - **His direction:** big statement; a literal subheadline that says what it is and why to care; visuals that show the future; proof points.

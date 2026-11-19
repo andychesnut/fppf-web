@@ -245,3 +245,7 @@ body:has(.a-screen) { background: var(--a-ground); }
 .p-facts div { border-top: 2px solid var(--a-ink); padding-top: 12px; } .p-facts strong { font-size: 19px; } .p-facts p { margin: 6px 0 0; font-size: 16px; line-height: 1.4; color: var(--a-body); }
 .p-proof .a-btn { align-self: flex-start; }
 @media (max-width: 700px) { .p-steps { grid-template-columns: 1fr; } .p-steps li { padding: 14px 16px; } .p-steps strong { font-size: 26px; } }
+.a-option.a-small { min-height: 46px; padding: 6px 8px; text-align: center; font-size: 16px; } .a-option.a-small[aria-pressed='true'] { padding: 5px 7px; }
+.a-row.a-stack .a-three { width: 100%; margin-top: 8px; } .a-row.a-stack > strong { display: flex; justify-content: space-between; width: 100%; }
+.s0 { background: #d5d8dd; }
+.p-mini { margin: 0; font-size: 14px; line-height: 1.4; color: var(--a-body); }

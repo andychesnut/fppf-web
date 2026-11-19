@@ -5,6 +5,7 @@ import { NumbersForm } from '@/components/NumbersForm.tsx';
 import { track } from '@/lib/client.ts';
 import { month, reading, sharpen, sinceLast } from '@/lib/onboarding.ts';
 import { EMPTY, clearMe, loadMe, saveMe, withNumbers, type Me } from '@/lib/me-store.ts';
+import { complete, mirror, mirrorLines } from '@/lib/alignment.ts';
 import { longDate, today } from '@/lib/plan-store.ts';
 
 const money = (n: number) => (n < 0 ? '-$' : '$') + Math.abs(Math.round(n)).toLocaleString('en-US');
@@ -42,6 +43,13 @@ export function Home() {
         <p className="a-want">{me.want.trim() || 'So the first job is room to choose.'}</p>
         {sayNo ? <p className="a-big"><span>You could say no for</span><strong>{sayNo}</strong></p> : null}
       </div>
+
+      <section className="a-card">
+        <div className="a-cardhead"><h2>Money and mind</h2><Link href="/align" className="a-link">{complete(me.align) ? 'Change' : 'Start'}</Link></div>
+        {complete(me.align) && mirror(me.align).total > 0
+          ? <div className="a-rows">{mirrorLines(me.align).slice(0, 2).map((l) => <div className="a-row a-line" key={l}>{l}</div>)}</div>
+          : <p className="a-help">Say what matters most to you, say where your money goes, and see where the two do not line up.</p>}
+      </section>
 
       {m && me.numbers ? (
         <section className="a-card">

@@ -4,7 +4,7 @@ const ALLOWED = new Set([
   'landing_view', 'snapshot_start', 'question_answered', 'snapshot_complete',
   'price_intent_view', 'price_intent_click', 'email_saved',
   'landing_edit', 'journey_view', 'journey_step', 'journey_complete', 'journey_update',
-  'start_view', 'start_step', 'start_done', 'home_view', 'numbers_saved', 'whatif_view', 'whatif_try', 'journey_edit', 'journey_new_yes', 'journey_new_no', 'journey_trapped_yes', 'journey_trapped_no',
+  'align_view', 'align_done', 'start_view', 'start_step', 'start_done', 'home_view', 'numbers_saved', 'whatif_view', 'whatif_try', 'journey_edit', 'journey_new_yes', 'journey_new_no', 'journey_trapped_yes', 'journey_trapped_no',
 ]);
 
 // Anonymous funnel events. No answers are recorded, only progress.

@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { month, monthsText, whatIf } from '@/lib/onboarding.ts';
+import { mirror, mirrorLines, type Alignment } from '@/lib/alignment.ts';
 
 // A picture of the real Home screen on made-up numbers, drawn with the same arithmetic the app uses.
 const N = { pay: 4000, bills: 2200, daily: 1000, savings: 8000 };
+const EX_ALIGN: Alignment = { priorities: ['Time with the people I love', 'Freedom to leave a job'], amounts: { housing: 2000, debt: 800, food: 600, transport: 400, rest: 600 }, serves: { housing: 'yes', debt: 'no', food: 'yes', transport: 'partly', rest: 'partly' } };
 const money = (n: number) => '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
 
 export function AppPreview() {
@@ -17,6 +19,11 @@ export function AppPreview() {
             <span className="a-label">You said you want</span>
             <p className="a-want">To leave my job and try something new</p>
             <p className="a-big"><span>You could say no for</span><strong>{monthsText(m.sayNoMonths)}</strong></p>
+          </div>
+          <div className="a-card">
+            <div className="a-cardhead"><h3>Money and mind</h3></div>
+            <div className="a-split"><span style={{ width: mirror(EX_ALIGN).share.yes + '%' }} className="s3" /><span style={{ width: mirror(EX_ALIGN).share.partly + '%' }} className="s2" /><span style={{ width: mirror(EX_ALIGN).share.no + '%' }} className="s1" /></div>
+            <p className="p-mini">{mirrorLines(EX_ALIGN)[1]}</p>
           </div>
           <div className="a-card">
             <div className="a-cardhead"><h3>This month</h3></div>
@@ -40,7 +47,7 @@ export function AppPreview() {
       </div>
       <div className="p-app-copy">
         <h2 id="p-app-h">It works like an app, and it stays on your device.</h2>
-        <p>Answer the questions once. You get a home screen like this one, with your own numbers. Come back any time, change a number, and see what moved.</p>
+        <p>Say what matters to you and where your money goes. You get a home screen like this one, with your own numbers. Come back any time, change a number, and see what moved.</p>
         <p className="p-trust">The screen shown is an example with made-up numbers.</p>
         <Link href="/start" className="a-btn">See where you stand</Link>
       </div>

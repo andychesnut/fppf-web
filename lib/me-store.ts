@@ -1,10 +1,11 @@
 // Everything the person tells us lives in their own browser and nowhere else.
 // Storage can be blocked, so every access is guarded.
 import type { Answers, Numbers } from './onboarding.ts';
+import { EMPTY_ALIGN, GROUPS, MAX_PRIORITIES, PRIORITIES, type Alignment, type Serves } from './alignment.ts';
 
-export type Me = { answers: Answers; want: string; wont: string; first: string; numbers: Numbers | null; numbersAt: string | null; prev: { numbers: Numbers; at: string } | null; done: boolean; at: string | null };
+export type Me = { answers: Answers; want: string; wont: string; first: string; numbers: Numbers | null; numbersAt: string | null; prev: { numbers: Numbers; at: string } | null; done: boolean; at: string | null; align: Alignment };
 const KEY = 'fp_me';
-export const EMPTY: Me = { answers: {}, want: '', wont: '', first: '', numbers: null, numbersAt: null, prev: null, done: false, at: null };
+export const EMPTY: Me = { answers: {}, want: '', wont: '', first: '', numbers: null, numbersAt: null, prev: null, done: false, at: null, align: EMPTY_ALIGN };
 
 const text = (v: unknown) => (typeof v === 'string' ? v.slice(0, 200) : '');
 const day = (v: unknown) => (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : undefined);
@@ -20,7 +21,7 @@ export function loadMe(): Me {
     const numbers = n && n.pay !== null && n.bills !== null && n.daily !== null && n.savings !== null ? (n as Numbers) : null;
     const pn = v.prev && typeof v.prev === 'object' && v.prev.numbers && typeof v.prev.numbers === 'object' ? { pay: num(v.prev.numbers.pay), bills: num(v.prev.numbers.bills), daily: num(v.prev.numbers.daily), savings: num(v.prev.numbers.savings) } : null;
     const prev = pn && pn.pay !== null && pn.bills !== null && pn.daily !== null && pn.savings !== null && day(v.prev.at) ? { numbers: pn as Numbers, at: day(v.prev.at) as string } : null;
-    return { answers, want: text(v.want), wont: text(v.wont), first: text(v.first), numbers, numbersAt: day(v.numbersAt) ?? null, prev, done: v.done === true, at: typeof v.at === 'string' ? v.at.slice(0, 10) : null };
+    return { answers, want: text(v.want), wont: text(v.wont), first: text(v.first), numbers, numbersAt: day(v.numbersAt) ?? null, prev, done: v.done === true, align: loadAlign(v.align), at: typeof v.at === 'string' ? v.at.slice(0, 10) : null };
   } catch { return { ...EMPTY }; }
 }
 export function saveMe(me: Me): void {
@@ -36,4 +37,17 @@ export function withNumbers(me: Me, n: Numbers, todayIso: string): Me {
   const changed = old && (old.pay !== n.pay || old.bills !== n.bills || old.daily !== n.daily || old.savings !== n.savings);
   const prev = changed && me.numbersAt && me.numbersAt !== todayIso ? { numbers: old, at: me.numbersAt } : me.prev;
   return { ...me, numbers: n, numbersAt: me.numbersAt && me.numbersAt === todayIso ? me.numbersAt : todayIso, prev };
+}
+
+// Only known priorities, known groups, and sane numbers come back out of storage.
+function loadAlign(v: unknown): Alignment {
+  const out: Alignment = { priorities: [], amounts: {}, serves: {} };
+  if (!v || typeof v !== 'object') return out;
+  const o = v as { priorities?: unknown; amounts?: Record<string, unknown>; serves?: Record<string, unknown> };
+  if (Array.isArray(o.priorities)) out.priorities = o.priorities.filter((x): x is string => typeof x === 'string' && (PRIORITIES as readonly string[]).includes(x)).slice(0, MAX_PRIORITIES);
+  for (const g of GROUPS) {
+    const a = num(o.amounts?.[g.id]); if (a !== null) out.amounts[g.id] = a;
+    const sv = o.serves?.[g.id]; if (sv === 'yes' || sv === 'partly' || sv === 'no') out.serves[g.id] = sv as Serves;
+  }
+  return out;
 }
