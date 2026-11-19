@@ -60,6 +60,13 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-19 05:45 UTC (2026-11-18 22:45 Mountain) - scheduled run: live check, no build
+- **Chose not to build.** The Principal is testing the 2026-11-19 build and will send feedback. Another page now would be guessing, and the next item (monthly check-in) depends on what he says.
+- **Verified live (public fetch):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/home`, `/what-if`, `/api/health` all return 200. The home page title and description match the log. Local `npm test`: 35 pass, 0 fail. Not run: build, because nothing was shipped.
+- **Metrics:** `ops-data` latest is 2026-11-19 00:19 UTC, before the new build: 77 landing views, 1 snapshot completion, 1 email, all from the old flow and probably the Principal's own testing. The new event names have no data yet. The feed has not refreshed since. No `reviews/verdicts/` exist. Real activations: unmeasured, about zero.
+- **Not a brief run:** it began at 22:45 Mountain, outside 6:00 to 8:00.
+- **Blocked on:** the Principal's feedback; the four items in the decision queue.
+
 ### 2026-11-19 - the Principal hands over the build; first build of the new product shipped
 - **His instruction:** take over the build. He will test the app and give another round of feedback.
 - **Built and shipped:** `lib/onboarding.ts` (15 questions, the reading, exact-number sharpening, the what-if arithmetic) with 11 tests in `lib/onboarding.test.ts`; `/start`, `/home`, `/what-if`; a new home page with the maze drawn in code for wide and narrow screens; the app look (grey ground, white cards, dark card for what the person wants); fonts changed to Source Serif 4 and Source Sans 3 site-wide; privacy page updated; seven anonymous event names added.
