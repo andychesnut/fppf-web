@@ -6,6 +6,7 @@ import { track } from '@/lib/client.ts';
 import { month, reading, sharpen, sinceLast } from '@/lib/onboarding.ts';
 import { EMPTY, clearMe, loadMe, saveMe, withNumbers, type Me } from '@/lib/me-store.ts';
 import { complete, mirror, mirrorLines } from '@/lib/alignment.ts';
+import { ready as keepReady, summaryLines } from '@/lib/review.ts';
 import { longDate, today } from '@/lib/plan-store.ts';
 
 const money = (n: number) => (n < 0 ? '-$' : '$') + Math.abs(Math.round(n)).toLocaleString('en-US');
@@ -49,6 +50,13 @@ export function Home() {
         {complete(me.align) && mirror(me.align).total > 0
           ? <div className="a-rows">{mirrorLines(me.align).slice(0, 2).map((l) => <div className="a-row a-line" key={l}>{l}</div>)}</div>
           : <p className="a-help">Say what matters most to you, say where your money goes, and see where the two do not line up.</p>}
+      </section>
+
+      <section className="a-card">
+        <div className="a-cardhead"><h2>Still want this?</h2><Link href="/keep" className="a-link">{keepReady(me.review) ? 'Change' : 'Start'}</Link></div>
+        {keepReady(me.review)
+          ? <div className="a-rows">{summaryLines(me.review).slice(0, 2).map((l) => <div className="a-row a-line" key={l}>{l}</div>)}</div>
+          : <p className="a-help">List what keeps costing you each month. For each one, say whether you use it and whether you would choose it again today.</p>}
       </section>
 
       {m && me.numbers ? (

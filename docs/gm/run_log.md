@@ -44,9 +44,9 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **READ NEXT: `docs/gm/product_direction.md`.** It holds the product, onboarding, look, and voice the Principal and the GM settled on 2026-11-18 and 2026-11-19. Mock-ups are in `docs/design/`. The live site is behind it.
 - **Runs:** Claude Code cloud routine "FPPF GM run (Claude Code)" (`trig_015SGNynFXUAeQEbcanh7zAc`), repo `andychesnut/fppf-web` attached, 6:45, 14:45, and 22:45 America/Denver. The old Cowork task was disabled by the Principal (his report, not verified). No other run pushed to the repo between 2026-11-18 11:15 Mountain and this entry: the first run's session stayed open as a working session with the Principal the whole time.
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
-- **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment. Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
+- **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment; `/align` is money against mind; `/keep` is "Still want this?" (shipped 2026-11-19 21:46 UTC, see entry). Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
 - **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
-- **Metrics feed:** last commit 2026-11-19 00:19 UTC; the 6-hourly job skipped at least two runs (noted 2026-11-19).
+- **Metrics feed:** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
 - **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
 - **Experiment E-002** is live (recorded in `docs/gm/learnings.md` on 2026-11-19). E-001 is superseded. No real traffic yet, and the first events are the Principal's testing.
@@ -63,6 +63,16 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 21:46 UTC (14:46 Mountain) - scheduled run: "Still want this?" review shipped
+- **Verified live (public fetch):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/align`, `/guides`, `/sitemap.xml`, `/api/health` all 200. Health: db true, email false, checkout false. Home title matches. No new commits on `main` since `9a28a20`, so no new feedback from the Principal in the repo.
+- **Metrics (ops-data, 2026-11-19 15:41 UTC):** 118 landing views (87 in the last 24h, up from 77 at the last run), 24 answers from 1 visitor, 1 snapshot complete, 1 email saved. The feed is current again, so the earlier skips were GitHub cron delay, not a failing job. The 87 views are unexplained: no page I can tie them to, and the app cannot yet mark test or bot traffic. Treat as unmeasured quality, not as people. No `reviews/verdicts/` exist.
+- **Binding constraint:** product. Nobody but the Principal has used it and he is testing. Traffic stays held on his instruction (standing ruling 2026-11-19).
+- **Built (product-learning action):** `/keep`, "Still want this?", from his interview themes (drift is by single item, recurring costs run without a decision). The person lists up to 10 things that keep costing money, says per item whether they use it and whether they would choose it again today, and sees the monthly and yearly total of what they would not choose again. Plain arithmetic, no score, no advice words (tested). Names and amounts stay in the browser only; two new anonymous events (`keep_view`, `keep_done`). New card on Home. `lib/review.ts`, 4 tests (48 pass).
+- **Verified locally:** `npm test` 48 pass, `npm run build` passes, walked the flow on a phone-sized local browser with no page errors and looked at the screens. Live confirmation: see the next line.
+- **Growth action:** none shipped, by the Principal's hold. Recorded the unexplained 87 views as an open question.
+- **Blocked on:** the Principal's feedback; decision queue unchanged.
+- **Next:** make Start lead into `/align` and `/keep`; "rules I set for myself" (pre-commitment); rework `/align` toward specific things; mark test traffic so metrics are clean.
 
 ### 2026-11-19 - the Principal: months of savings is a sub-bullet; the value is money against mind
 - **His ruling:** see the standing ruling at the top. I had led with months because it was the number I could compute easily and a leftover of my first brand, not because a customer asked for it.

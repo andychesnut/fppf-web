@@ -93,3 +93,7 @@ Experiment results and learnings, newest first. No experiments are known to be r
 ## 2026-11-19 (growth challenge)
 - The loop optimised for the log, not the outcome: it checked, recorded and notified, but no run changed what produces visitors. Fix: each run names the binding constraint and must ship against it.
 - Prediction for E-003 (search guides): within 30 days of indexing, guides produce at least 10 real `landing_view` or `start_view` events that began on a guide. Kill rule: zero guide-originated visits after 45 days means search is the wrong channel for this audience; try another public channel.
+
+## 2026-11-19 21:46 UTC: item-level review
+- Build `/keep` follows the interview theme that drift is per item, not per category. Prediction: of people who reach the first reading, at least 1 in 3 who open `/keep` finish it (`keep_done` over `keep_view`). Kill rule: under 15 percent after 20 `keep_view` events from real people means rework the wording or drop it. Both events are unmeasured until real traffic exists.
+- Metrics note: 87 landing views in 24 hours with 1 visitor in the funnel cannot be treated as people until test and bot traffic can be marked.
