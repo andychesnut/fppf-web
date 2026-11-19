@@ -186,11 +186,12 @@ body:has(.a-screen) { background: var(--a-ground); }
 .p-copy h1 { font-family: var(--display); font-weight: 600; font-size: clamp(42px, 6.2vw, 76px); line-height: 1.0; letter-spacing: -0.025em; }
 .p-lede { font-size: 21px; line-height: 1.45; color: var(--a-body); max-width: 26em; }
 .p-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; } .p-cta span { font-size: 16px; color: var(--a-quiet); }
+.p-gets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; max-width: 28em; } .p-gets li { position: relative; padding-left: 26px; font-size: 18px; line-height: 1.4; color: var(--a-ink); } .p-gets li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 12px; height: 12px; border-radius: 50%; background: #1d4ed8; }
 .p-trust { font-size: 15px; color: var(--a-quiet); }
 .maze-wrap { flex: 1.1 1 440px; min-width: 0; max-width: 640px; display: flex; flex-direction: column; gap: 6px; }
 .maze { width: 100%; height: auto; display: block; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .maze-tall { display: none; max-width: 390px; margin: 0 auto; }
-@media (max-width: 700px) { .maze-wide { display: none; } .maze-tall { display: block; } .p-hero { padding-top: 8px; gap: 20px; } .p-copy { gap: 16px; } .p-lede { font-size: 18px; } }
+@media (max-width: 700px) { .maze-wide { display: none; } .maze-tall { display: block; } .p-hero { padding-top: 8px; gap: 20px; } .p-copy { gap: 16px; } .p-lede { font-size: 18px; } .p-gets li { font-size: 17px; } }
 .maze-walls { stroke: var(--a-ink); stroke-width: 2; stroke-linecap: square; opacity: 0.2; }
 .maze-flow { stroke-dasharray: 1 16; animation: mz-move 0.9s linear infinite; }
 .maze-grey { stroke: #6b7077; stroke-width: 3; } .maze-live { stroke: var(--a-live); stroke-width: 7; }

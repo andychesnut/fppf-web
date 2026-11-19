@@ -14,9 +14,14 @@ export default function Home() {
       <main className="wrap p-hero">
         <div className="p-copy">
           <h1>{TAGLINE}</h1>
-          <p className="p-lede">You know something has to change. The bills still have to get paid. This shows you whether you can afford the change you want, and what&apos;s standing in the way.</p>
-          <div className="p-cta"><StartButton /><span>It&apos;s free. About ten minutes.</span></div>
-          <p className="p-trust">We never touch your money. Nobody pays us to recommend anything.</p>
+          <p className="p-lede">A free tool for when you want to change something big, like leaving a job, moving, or taking on a new payment, and you can&apos;t tell if you can afford it.</p>
+          <ul className="p-gets">
+            <li>How many months your savings would cover if the paychecks stopped</li>
+            <li>What eats your pay before the month even starts</li>
+            <li>What a new payment would do to your month, before you sign</li>
+          </ul>
+          <div className="p-cta"><StartButton /><span>Free. 15 questions, about ten minutes. No email, no account.</span></div>
+          <p className="p-trust">Your answers stay on your device. We never touch your money. Nobody pays us to recommend anything.</p>
         </div>
         <Maze />
       </main>

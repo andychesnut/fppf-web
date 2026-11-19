@@ -63,6 +63,13 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-19 - the Principal's first feedback: the home page does not say what it is
+- **His words:** layout is great, but he could not tell what he had landed on. A tool, an idea, a methodology? Why care? What is being asked of him?
+- **Diagnosis:** the headline and picture were right, but nothing named the thing, what it gives, or the cost to the visitor. The copy also leaned on a metaphor the visitor does not have yet.
+- **Changed (home page copy only, headline untouched):** the lede now names it ("A free tool for when you want to change something big, like leaving a job, moving, or taking on a new payment, and you can't tell if you can afford it"); three plain lines say what the visitor gets; the ask is stated next to the button ("Free. 15 questions, about ten minutes. No email, no account"); the trust line adds that answers stay on the device.
+- **Verified:** 39 tests, build, rendered at desktop and phone width and looked at. Live check after the push is in the next line if confirmed.
+- **Rule from this:** every public page must pass a five-second test: what is it, what do I get, what does it ask of me. Check each new page against it before shipping.
+
 ### 2026-11-19 later - the Principal: "You need to be the one growing this"
 - **His challenge:** ARR is $0 and the self-improvement loop is weak. Two constraints, growth and product. The GM owns growth.
 - **GM diagnosis (recorded):** the site had no sitemap, no robots file, no per-page descriptions and no content pages, so it could not be found. The check-in card shipped earlier the same day was a retention feature before any acquisition: wrong priority. Checkout is gated by the floor, so ARR cannot move until the counsel decision and the owner's flag. Product is unvalidated: nobody but the Principal has used it, and email is off so nobody can be pulled back.
