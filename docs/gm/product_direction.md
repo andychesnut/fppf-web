@@ -96,3 +96,14 @@ Recorded as themes because the product's own rule is to store bands and never ra
 3. Rework `/align` from category groups to specific things.
 
 Open question for him: if a rule had been written in advance, what would it have said?
+
+### Interview 1, round 2 (2026-11-19): themes only
+
+- **His principles are contrasts, so each is a test for a single purchase:** experiences over stuff; a basecamp, not something frivolous; betting on himself (solo income). Round 2 confirmed the feelings about the quiet recurring costs are mixed (stuck, annoyed, embarrassed).
+- **His rule, in his words, as a formula: wait days equals price divided by a personal number.** Small purchases wait almost nothing, large ones wait a long time, and no one has to define luxury. The number is personal. This is the engine for the "Sleep on it" queue.
+- **His bet has a target and a first checkpoint in monthly income.** Months of savings matters here as the fuel for the bet, not as a rule of thumb.
+- **The sharpest mirror found:** the cost of the things that fail his tests, as a share of the income his bet needs. Arithmetic on the person's own numbers; their call.
+- **He cannot see the split between experiences and stuff today.** That is part of the value. Getting the data conflicts with the floor (no connected accounts). Options: manual entry with tags now; a local-only statement import (file read in the browser, never sent to us) only if the Principal rules it allowed.
+
+### Build order from the interview
+1. "Sleep on it" with the formula. 2. The bet panel (target, checkpoint, share tied up in things that fail the person's tests). 3. The experiences-versus-stuff view, manual tags first.
