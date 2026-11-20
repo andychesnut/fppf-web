@@ -97,3 +97,6 @@ Experiment results and learnings, newest first. No experiments are known to be r
 ## 2026-11-19 21:46 UTC: item-level review
 - Build `/keep` follows the interview theme that drift is per item, not per category. Prediction: of people who reach the first reading, at least 1 in 3 who open `/keep` finish it (`keep_done` over `keep_view`). Kill rule: under 15 percent after 20 `keep_view` events from real people means rework the wording or drop it. Both events are unmeasured until real traffic exists.
 - Metrics note: 87 landing views in 24 hours with 1 visitor in the funnel cannot be treated as people until test and bot traffic can be marked.
+
+## 2026-11-20 (traffic filter)
+- Prediction: after the filter ships, `landing_view` in the 24 hours after deploy falls by at least half versus the 71 in the previous 24 hours. If it does not fall, the views are real browsers and need another explanation (a link somewhere). Not testable until the next feed refresh.

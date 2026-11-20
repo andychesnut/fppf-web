@@ -1,4 +1,5 @@
 import { ready } from '@/lib/db.ts';
+import { isAutomated } from '@/lib/traffic.ts';
 
 const ALLOWED = new Set([
   'landing_view', 'snapshot_start', 'question_answered', 'snapshot_complete',
@@ -11,6 +12,7 @@ const ALLOWED = new Set([
 export async function POST(req: Request) {
   let body: { name?: string; anonId?: string; props?: Record<string, unknown> };
   try { body = await req.json(); } catch { return Response.json({ ok: false }, { status: 400 }); }
+  if (isAutomated(req.headers.get('user-agent'))) return Response.json({ ok: true, stored: false, skipped: 'automated' });
   if (!body.name || !ALLOWED.has(body.name)) return Response.json({ ok: false }, { status: 400 });
   const props: Record<string, string | number> = {};
   for (const k of ['i', 'stage', 'load', 'price']) {

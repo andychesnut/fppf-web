@@ -47,7 +47,8 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
 - **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment; `/align` is money against mind; `/keep` is "Still want this?" (shipped 2026-11-19 21:46 UTC, see entry). Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
 - **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
-- **Metrics feed:** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
+- **Test traffic (2026-11-20):** crawler and headless events are dropped server-side; `?notrack=1` opts a browser out. Check the effect on the next feed.
+- **Metrics feed (older note):** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
 - **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
 - **Experiment E-002** is live (recorded in `docs/gm/learnings.md` on 2026-11-19). E-001 is superseded. No real traffic yet, and the first events are the Principal's testing.
@@ -64,6 +65,16 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-19 22:45 Mountain (2026-11-20 05:45 UTC) - scheduled run: test and bot traffic can now be marked
+- **Verified live (public fetch, `www.firstprinciplesmoney.com`):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/home`, `/what-if`, `/keep`, `/api/health` all 200. Health: db true, email false, checkout false. The bare domain 308-redirects to `www`.
+- **Metrics (ops-data, 2026-11-20 00:35 UTC):** 148 landing views (71 in the last 24h), 1 `start_view`, 1 snapshot complete, 1 email saved. The feed is current. Still no real traffic known. No `reviews/verdicts/` exist. No new commits from the Principal since the hand-test entry, so his notes have not arrived.
+- **Binding constraint:** measurement and product. The 71 to 87 daily landing views cannot be told apart from crawlers, so no experiment can be read.
+- **Built (not under any hold):** (1) the events endpoint now drops events whose user agent looks like a crawler, headless browser or command-line client (`lib/traffic.ts`, 2 tests, 50 pass); (2) the Principal or any tester can visit any page once with `?notrack=1` to stop sending events from that browser (`?notrack=0` undoes it). This does not change what is stored per person. Ends the "cannot mark test traffic" blocker for the live-flow rule, but a scripted walk of the live flow stays off until the filter is confirmed on live data.
+- **Verified:** `npm test` 50 pass, `npm run build` passes. Not walked in a live browser, by rule.
+- **Not done, by hold:** Sleep on it, dashboard, changes to `/align` and `/keep`, traffic work.
+- **Blocked on:** the Principal's notes on the dashboard and the floor ruling on a local statement import.
+- **Next:** after the next metrics refresh, check whether `landing_view` counts fall (that means the 71 a day were mostly bots); then make Start lead into `/align` and `/keep` once the Principal's notes arrive.
 
 ### 2026-11-20 - hand test with the Principal's own data; dashboard concept shown
 - **Did:** interviewed the Principal (principles, the bet, his own examples of drift), then ran the proposed product by hand on his own card statements: a deck of about twelve cards, biggest first, one question each ("Would you choose this again today?"), then a mirror. Built a private dashboard concept from the result and showed it to him as a file and images. Nothing with his data was published or committed; the statement file and dashboard live only in session scratch space.
