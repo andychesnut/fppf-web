@@ -119,3 +119,13 @@ No merchants, amounts or dates recorded here, by the privacy rule. The file stay
 - **His day-to-day spending broadly matched his stated principles.** The misalignment concentrated in a few large decisions, plus card interest that fails every test. The tool's job is to find the few big ones, not to audit coffee.
 - **Effort:** one export and one message from him. He expects most users would not export a file.
 - **Open:** whether it told him anything he did not already know. That answer decides whether this is the product.
+
+### The Principal's notes on the dashboard concepts (2026-11-20): the framework, no figures
+
+- **The first dashboard did not read as intelligent.** It described bars. What reads as intelligent: a visible model of the person (their values in their words), one score with a rule they can check, and tensions named against their own words (for example "a basecamp, not frivolous" against what the home actually costs, in units of something they value).
+- **Show an overall alignment percentage and a celebration barometer.** Celebrate the share already going toward their direction. In the hand test the day-to-day share was high and the drift sat in a few big fixed costs; that contrast was the most useful line.
+- **Show what the misalignment could buy, in the person's own currencies:** months of betting on themselves, trips like ones they already took, and the cost of the dream they name. Prices come from their own spending, not from us.
+- **It must not be idealistic.** "Stop paying rent and fund your dream" is not practical; people have obligations. Default to what moves without changing any obligation, in lanes: (1) ending on its own, (2) small and in your hands, (3) big decisions with obligations, which take months and cost money to change and count only if the person turns them on.
+- **Basic needs are not scored.** Food and a roof up to what a basecamp would cost are neither aligned nor against. Only the amount above a basecamp counts against. The person sets that number.
+- **Everyone is different.** The structure stays fixed (needs, toward values, ending, against; the three lanes; the score rule). The content is personal: the values are their words, the currencies are priced from their own spending, the dream is typed by them.
+- **Score rule used:** toward your values divided by (toward your values plus against your direction). Needs and ending costs are left out.
