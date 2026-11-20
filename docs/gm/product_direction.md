@@ -129,3 +129,22 @@ No merchants, amounts or dates recorded here, by the privacy rule. The file stay
 - **Basic needs are not scored.** Food and a roof up to what a basecamp would cost are neither aligned nor against. Only the amount above a basecamp counts against. The person sets that number.
 - **Everyone is different.** The structure stays fixed (needs, toward values, ending, against; the three lanes; the score rule). The content is personal: the values are their words, the currencies are priced from their own spending, the dream is typed by them.
 - **Score rule used:** toward your values divided by (toward your values plus against your direction). Needs and ending costs are left out.
+
+## Job to be done (2026-11-20, from the interviews and hand test; supersedes earlier framings where they disagree)
+
+"When I sense my life and my money have drifted apart, help me see from my real transactions where my money is and isn't serving what I care about, so I can make the few decisions that matter, feel good about what's already right, and watch the gap close."
+
+- **Functional:** truth from every account; every number traces to transactions; the person's labels, not the app's guesses; past, running, ending, or a need.
+- **Emotional:** seen, not judged; celebrate what is aligned; calm about the big stuff; no shame for a bad-day purchase.
+- **Practical:** respects obligations and basic needs; a few big decisions, not a budget; low effort (one question, biggest first).
+- **Not this:** not a budget app, not advice, not idealistic, no invented numbers, nothing leaves the device without the person's say.
+
+### Lesson from the "non-data-driven" note
+A framework built on stated figures, category-wide extrapolation and the GM's own defaults read as fake, and was wrong once checked: it claimed card interest was still running when the data showed it had stopped. Rule: headline numbers come only from transactions; anything else is labelled as the person's input and kept out of the headline. Money in, not just money out, is part of the data.
+
+### Four variants shown to the Principal (concept screens built from his card data, kept private)
+1. **The Monthly Mirror:** one share (labeled spending you'd choose again), month by month, with the cash facts underneath.
+2. **The Ten-Minute Review:** a monthly deck, biggest and newest first, four answers (again, not again, ending, a need). The input for every other variant.
+3. **The Big Few:** the largest running costs from the data, with run rate, direction, and the person's label; says so when the data disagrees with what the person said; shows what it cannot see as missing.
+4. **Values as Accounts:** each value is an account; each month compared only to its own history; celebration built in.
+GM recommendation: 2 as the input, 1 as home, 3 for decisions. Needs the checking account to see housing, vehicles and income.
