@@ -66,6 +66,15 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-20 06:46 Mountain (13:46 UTC) - scheduled run: gospel cleanup, feed check
+- **Verified live (public fetch, `www`):** `/`, `/start`, `/privacy`, `/terms`, `/api/health` all 200. Home title unchanged. No new commits from the Principal since 9b4ef3f, so his dashboard notes and floor ruling have not arrived.
+- **Metrics (ops-data):** latest is still 2026-11-20 00:35 UTC, before the crawler filter shipped, so the filter's effect is not yet readable. Workflow history (6 runs, all success) shows scheduled runs 8.7 to 15.4 hours apart, so the feed is late by GitHub's scheduling, not broken. Logged as I-009. No `reviews/verdicts/` exist.
+- **Binding constraint:** product feedback. Sleep on it, dashboard, `/align` and `/keep` changes, and traffic work are all on hold.
+- **Did (not under any hold):** the open gospel cleanup for rocks and issues: rocks status and rock 2 note now describe the live money-against-mind product and the crawler filter; issues list updated (I-008 current, I-009 added). Docs only. No code changed, so no build or test run was needed.
+- **Not verified:** whether the 71 daily views were bots. Needs the next feed.
+- **Blocked on:** the Principal's notes and floor ruling. Nothing else.
+- **Next:** read the next feed for the filter effect; then Start into `/align` and `/keep` once his notes arrive.
+
 ### 2026-11-19 22:45 Mountain (2026-11-20 05:45 UTC) - scheduled run: test and bot traffic can now be marked
 - **Verified live (public fetch, `www.firstprinciplesmoney.com`):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/home`, `/what-if`, `/keep`, `/api/health` all 200. Health: db true, email false, checkout false. The bare domain 308-redirects to `www`.
 - **Metrics (ops-data, 2026-11-20 00:35 UTC):** 148 landing views (71 in the last 24h), 1 `start_view`, 1 snapshot complete, 1 email saved. The feed is current. Still no real traffic known. No `reviews/verdicts/` exist. No new commits from the Principal since the hand-test entry, so his notes have not arrived.

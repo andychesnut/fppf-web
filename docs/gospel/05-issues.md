@@ -1,6 +1,6 @@
 # FPPF - Issues
 
-**Status: updated 2026-11-18 by the GM (records rulings already made).**
+**Status: updated 2026-11-20 by the GM.**
 Gospel document 5 of 8. 
 ## What the issues list is
 
@@ -23,7 +23,7 @@ An issue belongs here if it meets any of these:
 
 A shipped fix, a recorded decision, or a deliberate recorded choice to go another direction. Nothing is left stranded and nothing is silently deleted.
 
-## The list (as of 2026-11-18)
+## The list (as of 2026-11-20)
 
 | ID | State | Issue | Resolution or GM recommendation |
 | --- | --- | --- | --- |
@@ -34,7 +34,8 @@ A shipped fix, a recorded decision, or a deliberate recorded choice to go anothe
 | I-005 | Solved 2026-11-18 | Standards for FPPF. | Principal's writing and design advice recorded in `docs/gm/learnings.md` (2026-11-18). Adopt that as the standard. |
 | I-006 | Solved 2026-11-17 | Overlap with other ventures. | Fully separate (isolation ruling, run log). |
 | I-007 | Identified | Outside counsel before paid checkout. | In Andy's decision queue. Cost estimate $1,500 to $4,000, unmeasured. |
-| I-008 | Identified | Traffic is near zero, so E-001 has no sample. | No distribution yet. Next: pages in the trapped person's own words that lead to the planner. |
+| I-008 | Identified | Traffic is near zero, so E-001 has no sample. | No distribution yet. Six search guides shipped 2026-11-19. Traffic work is on hold at the Principal's instruction until he has tested the experience. 71 to 87 daily landing views were unexplained; the crawler filter shipped 2026-11-20 to find out how many were bots. |
+| I-009 | Identified 2026-11-20 | Metrics feed refresh is irregular (GitHub scheduled runs fire late or skip). Runs 4 to 6 landed 9 to 15 hours apart, all successful. | Not a fault in the job. Accept, or add a manual trigger from the run when a fresh read matters. |
 
 ## Working an issue
 

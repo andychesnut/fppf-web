@@ -100,3 +100,6 @@ Experiment results and learnings, newest first. No experiments are known to be r
 
 ## 2026-11-20 (traffic filter)
 - Prediction: after the filter ships, `landing_view` in the 24 hours after deploy falls by at least half versus the 71 in the previous 24 hours. If it does not fall, the views are real browsers and need another explanation (a link somewhere). Not testable until the next feed refresh.
+
+## 2026-11-20 (06:46 run)
+- Metrics feed gaps of 9 to 15 hours are GitHub schedule delay, since every run succeeded. Consequence: do not call the feed faulty on age alone; check the workflow history first. The crawler-filter prediction (landing views fall by half from 71) is still untested.
