@@ -103,3 +103,7 @@ Experiment results and learnings, newest first. No experiments are known to be r
 
 ## 2026-11-20 (06:46 run)
 - Metrics feed gaps of 9 to 15 hours are GitHub schedule delay, since every run succeeded. Consequence: do not call the feed faulty on age alone; check the workflow history first. The crawler-filter prediction (landing views fall by half from 71) is still untested.
+
+## 2026-11-20 - alignment reading (not an experiment)
+- Shipped the Principal's framework on `/keep`: needs unscored, basecamp set by the person, three lanes, score = toward / (toward + against). No prediction or kill rule recorded because there is no traffic to read; the test is the Principal's reaction and whether the reading tells a person something they did not know (the open question from hand test 1).
+- A visible rule beside the score is the design bet: a number the person can check reads as intelligent where bars did not.

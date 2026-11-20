@@ -47,6 +47,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
 - **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment; `/align` is money against mind; `/keep` is "Still want this?" (shipped 2026-11-19 21:46 UTC, see entry). Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
 - **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
+- **Alignment reading (2026-11-20 21:46 UTC):** `/keep` now marks needs, sets a basecamp number, assigns lanes, and shows one score with its rule. Dashboard hold lifted by the Principal's notes; Sleep on it hold stands.
 - **Test traffic (2026-11-20):** crawler and headless events are dropped server-side; `?notrack=1` opts a browser out. Check the effect on the next feed.
 - **Metrics feed (older note):** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
@@ -65,6 +66,17 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-20 14:46 Mountain (21:46 UTC) - scheduled run: the alignment reading on `/keep`
+- **Verified live (public fetch, `www`) before the change:** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false. Home title unchanged.
+- **Metrics (ops-data, 2026-11-20 15:23 UTC):** 164 landing views (48 in the last 24h, down from 71 to 87 a day), 158 visitors, 1 `start_view`, 1 snapshot complete, 1 email saved, 1 visitor with 24 answers. The drop from 71 to 48 is consistent with the crawler filter (shipped 05:45 UTC) removing part of the traffic, but the 24h window straddles the ship time, so this is not yet a clean read. No `reviews/verdicts/` exist.
+- **Input:** the Principal's notes on the dashboard concepts arrived (commit 90f2d3e, 2026-11-20 18:10 UTC). That lifts the dashboard hold from the 2026-11-20 hand-test entry. The "Sleep on it" and browser extension holds still stand and were not touched. Traffic work stays on hold.
+- **Built:** the framework from his notes, on the existing `/keep` flow, local only. Needs are marked and not scored; the person sets a basecamp number and only the needs cost above it counts against. "Would not choose again" items get a lane (ending on its own, small and in their hands, big with obligations). The result shows one score with the rule printed beside it (toward divided by toward plus against; needs, ending and "not sure" left out), the share already going toward what they chose, the three lanes with amounts, and an optional unit the person names and prices (their own currency, never ours). `lib/review.ts` `alignment()` and `inUnits()`, 5 new tests (55 pass).
+- **Ruling conflict, resolved:** the 2026-11-19 ruling said "no scores, no invented thresholds". The Principal's 2026-11-20 notes, later and his own, ask for one score with a checkable rule, with the basecamp number set by the person. The notes win. No threshold is ours: the person sets the basecamp and the unit price.
+- **Not built from his notes:** values in the person's own words as a model at the top, tensions named against those words, the celebration barometer styling, and the "dream cost" currency preset. Next.
+- **Verified:** `npm test` 55 pass; `npm run build` passes; rendered locally at phone width with seeded data and looked at both the rating step and the result (screenshot reviewed). Live check after push is recorded below.
+- **Floor:** amounts and names stay in the browser; no new events; no advice words; no outcome claims.
+- **Blocked on:** nothing new. His remaining feedback on the live version would move it.
 
 ### 2026-11-20 06:46 Mountain (13:46 UTC) - scheduled run: gospel cleanup, feed check
 - **Verified live (public fetch, `www`):** `/`, `/start`, `/privacy`, `/terms`, `/api/health` all 200. Home title unchanged. No new commits from the Principal since 9b4ef3f, so his dashboard notes and floor ruling have not arrived.
