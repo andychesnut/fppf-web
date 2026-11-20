@@ -1,0 +1,183 @@
+{
+  "collected_at": "2026-11-20T1523Z",
+  "site": "https://www.firstprinciplesmoney.com",
+  "home_status": "200",
+  "health": {
+    "ok": true,
+    "db": true,
+    "email": false,
+    "checkout": false
+  },
+  "metrics": {
+    "ok": true,
+    "generated_at": "2026-11-20T15:23:36.629Z",
+    "db": true,
+    "events": [
+      {
+        "name": "email_saved",
+        "all_time": 1,
+        "last_7d": 1,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      },
+      {
+        "name": "landing_view",
+        "all_time": 164,
+        "last_7d": 164,
+        "last_24h": 48,
+        "visitors_all_time": 158
+      },
+      {
+        "name": "price_intent_view",
+        "all_time": 1,
+        "last_7d": 1,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      },
+      {
+        "name": "question_answered",
+        "all_time": 24,
+        "last_7d": 24,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      },
+      {
+        "name": "snapshot_complete",
+        "all_time": 1,
+        "last_7d": 1,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      },
+      {
+        "name": "snapshot_start",
+        "all_time": 1,
+        "last_7d": 1,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      },
+      {
+        "name": "start_view",
+        "all_time": 1,
+        "last_7d": 1,
+        "last_24h": 0,
+        "visitors_all_time": 1
+      }
+    ],
+    "dropoff": [
+      {
+        "question": 1,
+        "visitors": 1
+      },
+      {
+        "question": 2,
+        "visitors": 1
+      },
+      {
+        "question": 3,
+        "visitors": 1
+      },
+      {
+        "question": 4,
+        "visitors": 1
+      },
+      {
+        "question": 5,
+        "visitors": 1
+      },
+      {
+        "question": 6,
+        "visitors": 1
+      },
+      {
+        "question": 7,
+        "visitors": 1
+      },
+      {
+        "question": 8,
+        "visitors": 1
+      },
+      {
+        "question": 9,
+        "visitors": 1
+      },
+      {
+        "question": 10,
+        "visitors": 1
+      },
+      {
+        "question": 11,
+        "visitors": 1
+      },
+      {
+        "question": 12,
+        "visitors": 1
+      },
+      {
+        "question": 13,
+        "visitors": 1
+      },
+      {
+        "question": 14,
+        "visitors": 1
+      },
+      {
+        "question": 15,
+        "visitors": 1
+      },
+      {
+        "question": 16,
+        "visitors": 1
+      },
+      {
+        "question": 17,
+        "visitors": 1
+      },
+      {
+        "question": 18,
+        "visitors": 1
+      },
+      {
+        "question": 19,
+        "visitors": 1
+      },
+      {
+        "question": 20,
+        "visitors": 1
+      },
+      {
+        "question": 21,
+        "visitors": 1
+      },
+      {
+        "question": 22,
+        "visitors": 1
+      },
+      {
+        "question": 23,
+        "visitors": 1
+      },
+      {
+        "question": 24,
+        "visitors": 1
+      }
+    ],
+    "price": [
+      {
+        "price": 79,
+        "viewed": 1,
+        "clicked": 0
+      }
+    ],
+    "stages": [
+      {
+        "stage": "foundation",
+        "completions": 1
+      }
+    ],
+    "saves": {
+      "total": 1,
+      "notify_full": 0,
+      "last_7d": 1
+    }
+  }
+}
