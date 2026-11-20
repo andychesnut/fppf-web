@@ -65,6 +65,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-20 - hand test with the Principal's own data; dashboard concept shown
+- **Did:** interviewed the Principal (principles, the bet, his own examples of drift), then ran the proposed product by hand on his own card statements: a deck of about twelve cards, biggest first, one question each ("Would you choose this again today?"), then a mirror. Built a private dashboard concept from the result and showed it to him as a file and images. Nothing with his data was published or committed; the statement file and dashboard live only in session scratch space.
+- **Dashboard concept, in order (the design, not his numbers):** his principles and his bet at the top; one headline share of monthly money going to things he would not choose again, with a single bar split into Yes, Ending, No and Not reviewed; the Nos against the income the bet needs and its first checkpoint; money freed when "Ending" items stop; the few big items ranked by yearly cost; past regrets kept apart from running costs; experiences against stuff.
+- **His reaction:** "This is very cool." Notes to follow. Whether it told him something new: he said "maybe".
+- **Lessons recorded in `docs/gm/product_direction.md` (hand test 1).**
+- **Rule for scheduled runs:** do not build the dashboard or change `/align` or `/keep` toward it until the Principal's notes arrive. The "Sleep on it" hold also stands.
+- **Open for the Principal:** his notes on the dashboard; the floor ruling on a local statement-file import; whether Plaid is in scope later.
+
 ### 2026-11-19 21:46 UTC (14:46 Mountain) - scheduled run: "Still want this?" review shipped
 - **Verified live (public fetch):** `/`, `/snapshot`, `/privacy`, `/terms`, `/start`, `/align`, `/guides`, `/sitemap.xml`, `/api/health` all 200. Health: db true, email false, checkout false. Home title matches. No new commits on `main` since `9a28a20`, so no new feedback from the Principal in the repo.
 - **Metrics (ops-data, 2026-11-19 15:41 UTC):** 118 landing views (87 in the last 24h, up from 77 at the last run), 24 answers from 1 visitor, 1 snapshot complete, 1 email saved. The feed is current again, so the earlier skips were GitHub cron delay, not a failing job. The 87 views are unexplained: no page I can tie them to, and the app cannot yet mark test or bot traffic. Treat as unmeasured quality, not as people. No `reviews/verdicts/` exist.
