@@ -108,3 +108,14 @@ Open question for him: if a rule had been written in advance, what would it have
 ### Build order from the interview
 **HOLD (2026-11-19, the Principal): item 1 is not to be built until he says it is validated.**
 1. "Sleep on it" with the formula. 2. The bet panel (target, checkpoint, share tied up in things that fail the person's tests). 3. The experiences-versus-stuff view, manual tags first.
+
+### Hand test 1 (2026-11-20): the Principal's own card statements, themes only
+No merchants, amounts or dates recorded here, by the privacy rule. The file stayed in session scratch space and was never committed.
+
+- **One question was enough.** "Would you choose this again today?" on about twelve cards, biggest first. He answered eleven in one message, with reasons. The four tests (experience or stuff, basecamp or frivolous, use it, funds or drains the bet) were never needed. Simplify.
+- **Categories fail inside themselves.** One category held both his strongest regret and something he loves, separated by merchant. The card needs a split action.
+- **Answers fell into four kinds, not three:** keep; ending (a project nearly done, a child changing activities); past regret that cannot be changed; mixed. The product should separate what is still running from what is past, because only the running part can change.
+- **Card data missed the biggest drift.** His largest misalignments (housing and a vehicle) are paid from a bank account, not cards. Card-only data understates drift. This is the strongest case so far for Plaid or a bank-file import.
+- **His day-to-day spending broadly matched his stated principles.** The misalignment concentrated in a few large decisions, plus card interest that fails every test. The tool's job is to find the few big ones, not to audit coffee.
+- **Effort:** one export and one message from him. He expects most users would not export a file.
+- **Open:** whether it told him anything he did not already know. That answer decides whether this is the product.
