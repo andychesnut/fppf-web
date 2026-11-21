@@ -102,6 +102,7 @@ export function Keep() {
       {al.score !== null ? (
         <section className="a-card">
           <div className="a-cardhead"><h2>{al.score}% of your listed money goes toward what you chose</h2></div>
+          <div className="a-meter" role="meter" aria-valuemin={0} aria-valuemax={100} aria-valuenow={al.score} aria-label="Share of listed money going toward what you chose" style={{ height: 14, borderRadius: 7, background: 'rgba(0,0,0,0.1)', overflow: 'hidden', margin: '4px 16px 12px' }}><div style={{ width: al.score + '%', height: '100%', background: '#1D4ED8' }} /></div>
           <div className="a-rows">
             <div className="a-row a-line">The rule: toward ${al.toward.toLocaleString('en-US')} divided by (toward plus against ${al.against.toLocaleString('en-US')}). Basic needs and ending costs are left out.</div>
             {al.aboveBasecamp > 0 ? <div className="a-row a-line">Your needs cost ${al.needs.toLocaleString('en-US')} a month. Your basecamp number is ${(me.review.basecamp ?? 0).toLocaleString('en-US')}. The ${al.aboveBasecamp.toLocaleString('en-US')} above it counts as against.</div> : null}
