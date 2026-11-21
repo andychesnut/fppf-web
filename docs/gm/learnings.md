@@ -110,3 +110,6 @@ Experiment results and learnings, newest first. No experiments are known to be r
 
 ## 2026-11-21 - crawler filter read
 Landing views in the last 24h fell from 48 to 20 across the two feeds after the filter (feed 2026-11-20 23:58 UTC). Consistent with most earlier views being bots; still no real traffic known. Real-traffic baseline is not yet established.
+
+## 2026-11-21 - crawler filter confirmed
+Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07:00 UTC). The prediction (fall of at least half) holds. Consequence: roughly 85 percent of earlier landing views were automated. Real-traffic baseline is about 10 or fewer a day and probably the Principal's own visits. Do not read any funnel rate until real starts exist.

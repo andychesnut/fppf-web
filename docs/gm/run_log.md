@@ -49,7 +49,8 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
 - **Values on `/keep` (2026-11-21 05:46 UTC, 5396a44):** the result shows up to three values in the person's words and names the tension against the largest cost not chosen again.
 - **Alignment reading (2026-11-20 21:46 UTC):** `/keep` now marks needs, sets a basecamp number, assigns lanes, and shows one score with its rule. Dashboard hold lifted by the Principal's notes; Sleep on it hold stands.
-- **Test traffic (2026-11-20):** crawler and headless events are dropped server-side; `?notrack=1` opts a browser out. Check the effect on the next feed.
+- **Test traffic (2026-11-20):** crawler and headless events are dropped server-side; `?notrack=1` opts a browser out. Effect confirmed 2026-11-21: landing views per 24h fell from 71 to 10.
+- **Share bar on `/keep` (2026-11-21 13:45 UTC, 18eb2ad):** the alignment score now has a bar.
 - **Metrics feed (older note):** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
 - **Metrics (2026-11-18 18:30 UTC):** 48 landing views, 1 completion, 1 email saved, all probably the Principal's own setup. Real activations about zero. Not re-read since.
 - **Brand:** First Principles Money. Headline "Put your money where your mind is." (the Principal's, D-014).
@@ -67,6 +68,16 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-21 13:45 UTC (06:45 Mountain) - scheduled run: share bar on `/keep`, filter effect read
+- **Verified live (public fetch, `www`):** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/keep`, `/api/health` all 200. Health: db true, email false, checkout false.
+- **Metrics (ops-data, 2026-11-21 07:00 UTC):** 170 landing views all time, 10 in the last 24h (71 before the crawler filter, 48, then 20). The filter prediction (a fall of at least half from 71) holds: the earlier views were mostly bots. 164 visitors, 1 completion, 1 email, all probably the Principal's. No real traffic known. No `reviews/verdicts/` exist.
+- **Input:** no new commits from the Principal. Sleep on it and browser extension holds stand. Traffic work stays on hold.
+- **Built:** a share bar under the alignment score on `/keep`, from his "celebration barometer" note. Same number and rule as before, drawn as a bar with a meter role for screen readers. No new data, no new events.
+- **Verified:** `npm test` 57 pass; `npm run build` passes; rendered locally at phone width with seeded data and looked at the screenshot. Live: pushed as 18eb2ad; the production `/keep` JavaScript on `www` contained the new meter label within about 1 minute. Not walked in a live browser, by rule.
+- **Floor:** nothing new stored or sent; no advice words.
+- **Not built:** the "dream cost" preset (the person already names and prices a unit; a preset would be our number). Variants 1 to 4 await his pick.
+- **Blocked on:** his feedback on the live version, and his pick among the four variants.
 
 ### 2026-11-21 05:46 UTC (2026-11-20 22:46 Mountain) - scheduled run: the person's own values on `/keep`
 - **Verified live (public fetch, `www`):** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false.
