@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanReview, summarize, summaryLines, ready, alignment, inUnits, MAX_ITEMS } from './review.ts';
+import { cleanReview, tension, MAX_VALUES, summarize, summaryLines, ready, alignment, inUnits, MAX_ITEMS } from './review.ts';
 
 test('summarize adds what the person would not choose again', () => {
   const s = summarize({ items: [{ name: 'Gym', monthly: 40, again: 'no' }, { name: 'Car', monthly: 500, again: 'no' }, { name: 'Phone', monthly: 60, again: 'yes' }] });
@@ -53,4 +53,17 @@ test('need, lane and basecamp survive cleaning; junk does not', () => {
   const r = cleanReview({ items: [{ name: 'a', monthly: 5, need: true, lane: 'big' }, { name: 'b', monthly: 5, need: 'yes', lane: 'x' }], basecamp: 1800.4 });
   assert.equal(r.items[0].need, true); assert.equal(r.items[0].lane, 'big'); assert.equal(r.items[1].need, undefined); assert.equal(r.items[1].lane, undefined); assert.equal(r.basecamp, 1800);
   assert.equal(cleanReview({ items: [], basecamp: -4 }).basecamp, undefined);
+});
+
+test('values are the person\'s own words, trimmed and capped', () => {
+  const r = cleanReview({ items: [], values: ['  time with my kids ', '', 5, 'a', 'b', 'c', 'x'.repeat(200)] });
+  assert.equal(r.values?.length, MAX_VALUES); assert.equal(r.values?.[0], 'time with my kids');
+  assert.equal(cleanReview({ items: [], values: [] }).values, undefined);
+});
+test('tension names the biggest cost not chosen against the first value, and is silent without both', () => {
+  const items = [{ name: 'Boat', monthly: 900, again: 'no' as const, lane: 'big' as const }, { name: 'Gym', monthly: 40, again: 'no' as const, lane: 'hands' as const }];
+  const t = tension({ items, values: ['time with my kids'] });
+  assert.ok(t?.includes('time with my kids') && t.includes('Boat') && t.includes('$900'));
+  assert.equal(tension({ items }), null);
+  assert.equal(tension({ items: [{ name: 'Gym', monthly: 40, again: 'yes' }], values: ['x'] }), null);
 });

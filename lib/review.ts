@@ -5,7 +5,8 @@ export type Use = 'yes' | 'sometimes' | 'no';
 export type Again = 'yes' | 'unsure' | 'no';
 export type Lane = 'ending' | 'hands' | 'big';
 export type Item = { name: string; monthly: number; use?: Use; again?: Again; need?: boolean; lane?: Lane };
-export type Review = { items: Item[]; basecamp?: number };
+export const MAX_VALUES = 3;
+export type Review = { items: Item[]; basecamp?: number; values?: string[] };
 export const EMPTY_REVIEW: Review = { items: [] };
 
 export const cleanItem = (v: unknown): Item | null => {
@@ -24,7 +25,9 @@ export const cleanReview = (v: unknown): Review => {
   const b = v && typeof v === 'object' ? (v as { basecamp?: unknown }).basecamp : undefined;
   const basecamp = typeof b === 'number' && Number.isFinite(b) && b > 0 && b < 1e9 ? Math.round(b) : undefined;
   const items = list.map(cleanItem).filter((x): x is Item => x !== null).slice(0, MAX_ITEMS);
-  return basecamp ? { items, basecamp } : { items };
+  const rv = v && typeof v === 'object' ? (v as { values?: unknown }).values : undefined;
+  const values = Array.isArray(rv) ? rv.filter((x): x is string => typeof x === 'string').map((x) => x.trim().slice(0, 80)).filter(Boolean).slice(0, MAX_VALUES) : [];
+  return { items, ...(basecamp ? { basecamp } : {}), ...(values.length ? { values } : {}) };
 };
 
 export const ready = (r: Review) => r.items.some((i) => i.name.trim() && i.monthly > 0);
@@ -74,4 +77,14 @@ export function alignment(r: Review): Alignment {
 export function inUnits(monthly: number, unitCost: number): number | null {
   if (!(unitCost > 0) || !(monthly > 0)) return null;
   return Math.round((monthly / unitCost) * 10) / 10;
+}
+
+// Names the tension in the person's own words: what they said matters, set beside their largest cost they would not choose again.
+// A statement of fact from their own answers. It never says what to do.
+export function tension(r: Review): string | null {
+  const v = (r.values ?? []).map((x) => x.trim()).filter(Boolean);
+  const top = alignment(r).againstItems[0];
+  if (!v.length || !top) return null;
+  const usd = (n: number) => '$' + n.toLocaleString('en-US');
+  return 'You said "' + v[0] + '" matters. Your largest cost you would not choose again is ' + top.name.trim() + ', ' + usd(top.monthly) + ' a month. Whether those two belong together is your call.';
 }

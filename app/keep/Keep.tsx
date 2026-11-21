@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { track } from '@/lib/client.ts';
-import { MAX_ITEMS, alignment, inUnits, rated, ready, summaryLines, summarize, type Again, type Item, type Lane, type Use } from '@/lib/review.ts';
+import { MAX_ITEMS, MAX_VALUES, alignment, tension, inUnits, rated, ready, summaryLines, summarize, type Again, type Item, type Lane, type Use } from '@/lib/review.ts';
 import { EMPTY, loadMe, saveMe, type Me } from '@/lib/me-store.ts';
 
 const digits = (s: string) => s.replace(/[^0-9]/g, '').slice(0, 7);
@@ -80,6 +80,9 @@ export function Keep() {
   }
 
   const s = summarize(me.review);
+  const vals = me.review.values ?? [];
+  const setVal = (i: number, t: string) => { const next = [...vals]; while (next.length <= i) next.push(''); next[i] = t.slice(0, 80); const m = { ...me, review: { ...me.review, values: next } }; setMe(m); saveMe(m); };
+  const tn = tension(me.review);
   const al = alignment(me.review);
   return (
     <main className="a-screen">
@@ -88,6 +91,14 @@ export function Keep() {
         <span className="a-label">What you would not choose again today</span>
         <p className="a-want">{s.notChosen.length ? '$' + s.notChosenMonthly.toLocaleString('en-US') + ' a month' : 'Nothing on your list'}</p>
       </div>
+      <section className="a-card">
+        <div className="a-cardhead"><h2>What matters to you, in your words</h2></div>
+        <div className="a-field">
+          <label htmlFor="k-v0">Up to {MAX_VALUES}, a few words each. Optional.</label>
+          {Array.from({ length: MAX_VALUES }, (_, i) => <input key={i} id={'k-v' + i} aria-label={'What matters to you, number ' + (i + 1)} type="text" maxLength={80} autoComplete="off" placeholder={i === 0 ? 'For example, time with my kids' : ''} value={vals[i] ?? ''} onChange={(e) => setVal(i, e.target.value)} />)}
+        </div>
+        {tn ? <p className="a-help">{tn}</p> : null}
+      </section>
       {al.score !== null ? (
         <section className="a-card">
           <div className="a-cardhead"><h2>{al.score}% of your listed money goes toward what you chose</h2></div>
