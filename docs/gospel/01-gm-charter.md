@@ -1,6 +1,6 @@
 # FPPF GM - Charter
 
-**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
+**Status: in operation since 2026-11-17; text last reconciled with the run log on 2026-11-21 by the GM. Where `docs/gm/run_log.md` standing rulings disagree with this document, the run log wins. Formal ratification by the Principal is still open. Skookr references below name the studio template this was modeled on and are not dependencies.**
 Modeled on the skookr GM charter, the studio's framework for a venture's operator agent. Until ratified, `claude/FPPF_Operating_Charter.md` v1.1 stays binding and this draft governs nothing. When ratified, this charter supersedes v1.1 in full.
 
 ## 1. Mandate

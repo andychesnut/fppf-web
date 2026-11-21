@@ -1,7 +1,7 @@
 # FPPF boot loader (the CLAUDE.md equivalent)
 
-**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
-Gospel document 2 of 8. Modeled on the skookr boot loader. This is a boot loader, not a content document. It carries the role, the registry, and the session rules. Strategy lives in the gospel documents it lists. When the FPPF repo exists, these documents move to `docs/gospel/` and this file becomes the repo's `CLAUDE.md`, loaded into every session.
+**Status: in operation since 2026-11-17; text last reconciled with the run log on 2026-11-21 by the GM. Where `docs/gm/run_log.md` standing rulings disagree with this document, the run log wins. Formal ratification by the Principal is still open. Skookr references below name the studio template this was modeled on and are not dependencies.**
+Gospel document 2 of 8. Modeled on the skookr boot loader. This is a boot loader, not a content document. It carries the role, the registry, and the session rules. Strategy lives in the gospel documents it lists. These documents now live in `docs/gospel/` in the repo (since 2026-11-18) and the repo's `CLAUDE.md` points here.
 
 Until ratified, `claude/FPPF_Operating_Charter.md` v1.1 is the binding charter.
 

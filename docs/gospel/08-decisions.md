@@ -1,6 +1,6 @@
 # FPPF - Decisions
 
-**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
+**Status: in operation since 2026-11-17; text last reconciled with the run log on 2026-11-21 by the GM. Where `docs/gm/run_log.md` standing rulings disagree with this document, the run log wins. Formal ratification by the Principal is still open. Skookr references below name the studio template this was modeled on and are not dependencies.**
 Gospel document 8 of 8. Modeled on the skookr Decisions log. Each entry records a ruling, its date, and its status. **Logging a decision entry needs the Principal's approval,** so every entry below is **PROPOSED, recorded from his statements and awaiting his confirmation.** A Principal ruling embedded in any document changes only through a new ruling from him.
 
 Entries use the studio's fields: ID, date, title, status, supersedes or amends, ruling.
@@ -26,6 +26,10 @@ Entries use the studio's fields: ID, date, title, status, supersedes or amends, 
 | D-001 | 2026-11-17 | Name: FPPF (First Principles Personal Finance) | PROPOSED |
 
 ## Entries
+
+**D-017, 2026-11-20, Alignment reading on /keep.** Status: GM DECISION, from the Principal's notes of 2026-11-20. Supersedes the "no scores" part of D-016. One score with its rule printed beside it (toward divided by toward plus against; needs and ending costs left out). The person sets the basecamp number, the lanes and the unit price. No threshold is ours. Revert: remove the score from `/keep`.
+
+**D-016, 2026-11-19, Core value is money against mind.** Status: the Principal's ruling. Months of savings is a supporting measure, not the lead. Every surface leads with money against what matters to the person. Sleep on it and a browser extension are on hold until he says they are validated.
 
 **D-015, 2026-11-19, Product definition.** Status: GM DECISION, worked out with the Principal over 2026-11-18 and 2026-11-19, no customer data. The product holds what a person wants, tells them whether they are on solid ground for it, shows what is in the way closing and why, and lets them test a decision before they make it. Onboarding has three parts: about you, your situation, your money. Eighteen of the 24 Snapshot questions are kept and the grades are retired. Public copy follows the voice rules. Full record: `docs/gm/product_direction.md`. Revert: delete that file and this entry.
 

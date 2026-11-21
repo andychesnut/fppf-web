@@ -1,6 +1,6 @@
 # FPPF - The Process
 
-**Status: DRAFT, 2026-11-17. Awaiting the Principal's ratification.**
+**Status: in operation since 2026-11-17; text last reconciled with the run log on 2026-11-21 by the GM. Where `docs/gm/run_log.md` standing rulings disagree with this document, the run log wins. Formal ratification by the Principal is still open. Skookr references below name the studio template this was modeled on and are not dependencies.**
 Gospel document 6 of 8. Modeled on the skookr Process, condensed for a lean product. Stages and gates are the studio's. FPPF-specific additions are marked **(FPPF)**.
 
 ## The spine

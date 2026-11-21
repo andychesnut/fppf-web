@@ -69,6 +69,14 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-21 21:45 UTC (14:45 Mountain) - scheduled run: gospel status lines reconciled, live check
+- **Verified live (public fetch, `www`):** `/`, `/start`, `/keep`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 (status codes only). No commits on `main` since 1937658, so no new input from the Principal.
+- **Metrics (ops-data, 2026-11-21 19:11 UTC):** 175 landing views all time, 10 in the last 24h, 169 visitors, 1 completion, 1 email, 1 start_view. Unchanged from the morning read in kind. No real traffic known. No `reviews/verdicts/` exist.
+- **Binding constraint:** product feedback. Sleep on it and traffic work stay on hold; the four variants await his pick; nothing to build from his notes remains that is not a guess.
+- **Did (docs only):** the open gospel cleanup. Documents 1, 2, 6, 7 and 8 said "DRAFT, awaiting ratification" and pointed at files before the repo existed; their status lines now say they are in operation, that the run log wins on conflict, and that ratification is still open. Added D-016 (core value is money against mind) and D-017 (alignment reading, supersedes the no-scores part). Revert: `git revert` this commit.
+- **Not done:** the v1 plan and Product Brief still describe the six F's as the public framework. No code changed, so no test or build run. No daily brief (outside 6:00 to 8:00 Mountain).
+- **Blocked on:** the Principal's feedback and his pick among the four variants.
+
 ### 2026-11-21 13:45 UTC (06:45 Mountain) - scheduled run: share bar on `/keep`, filter effect read
 - **Verified live (public fetch, `www`):** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/keep`, `/api/health` all 200. Health: db true, email false, checkout false.
 - **Metrics (ops-data, 2026-11-21 07:00 UTC):** 170 landing views all time, 10 in the last 24h (71 before the crawler filter, 48, then 20). The filter prediction (a fall of at least half from 71) holds: the earlier views were mostly bots. 164 visitors, 1 completion, 1 email, all probably the Principal's. No real traffic known. No `reviews/verdicts/` exist.
