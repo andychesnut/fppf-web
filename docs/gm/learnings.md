@@ -107,3 +107,6 @@ Experiment results and learnings, newest first. No experiments are known to be r
 ## 2026-11-20 - alignment reading (not an experiment)
 - Shipped the Principal's framework on `/keep`: needs unscored, basecamp set by the person, three lanes, score = toward / (toward + against). No prediction or kill rule recorded because there is no traffic to read; the test is the Principal's reaction and whether the reading tells a person something they did not know (the open question from hand test 1).
 - A visible rule beside the score is the design bet: a number the person can check reads as intelligent where bars did not.
+
+## 2026-11-21 - crawler filter read
+Landing views in the last 24h fell from 48 to 20 across the two feeds after the filter (feed 2026-11-20 23:58 UTC). Consistent with most earlier views being bots; still no real traffic known. Real-traffic baseline is not yet established.

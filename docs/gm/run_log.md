@@ -47,6 +47,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Access (all working, verified 2026-11-18):** push to the repo; fetch of `firstprinciplesmoney.com` and `www`; metrics feed on the `ops-data` branch.
 - **Live site (shipped 2026-11-19):** `/` is the Principal's headline with the animated maze and one button; `/start` is the new onboarding (15 questions in three parts, a first draft, a first reading); `/home` shows what is in the way, what the person has going for them, and their month if they add four numbers; `/what-if` tries a new monthly payment; `/align` is money against mind; `/keep` is "Still want this?" (shipped 2026-11-19 21:46 UTC, see entry). Everything a person enters stays in their browser. The older `/journey`, `/snapshot`, and `/angles` still exist but nothing links to them.
 - **Home also shows a "Since <date>" card (shipped 2026-11-19 14:00 UTC)** once a person changes saved numbers on a later day.
+- **Values on `/keep` (2026-11-21 05:46 UTC, 5396a44):** the result shows up to three values in the person's words and names the tension against the largest cost not chosen again.
 - **Alignment reading (2026-11-20 21:46 UTC):** `/keep` now marks needs, sets a basecamp number, assigns lanes, and shows one score with its rule. Dashboard hold lifted by the Principal's notes; Sleep on it hold stands.
 - **Test traffic (2026-11-20):** crawler and headless events are dropped server-side; `?notrack=1` opts a browser out. Check the effect on the next feed.
 - **Metrics feed (older note):** last commit 2026-11-19 15:41 UTC. Earlier skips were cron delay; feed is current. 118 landing views, 1 completion, 1 email, none from real traffic as far as known.
@@ -66,6 +67,16 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-21 05:46 UTC (2026-11-20 22:46 Mountain) - scheduled run: the person's own values on `/keep`
+- **Verified live (public fetch, `www`):** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false.
+- **Metrics (ops-data, 2026-11-20 23:58 UTC):** 168 landing views all time, 20 in the last 24h (down from 48 at the previous read, which fits the crawler filter now covering a full window), 162 visitors, 1 completion, 1 email. Still no real traffic known. No `reviews/verdicts/` exist.
+- **Input:** no new commits from the Principal since his notes (90f2d3e). Sleep on it and browser extension holds stand. Traffic work stays on hold.
+- **Built:** the next item from his notes. `/keep` now has up to three values in the person's own words at the top of the result, and one plain line naming the tension: what they said matters, set beside their largest cost they would not choose again, ending with "your call". No score on it, no advice words. `lib/review.ts` `tension()`, `MAX_VALUES`, cleaned values; 2 new tests (57 pass).
+- **Verified:** `npm test` 57 pass; `npm run build` passes; rendered locally at phone width with seeded data and looked at the screenshot. Live: pushed as 5396a44; the production `/keep` JavaScript on `www` contains the new text (fetched and searched). Not walked in a live browser, by rule.
+- **Floor:** values stay in the browser; no new events; no advice; no outcome claims.
+- **Not built from his notes:** the celebration barometer styling and the "dream cost" currency preset. Variants 1 to 4 await his pick.
+- **Blocked on:** his feedback on the live version, and his pick among the four variants.
 
 ### 2026-11-20 14:46 Mountain (21:46 UTC) - scheduled run: the alignment reading on `/keep`
 - **Verified live (public fetch, `www`) before the change:** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false. Home title unchanged.
