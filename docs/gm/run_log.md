@@ -69,6 +69,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-22 21:45 UTC (14:45 Mountain) - scheduled run: quiet check, no build
+- **Verified live (public fetch, `www`):** `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 (status codes). Health: db true, email false, checkout false.
+- **Metrics (ops-data, 2026-11-22 19:33 UTC):** 178 landing views all time, 3 in 24h, 1 completion, 1 email. No `reviews/verdicts/` exist. No new commits on `main` since the 06:45 run.
+- **Did:** nothing built. Holds stand and there is no new input from the Principal. No code changed, so no test or build run. No brief (outside 6:00 to 8:00 Mountain). No notification.
+- **Blocked on:** the Principal's feedback on the live version and his variant pick.
+
 ### 2026-11-22 13:45 UTC (06:45 Mountain) - scheduled run: quiet check, daily brief
 - **Verified live (public fetch, `www`):** `/`, `/start`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 after the bare-domain redirect. Health: db true, email false, checkout false.
 - **Metrics (ops-data, 2026-11-22 06:41 UTC):** 177 landing views all time, 7 in 24h, 1 completion, 1 email. No `reviews/verdicts/` exist. No new commits on `main` from the Principal.
