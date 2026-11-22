@@ -69,6 +69,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-22 05:46 UTC (2026-11-21 22:46 Mountain) - scheduled run: quiet check, no build
+- **Verified live (public fetch, `www`):** `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 (status codes). Health: db true, email false, checkout false.
+- **Metrics (ops-data, latest 2026-11-21 19:11 UTC):** unchanged since the last entry: 175 landing views all time, 10 in 24h, 1 completion, 1 email. No `reviews/verdicts/` exist. No new commits on `main` from the Principal.
+- **Did:** nothing built. Every remaining item is a guess without his feedback or his pick among variants 1 to 4, and the Sleep on it and traffic holds stand. No code changed, so no test or build run. No daily brief (outside 6:00 to 8:00 Mountain). No notification (nothing new).
+- **Blocked on:** the Principal's feedback on the live version and his variant pick.
+
 ### 2026-11-21 21:45 UTC (14:45 Mountain) - scheduled run: gospel status lines reconciled, live check
 - **Verified live (public fetch, `www`):** `/`, `/start`, `/keep`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 (status codes only). No commits on `main` since 1937658, so no new input from the Principal.
 - **Metrics (ops-data, 2026-11-21 19:11 UTC):** 175 landing views all time, 10 in the last 24h, 169 visitors, 1 completion, 1 email, 1 start_view. Unchanged from the morning read in kind. No real traffic known. No `reviews/verdicts/` exist.
