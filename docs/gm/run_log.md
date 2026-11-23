@@ -76,6 +76,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 ### 2026-11-23 21:45 UTC (14:45 Mountain) - scheduled run: shipped the demand test (E-004)
 - **Verified at start:** repo origin is andychesnut/fppf-web. Metrics (ops-data, 2026-11-23 07:30 UTC): 179 landing views, 2 in 24h, 1 completion, 1 email; no `reviews/verdicts/`. Live site was not re-fetched before the build (live check follows the deploy, below).
 - **Did:** built `/offer`, the monthly review waitlist with a labelled planned price of $49 one time (nothing charged, no payment details), email-only `waitlist` table, `/api/waitlist`, events `offer_view`, `offer_start`, `waitlist_joined`, waitlist counts in `/api/metrics`, privacy line, sitemap entry, and links from the guides index and every guide. E-004 prediction and kill rule recorded in `learnings.md` before shipping. 59 tests pass (2 new), production build passes, and a local build rendered at phone width and rejected a bad email.
+- **Live check (about 2 minutes after the push, public fetch):** `/offer` 200 and contains the form; `/`, `/guides`, `/privacy`, `/terms`, `/api/health` 200; health db true, email false, checkout false. The waitlist POST was not exercised live (no test traffic marker, and it would write a real row).
 - **Blocked on:** nothing. Traffic to the guides is the open risk.
 
 ### 2026-11-23 13:45 UTC (06:45 Mountain) - scheduled run: quiet check, daily brief, Monday outer pass
