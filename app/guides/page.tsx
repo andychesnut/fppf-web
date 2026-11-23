@@ -13,6 +13,7 @@ export default function Page() {
       <ul className="list">
         {GUIDES.map((g) => <li key={g.slug}><Link href={'/guides/' + g.slug}><strong>{g.title}</strong></Link><br />{g.description}</li>)}
       </ul>
+      <p>Want a monthly check on where your money and your mind line up? <Link href="/offer">See the planned monthly review</Link>.</p>
       <p className="muted small">Education and self-assessment only. Not investment, tax, or legal advice.</p>
     </main>
   );

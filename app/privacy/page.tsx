@@ -18,6 +18,7 @@ export default function Page() {
         <li><strong>Your saved result,</strong> only if you ask us to save it: your email address, the state of each area, your situation load, and your runway range in months.</li>
         <li><strong>The questions, your own words, and your numbers.</strong> Everything you answer or type at Start, Home, and What if is kept in your browser and nowhere else. It is never sent to us. You can erase it from the Home screen.</li>
         <li><strong>The earlier planner.</strong> The sentence and the numbers you type are worked out in your browser and saved only there, so you can come back to your plan. They are never sent to us. You can erase them from the plan page.</li>
+        <li><strong>The waitlist,</strong> only if you join it: your email address and the planned price shown to you. Nothing else, and nothing is charged.</li>
         <li><strong>Anonymous usage counts:</strong> which step of the snapshot was reached, whether a page was opened and which question was reached, your yes or no to its two feedback questions, and whether a button was tapped, tied to a random identifier kept in your browser. They hold no email and no answers.</li>
       </ul>
       <h2>What we never collect</h2>

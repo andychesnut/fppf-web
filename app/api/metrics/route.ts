@@ -25,7 +25,8 @@ export async function GET(req: Request) {
       from events where name = 'snapshot_complete' group by 1 order by 2 desc`;
     const saves = await q`select count(*)::int as total, count(*) filter (where notify_full)::int as notify_full,
         count(*) filter (where ts > now() - interval '7 days')::int as last_7d from saves`;
-    return Response.json({ ok: true, generated_at: new Date().toISOString(), db: true, events, dropoff, price, stages, saves: saves[0] });
+    const waitlist = await q`select count(*)::int as total, count(*) filter (where ts > now() - interval '7 days')::int as last_7d from waitlist`;
+    return Response.json({ ok: true, generated_at: new Date().toISOString(), db: true, waitlist: waitlist[0], events, dropoff, price, stages, saves: saves[0] });
   } catch {
     return Response.json({ ok: false }, { status: 500 });
   }

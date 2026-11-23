@@ -4,6 +4,6 @@ import { siteUrl } from '@/lib/site.ts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const u = siteUrl();
-  const pages = ['', '/start', '/what-if', '/guides', '/privacy', '/terms'];
+  const pages = ['', '/start', '/what-if', '/guides', '/offer', '/privacy', '/terms'];
   return [...pages.map((p) => ({ url: u + p })), ...GUIDES.map((g) => ({ url: u + '/guides/' + g.slug }))];
 }

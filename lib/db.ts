@@ -38,6 +38,13 @@ export async function ready(): Promise<NeonQueryFunction<false, false> | null> {
         notify_full boolean not null default false,
         unsubscribed boolean not null default false
       )`;
+      await q`create table if not exists waitlist (
+        id bigserial primary key,
+        ts timestamptz not null default now(),
+        email text not null unique,
+        price int,
+        unsubscribed boolean not null default false
+      )`;
     })().catch((e) => {
       schemaReady = null;
       throw e;

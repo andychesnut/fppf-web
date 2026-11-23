@@ -68,9 +68,15 @@ Read this first on every run. The "Standing rulings" section overrides any older
   4. Confirm the postal address format. Age: since 2026-11-18.
 - **Spend, month one, estimated:** domain about $16, Vercel Pro about $20. Unverified.
 - **Known cleanup, still open:** the gospel documents other than document 3 are out of date against the standing rulings (charter, RSI loop, rocks, issues, team, decisions status lines). The v1 plan and Product Brief still describe the six F's as the public framework.
+- **E-004 demand test (2026-11-23):** `/offer` waitlist, $49 one-time planned price, live after the push in the 21:45 UTC entry. Read `offer_view`, `offer_start`, `waitlist_joined` from ops-data from 2026-11-24.
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
+
+### 2026-11-23 21:45 UTC (14:45 Mountain) - scheduled run: shipped the demand test (E-004)
+- **Verified at start:** repo origin is andychesnut/fppf-web. Metrics (ops-data, 2026-11-23 07:30 UTC): 179 landing views, 2 in 24h, 1 completion, 1 email; no `reviews/verdicts/`. Live site was not re-fetched before the build (live check follows the deploy, below).
+- **Did:** built `/offer`, the monthly review waitlist with a labelled planned price of $49 one time (nothing charged, no payment details), email-only `waitlist` table, `/api/waitlist`, events `offer_view`, `offer_start`, `waitlist_joined`, waitlist counts in `/api/metrics`, privacy line, sitemap entry, and links from the guides index and every guide. E-004 prediction and kill rule recorded in `learnings.md` before shipping. 59 tests pass (2 new), production build passes, and a local build rendered at phone width and rejected a bad email.
+- **Blocked on:** nothing. Traffic to the guides is the open risk.
 
 ### 2026-11-23 13:45 UTC (06:45 Mountain) - scheduled run: quiet check, daily brief, Monday outer pass
 - **Verified live (public fetch, `www`, status codes):** `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false.

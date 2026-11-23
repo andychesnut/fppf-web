@@ -116,3 +116,8 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-23 - weekly outer pass
 - Calibration: one prediction made this week (crawler filter cuts landing views by half), one correct. Process failures: none. Idle runs are the correct response while the holds stand and there is no feedback; the cost is that the product still has one user. No rule change warranted.
+
+## 2026-11-23 - E-004 demand test: monthly review waitlist at /offer
+- Recorded before shipping. Offer: the monthly money-against-mind review, planned launch price $49 one time (labelled, nothing charged, R5 and R11), waitlist by email only. Reached from the guides pages and the guides index.
+- Prediction within 7 days of going live: 50 real visitors (`offer_view`), 10 starts (`offer_start`), 5 sign-ups (`waitlist_joined`, and rows in the `waitlist` table). Kill rule: fewer than 2 sign-ups means rework the pitch before building more product.
+- Caveat: guides have had no known real traffic, so fewer than 50 visitors means the channel is the problem, not the offer. Read sign-ups per visitor, not only totals.

@@ -28,6 +28,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       ))}
       <p>{g.cta.text}</p>
       <p><Link href={g.cta.href} className="a-btn">{g.cta.label}</Link></p>
+      <p className="small">Planning a monthly check? <Link href="/offer">See the planned monthly review</Link>.</p>
       <p className="muted small">{DISCLAIMER}</p>
     </main>
   );
