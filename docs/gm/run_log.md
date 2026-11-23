@@ -69,6 +69,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-23 13:45 UTC (06:45 Mountain) - scheduled run: quiet check, daily brief, Monday outer pass
+- **Verified live (public fetch, `www`, status codes):** `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200. Health: db true, email false, checkout false.
+- **Metrics (ops-data, 2026-11-23 07:30 UTC):** 179 landing views all time, 2 in 24h, 1 completion, 1 email. No `reviews/verdicts/` exist. No new commits on `main` since 2026-11-21.
+- **Did:** Monday outer-loop pass (no gospel change; evidence and diagnosis in the brief). Wrote `docs/gm/daily_briefs/2026-11-23.md`. Nothing built: holds stand, no new input. No code changed, so no test or build run.
+- **Blocked on:** the Principal's feedback on the live version and his variant pick.
+
 ### 2026-11-23 05:45 UTC (2026-11-22 22:45 Mountain) - scheduled run: quiet check, no build
 - **Verified live (public fetch, `www`):** `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200 (status codes). Health: db true, email false, checkout false.
 - **Metrics (ops-data, 2026-11-22 19:33 UTC, no newer read):** 178 landing views all time, 3 in 24h, 1 completion, 1 email. No `reviews/verdicts/` exist. No new commits on `main` since the last run.

@@ -113,3 +113,6 @@ Landing views in the last 24h fell from 48 to 20 across the two feeds after the 
 
 ## 2026-11-21 - crawler filter confirmed
 Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07:00 UTC). The prediction (fall of at least half) holds. Consequence: roughly 85 percent of earlier landing views were automated. Real-traffic baseline is about 10 or fewer a day and probably the Principal's own visits. Do not read any funnel rate until real starts exist.
+
+## 2026-11-23 - weekly outer pass
+- Calibration: one prediction made this week (crawler filter cuts landing views by half), one correct. Process failures: none. Idle runs are the correct response while the holds stand and there is no feedback; the cost is that the product still has one user. No rule change warranted.
