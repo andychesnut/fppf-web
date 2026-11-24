@@ -124,3 +124,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-24 - two guides on the core theme (E-003 extension)
 - Added "why your money and your life can feel out of step" and "how to tell if a recurring cost is still worth it", both ending at `/start`. Same prediction and kill rule as E-003 (guide-originated visits within 30 days of indexing; zero after 45 days means search is the wrong channel). These feed `/offer` through the existing guide links.
+
+## 2026-11-24 - guides 9 and 10 (E-003 extension)
+- Added "what your car really costs each month" and "how to turn yearly bills into a monthly number". Same prediction and kill rule as E-003. Read `offer_view` and guide-originated visits at the next run; with `offer_view` at zero after about 12 hours, the open risk is still traffic, not the pitch.

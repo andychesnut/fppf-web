@@ -118,6 +118,35 @@ export const GUIDES: Guide[] = [
     ],
     cta: { text: 'Go through your own costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
   },
+  {
+    slug: 'what-your-car-really-costs-each-month',
+    title: 'What your car really costs each month',
+    description: 'Add up the loan, insurance, fuel and upkeep into one monthly and yearly figure, then ask whether the car is still worth that to you.',
+    intro: 'Most people know the loan payment and not the full cost. Putting every car cost into one number takes ten minutes and a bank statement.',
+    sections: [
+      { h: 'List every cost, not just the payment', p: ['Loan or lease, insurance, fuel, parking or tolls, repairs and upkeep, registration and taxes. Use the last three months for the monthly ones.', 'Take a made-up car: $420 loan, $140 insurance, $160 fuel, $90 upkeep. That is $810 a month.'] },
+      { h: 'Turn it into a yearly figure', p: ['$810 a month is $9,720 a year. Add the yearly bills too, such as $180 registration, and the year is $9,900, or $825 a month.'] },
+      { h: 'Divide by how much you use it', p: ['If you drive it on 20 days a month, $825 is about $41 a day. That is a fact about the past, not a verdict.'] },
+      { h: 'Ask the fresh-eyes question', p: ['If you did not own this car today, would you pay $825 a month to have it? Yes, no and not sure are all fine answers.'] },
+      { h: 'Check how hard it is to change', p: ['A loan or lease may carry a payoff or a fee. Insurance can often be re-quoted. Knowing which costs are fixed tells you what is realistic this year and what is a longer plan.'] },
+      { h: 'Your call', p: ['Plenty of people choose a car because it serves their life, such as a job, family or a place with no transit. The aim is to see the full cost and choose it on purpose. This is education, not advice.'] },
+    ],
+    cta: { text: 'Put the car next to your other costs. Everything stays on your device.', href: '/start', label: 'See my costs together' },
+  },
+  {
+    slug: 'how-to-turn-yearly-bills-into-a-monthly-number',
+    title: 'How to turn yearly bills into a monthly number',
+    description: 'Insurance, registration, gifts and subscriptions that bill once a year hide from your monthly budget. Here is how to spread them into one steady figure.',
+    intro: 'A monthly number that leaves out yearly bills looks healthier than it is. The fix is plain division.',
+    sections: [
+      { h: 'Collect the once-a-year and once-a-quarter bills', p: ['Look back over twelve months. Typical ones: insurance paid in full, registration, annual software, holiday gifts, a yearly trip you always take.'] },
+      { h: 'Add them and divide by twelve', p: ['Take a made-up year: $1,200 insurance, $180 registration, $240 software, $600 gifts. That is $2,220 a year. Divided by 12, it is $185 a month.'] },
+      { h: 'Add the result to your monthly bills', p: ['If your regular monthly bills are $2,200, your real monthly number is $2,385. That is the figure to compare against what comes in.'] },
+      { h: 'Why it matters', p: ['A month with no big bill feels easy, and a month with three feels like a crisis. Spreading them shows the true level every month and explains a lot of that stress.'] },
+      { h: 'Your call', p: ['You decide which yearly items count as must-pay and which are choices. Some, such as the yearly trip, may be the point of the money. This is education, not advice.'] },
+    ],
+    cta: { text: 'Enter your four numbers, including the yearly bills spread out. They stay on your device.', href: '/start', label: 'Find my monthly number' },
+  },
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);

@@ -73,6 +73,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-24 13:46 UTC (06:46 Mountain) - scheduled run: two more guides, daily brief
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 09:50 UTC): 182 landing views all time, 3 in 24h, `start_view` 3, `start_step` 5, no `offer_view` events, waitlist 0. No `reviews/verdicts/`.
+- **Did:** added two guides (what a car really costs each month; turn yearly bills into a monthly number), both ending at `/start`, with an arithmetic test. 61 tests pass, production build passes. Wrote the daily brief.
+- **Not done:** no distribution channel beyond search exists yet; E-004 has no visitors to read.
+- **Blocked on:** nothing.
+
 ### 2026-11-24 05:45 UTC (2026-11-23 22:45 Mountain) - scheduled run: two new guides
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/offer`, `/guides`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-23 23:50 UTC): 181 landing views all time, 3 in 24h, 1 completion, 1 email, waitlist 0, no `offer_view` events yet. No `reviews/verdicts/`.
 - **Did:** added two guides on the core theme (money and life out of step; is a recurring cost still worth it), both ending at `/start`, with an arithmetic test. 60 tests pass, production build passes. Sitemap picks them up automatically.

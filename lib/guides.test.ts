@@ -36,3 +36,14 @@ test('the alignment and recurring-cost guides match their own arithmetic', () =>
   assert.equal(Math.round((135 / 4) * 100) / 100, 33.75);
   assert.ok(GUIDES.find((g) => g.slug === 'why-your-money-and-your-life-feel-out-of-step')!.sections[2].p[0].includes('58%'));
 });
+
+test('car and yearly-bill guides match their own arithmetic', () => {
+  assert.equal(420 + 140 + 160 + 90, 810);
+  assert.equal(810 * 12, 9720);
+  assert.equal(9720 + 180, 9900);
+  assert.equal(9900 / 12, 825);
+  assert.equal(Math.round(825 / 20), 41);
+  assert.equal(1200 + 180 + 240 + 600, 2220);
+  assert.equal(2220 / 12, 185);
+  assert.equal(2200 + 185, 2385);
+});
