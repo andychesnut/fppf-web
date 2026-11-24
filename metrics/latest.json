@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-24T0950Z",
+  "collected_at": "2026-11-24T2222Z",
   "site": "https://www.firstprinciplesmoney.com",
   "home_status": "200",
   "health": {
@@ -10,7 +10,7 @@
   },
   "metrics": {
     "ok": true,
-    "generated_at": "2026-11-24T09:50:03.865Z",
+    "generated_at": "2026-11-24T22:22:52.498Z",
     "db": true,
     "waitlist": {
       "total": 0,
@@ -26,10 +26,10 @@
       },
       {
         "name": "landing_view",
-        "all_time": 182,
-        "last_7d": 182,
+        "all_time": 184,
+        "last_7d": 184,
         "last_24h": 3,
-        "visitors_all_time": 175
+        "visitors_all_time": 177
       },
       {
         "name": "price_intent_view",
@@ -63,14 +63,14 @@
         "name": "start_step",
         "all_time": 5,
         "last_7d": 5,
-        "last_24h": 5,
+        "last_24h": 0,
         "visitors_all_time": 1
       },
       {
         "name": "start_view",
         "all_time": 3,
         "last_7d": 3,
-        "last_24h": 2,
+        "last_24h": 0,
         "visitors_all_time": 2
       }
     ],
