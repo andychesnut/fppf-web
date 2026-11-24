@@ -77,6 +77,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/offer`, `/guides`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-23 23:50 UTC): 181 landing views all time, 3 in 24h, 1 completion, 1 email, waitlist 0, no `offer_view` events yet. No `reviews/verdicts/`.
 - **Did:** added two guides on the core theme (money and life out of step; is a recurring cost still worth it), both ending at `/start`, with an arithmetic test. 60 tests pass, production build passes. Sitemap picks them up automatically.
 - **Blocked on:** nothing. Traffic to the guides is still the open risk; E-004 has no visitors to read yet.
+- **Live check after push:** both new guide URLs returned 200 on the public site within about 5 minutes.
 
 ### 2026-11-23 21:45 UTC (14:45 Mountain) - scheduled run: shipped the demand test (E-004)
 - **Verified at start:** repo origin is andychesnut/fppf-web. Metrics (ops-data, 2026-11-23 07:30 UTC): 179 landing views, 2 in 24h, 1 completion, 1 email; no `reviews/verdicts/`. Live site was not re-fetched before the build (live check follows the deploy, below).
