@@ -121,3 +121,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 - Recorded before shipping. Offer: the monthly money-against-mind review, planned launch price $49 one time (labelled, nothing charged, R5 and R11), waitlist by email only. Reached from the guides pages and the guides index.
 - Prediction within 7 days of going live: 50 real visitors (`offer_view`), 10 starts (`offer_start`), 5 sign-ups (`waitlist_joined`, and rows in the `waitlist` table). Kill rule: fewer than 2 sign-ups means rework the pitch before building more product.
 - Caveat: guides have had no known real traffic, so fewer than 50 visitors means the channel is the problem, not the offer. Read sign-ups per visitor, not only totals.
+
+## 2026-11-24 - two guides on the core theme (E-003 extension)
+- Added "why your money and your life can feel out of step" and "how to tell if a recurring cost is still worth it", both ending at `/start`. Same prediction and kill rule as E-003 (guide-originated visits within 30 days of indexing; zero after 45 days means search is the wrong channel). These feed `/offer` through the existing guide links.

@@ -89,6 +89,35 @@ export const GUIDES: Guide[] = [
     ],
     cta: { text: 'Enter your four numbers and see the three results. They stay on your device.', href: '/start', label: 'Start' },
   },
+  {
+    slug: 'why-your-money-and-your-life-feel-out-of-step',
+    title: 'Why your money and your life can feel out of step',
+    description: 'A plain way to check whether your spending matches what you say matters to you, using three groups: needs, things you would choose again, and the rest.',
+    intro: 'You can pay every bill on time and still feel your money is not going where your life is. That gap is common, and you can look at it with a pencil.',
+    sections: [
+      { h: 'Start with what matters to you, in your words', p: ['Write down two or three things you want your money to serve. Not goals a planner would approve of. Yours: time with family, a trip every year, a year to try a business.', 'Nobody else can set this list. It is the measuring stick for everything below.'] },
+      { h: 'Sort last month into three groups', p: ['Needs: a roof and food up to a basic level, plus bills you cannot skip. Toward: spending you would choose again because it serves your list. Against: spending you would not choose again if you saw it fresh.', 'Take a made-up month with $3,200 spent. $2,000 is needs, $700 is toward, $500 is against.'] },
+      { h: 'A simple share you can check', p: ['Leave needs out, since they are not a choice. Then divide toward by toward plus against. Here that is $700 divided by $1,200, or about 58%.', 'The number is not a grade. It shows how much of the money you actually steer is going where you said you wanted it.'] },
+      { h: 'Look for the few big items, not the many small ones', p: ['In most months the gap sits in a handful of recurring costs, such as a subscription you forgot, a car you drive little, or a plan you have outgrown. Small daily spending is rarely where the pull is.', 'Some of those costs are tied to obligations and take months to change. Others end on their own or are yours to cancel today. Sorting them by how hard they are to change keeps the exercise realistic.'] },
+      { h: 'Your call', p: ['You are the judge of what is aligned. A cost that looks wasteful to one person is the point of life for another. This is education, not advice.'] },
+    ],
+    cta: { text: 'Try it on your own life. Your answers stay on your device.', href: '/start', label: 'See where my money is going' },
+  },
+  {
+    slug: 'how-to-tell-if-a-recurring-cost-is-still-worth-it',
+    title: 'How to tell if a recurring cost is still worth it',
+    description: 'A five-question check for any subscription, membership or monthly cost: what it costs per year, how often you use it, and whether you would choose it again.',
+    intro: 'Recurring costs are easy to start and easy to forget. Here is a short check that works for a gym, a streaming service, a software tool or a club.',
+    sections: [
+      { h: 'Turn the monthly price into a yearly one', p: ['A $45 monthly cost is $540 a year. Seeing the yearly figure makes it easier to weigh against a trip or a month of breathing room.'] },
+      { h: 'Count how often you actually use it', p: ['Look at the last three months. If you used a $45 membership four times in total, each visit cost about $34 (three months at $45 is $135, divided by 4). That is a fact about the past, not a verdict.'] },
+      { h: 'Ask the fresh-eyes question', p: ['If this cost did not exist today and someone offered it to you at this price, would you sign up? Yes, no and not sure are all fine answers.'] },
+      { h: 'Check how hard it is to end', p: ['Some costs end with one click. Others have a contract, a fee or a notice period. Knowing that tells you whether to act this week or plan for later.'] },
+      { h: 'Say what it would buy instead', p: ['Name something you already value that the same $540 a year would cover, using your own prices. The comparison is yours, not ours.'] },
+      { h: 'Your call', p: ['Keeping a cost you would choose again is a good result. The aim is to choose, not to cut. This is education, not advice.'] },
+    ],
+    cta: { text: 'Go through your own costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
+  },
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);

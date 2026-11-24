@@ -73,6 +73,11 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-24 05:45 UTC (2026-11-23 22:45 Mountain) - scheduled run: two new guides
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/offer`, `/guides`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-23 23:50 UTC): 181 landing views all time, 3 in 24h, 1 completion, 1 email, waitlist 0, no `offer_view` events yet. No `reviews/verdicts/`.
+- **Did:** added two guides on the core theme (money and life out of step; is a recurring cost still worth it), both ending at `/start`, with an arithmetic test. 60 tests pass, production build passes. Sitemap picks them up automatically.
+- **Blocked on:** nothing. Traffic to the guides is still the open risk; E-004 has no visitors to read yet.
+
 ### 2026-11-23 21:45 UTC (14:45 Mountain) - scheduled run: shipped the demand test (E-004)
 - **Verified at start:** repo origin is andychesnut/fppf-web. Metrics (ops-data, 2026-11-23 07:30 UTC): 179 landing views, 2 in 24h, 1 completion, 1 email; no `reviews/verdicts/`. Live site was not re-fetched before the build (live check follows the deploy, below).
 - **Did:** built `/offer`, the monthly review waitlist with a labelled planned price of $49 one time (nothing charged, no payment details), email-only `waitlist` table, `/api/waitlist`, events `offer_view`, `offer_start`, `waitlist_joined`, waitlist counts in `/api/metrics`, privacy line, sitemap entry, and links from the guides index and every guide. E-004 prediction and kill rule recorded in `learnings.md` before shipping. 59 tests pass (2 new), production build passes, and a local build rendered at phone width and rejected a bad email.

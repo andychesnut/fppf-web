@@ -28,3 +28,11 @@ test('the worked example in the guides matches the app arithmetic', () => {
   assert.equal(Math.round((8000 / 2800) * 10) / 10, 2.9);
   assert.ok(GUIDES[0].sections[1].p[1].includes('about 2.9 months'));
 });
+
+test('the alignment and recurring-cost guides match their own arithmetic', () => {
+  assert.equal(Math.round((700 / 1200) * 100), 58);
+  assert.equal(2000 + 700 + 500, 3200);
+  assert.equal(45 * 12, 540);
+  assert.equal(Math.round((135 / 4) * 100) / 100, 33.75);
+  assert.ok(GUIDES.find((g) => g.slug === 'why-your-money-and-your-life-feel-out-of-step')!.sections[2].p[0].includes('58%'));
+});
