@@ -127,3 +127,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-24 - guides 9 and 10 (E-003 extension)
 - Added "what your car really costs each month" and "how to turn yearly bills into a monthly number". Same prediction and kill rule as E-003. Read `offer_view` and guide-originated visits at the next run; with `offer_view` at zero after about 12 hours, the open risk is still traffic, not the pitch.
+
+## 2026-11-24 (14:45 run) - sitemap host
+- Prediction: with the sitemap and robots naming `www`, the guides become findable by a `site:` search within 30 days. Falsified if `site:firstprinciplesmoney.com` still returns nothing by 2026-12-24 with the sitemap correct; then the blocker is crawl discovery, and the next step is a Search Console submission (the Principal's account). Lesson: check the live sitemap, not just the code default; an environment variable overrode it.
