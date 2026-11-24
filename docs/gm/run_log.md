@@ -76,6 +76,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 ### 2026-11-24 13:46 UTC (06:46 Mountain) - scheduled run: two more guides, daily brief
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 09:50 UTC): 182 landing views all time, 3 in 24h, `start_view` 3, `start_step` 5, no `offer_view` events, waitlist 0. No `reviews/verdicts/`.
 - **Did:** added two guides (what a car really costs each month; turn yearly bills into a monthly number), both ending at `/start`, with an arithmetic test. 61 tests pass, production build passes. Wrote the daily brief.
+- **Live check after push:** both new guide URLs returned 200 within about 1 minute.
 - **Not done:** no distribution channel beyond search exists yet; E-004 has no visitors to read.
 - **Blocked on:** nothing.
 
