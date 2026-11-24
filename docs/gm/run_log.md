@@ -77,6 +77,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/guides`, `/offer`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 09:50 UTC, no newer feed): 182 landing views all time, 3 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A public search for `site:firstprinciplesmoney.com` returned no pages from the site, so none of the guides is known to be indexed yet.
 - **Found:** the live `sitemap.xml` and `robots.txt` list the bare domain (`https://firstprinciplesmoney.com/...`), which 308-redirects to `www`. A sitemap whose every URL redirects is a poor signal to search engines. Cause: the production `NEXT_PUBLIC_SITE_URL` is the bare domain, overriding the code default.
 - **Did:** `lib/site.ts` `normalizeSiteUrl()` forces the bare domain to `www` whatever the variable says, with a test (62 tests pass, production build passes). The Vercel variable was not touched (never hold credentials).
+- **Live check (about 2 minutes after the push):** live `sitemap.xml` lists `www` URLs and `robots.txt` names the `www` sitemap.
 - **Tried and blocked:** pinging IndexNow; the agent proxy refuses `api.indexnow.org`. Not retried.
 - **Blocked on:** nothing. Traffic is still the constraint; the next search signal needs a Search Console or Bing account, which is the Principal's to create (floor).
 
