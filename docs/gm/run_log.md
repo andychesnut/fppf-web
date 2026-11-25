@@ -78,6 +78,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **E-004 read:** day 3 of 7, zero offer views. Constraint is traffic, not the pitch.
 - **Did:** added two guides (what moving costs each month; compare two job offers by what you keep), both ending at `/start`, with an arithmetic test. 64 tests pass, production build passes. Wrote the daily brief.
 - **Blocked on:** nothing. Search indexing needs a Search Console or Bing account, which is the Principal's to create.
+- **Live check:** both new guide URLs returned 200 on the public site within about 1 minute of the push.
 
 ### 2026-11-25 05:46 UTC (2026-11-24 22:46 Mountain) - scheduled run: two more guides
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 22:22 UTC): 184 landing views all time, 3 in 24h, waitlist 0, no `offer_view`, `offer_start` or `waitlist_joined` events. No `reviews/verdicts/`.
