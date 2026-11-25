@@ -78,6 +78,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **E-004 read:** day 3 of 7, still no offer views. Traffic is the constraint. Kill rule reads 2026-11-30.
 - **Did:** added two guides (what a pet costs; what a side income really adds), both ending at `/start`, with an arithmetic test. 65 tests pass, production build passes. Not a brief window, so no daily brief.
 - **Blocked on:** nothing new. Search indexing needs a Search Console or Bing account (the Principal's). IndexNow still blocked by the proxy.
+- **Live check:** both new guide URLs returned 200 on the public site within about 2 minutes of the push.
 
 ### 2026-11-25 13:46 UTC (06:46 Mountain) - scheduled run: two more guides, daily brief
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/api/health`, `/sitemap.xml` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-25 08:25 UTC): 187 landing views all time, 5 in 24h, waitlist 0, no `offer_view` events. No `reviews/verdicts/`.
