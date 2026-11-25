@@ -47,3 +47,14 @@ test('car and yearly-bill guides match their own arithmetic', () => {
   assert.equal(2220 / 12, 185);
   assert.equal(2200 + 185, 2385);
 });
+
+test('career break and recurring charge guides match their own arithmetic', () => {
+  assert.equal(3200 * 6, 19200);
+  assert.equal(450 * 6, 2700);
+  assert.equal(19200 + 2700 + 4000, 25900);
+  assert.equal(800 * 6, 4800);
+  assert.equal(25900 - 4800, 21100);
+  assert.equal(21100 - 20000, 1100);
+  assert.equal(16 + 10 + 12 + 45 + 8, 91);
+  assert.equal(91 * 12, 1092);
+});

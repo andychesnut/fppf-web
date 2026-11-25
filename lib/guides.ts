@@ -147,6 +147,36 @@ export const GUIDES: Guide[] = [
     ],
     cta: { text: 'Enter your four numbers, including the yearly bills spread out. They stay on your device.', href: '/start', label: 'Find my monthly number' },
   },
+  {
+    slug: 'what-a-career-break-or-sabbatical-costs',
+    title: 'What a career break or sabbatical really costs',
+    description: 'A plain sum for time off work: months away, monthly spending, health cover, one-off costs and any income, set against what you have saved.',
+    intro: 'Time away from work is a trade, and the cost is arithmetic you can do on paper. Here is the sum, step by step.',
+    sections: [
+      { h: 'Pick the number of months', p: ['Start with a length you could say out loud, such as six months. You can change it later. Every other figure scales with it.'] },
+      { h: 'Add what a normal month costs while you are away', p: ['Use your real monthly spending from the last three months. Take a made-up figure of $3,200 a month. Six months is $19,200.', 'Then add what changes when a job ends. Health cover is often the big one. At a made-up $450 a month, six months is $2,700.'] },
+      { h: 'Add the one-off costs', p: ['A trip, a course or a move belongs here. Say $4,000. The total need is $19,200 plus $2,700 plus $4,000, or $25,900.'] },
+      { h: 'Subtract income you are sure of', p: ['Count only what is already agreed, such as part-time work at $800 a month. Six months is $4,800, which leaves $21,100 to cover.'] },
+      { h: 'Compare with what you have set aside', p: ['With $20,000 saved, this made-up person is about $1,100 short. That gap is the part to look at: a shorter break, a lower monthly figure or more time to save are all different answers to it.'] },
+      { h: 'Your call', p: ['The sum does not say whether a break is wise. It shows what it costs, so the decision is made with the figure in view. This is education, not advice.'] },
+    ],
+    cta: { text: 'Start from your own monthly number. It stays on your device.', href: '/start', label: 'Find my monthly number' },
+  },
+  {
+    slug: 'how-to-find-recurring-charges-in-your-statements',
+    title: 'How to find the recurring charges hiding in your statements',
+    description: 'A thirty-minute pass through three months of statements to list every charge that repeats, add it up by the year, and decide which to keep.',
+    intro: 'Most people can name their rent and not their fifth subscription. A short pass through your statements finds the rest.',
+    sections: [
+      { h: 'Gather three months', p: ['Download or open the last three months of statements for each card and account you pay from. Three months catches monthly charges and most quarterly ones.'] },
+      { h: 'Mark anything that appears more than once', p: ['Look for the same name and a similar amount in more than one month. Write each on a list with its monthly amount. Charges that appear once a year need a look back across twelve months.'] },
+      { h: 'Add them up', p: ['Take a made-up list: $16, $10, $12, $45 and $8 a month. That is $91 a month. Times 12, it is $1,092 a year.'] },
+      { h: 'Sort each one', p: ['For each line choose one: keep, drop, or not sure. Not sure is a fine answer. Ask whether you would sign up again today at this price.'] },
+      { h: 'Check how hard each is to end', p: ['Some end with one click. Others have a notice period or a fee. Put a date next to the ones you decide to end so the decision turns into an action.'] },
+      { h: 'Your call', p: ['Keeping a charge you would choose again is a good outcome. The point is to know what repeats, not to cut everything. This is education, not advice.'] },
+    ],
+    cta: { text: 'Go through your costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
+  },
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);
