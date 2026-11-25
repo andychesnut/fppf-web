@@ -177,6 +177,36 @@ export const GUIDES: Guide[] = [
     ],
     cta: { text: 'Go through your costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
   },
+  {
+    slug: 'what-moving-to-a-new-place-really-costs',
+    title: 'What moving to a new place really costs each month',
+    description: 'A plain sum for a move: the change in rent, the change in everyday costs, and the one-off cost of getting there, over the first year.',
+    intro: 'A new place changes more than the rent. Here is the sum that shows the whole change, month by month and for the first year.',
+    sections: [
+      { h: 'Start with the rent difference', p: ['Take a made-up move from $1,600 a month to $2,100. That is $500 more each month.'] },
+      { h: 'Add the everyday costs that change', p: ['Transport, utilities and parking often move with the address. Say the new commute saves $120 a month in transit. Subtract it: $500 minus $120 is $380 more each month.'] },
+      { h: 'Turn it into a year', p: ['$380 times 12 is $4,560 more over twelve months.'] },
+      { h: 'Add the one-off costs', p: ['Movers, deposits, and setup belong here. Say $3,000. The first year then costs $4,560 plus $3,000, or $7,560 more than staying.'] },
+      { h: 'Set it beside what you get', p: ['Shorter travel, a better neighbourhood or being near people can be worth a lot. The sum only shows the price, so you can set it next to what the move gives you.'] },
+      { h: 'Your call', p: ['Whether the move is worth it is yours to decide. This is education, not advice.'] },
+    ],
+    cta: { text: 'Start from your own monthly number. It stays on your device.', href: '/start', label: 'Find my monthly number' },
+  },
+  {
+    slug: 'how-to-compare-two-job-offers-by-what-you-keep',
+    title: 'How to compare two job offers by what you keep each month',
+    description: 'Turn two salaries into a monthly figure after tax and the costs each job adds, so the difference you see is the difference you keep.',
+    intro: 'A bigger salary is not always a bigger month. The sum below compares what is left once the job has taken its share.',
+    sections: [
+      { h: 'Put both on a monthly footing', p: ['Take made-up offers of $72,000 and $78,000. Divided by 12, that is $6,000 and $6,500 a month before tax.'] },
+      { h: 'Use your own take-home rate', p: ['Look at a recent pay stub for the share you keep. At a made-up 75 percent, the first offer is $4,500 a month and the second is $4,875. The gap is $375.'] },
+      { h: 'Subtract what each job costs you', p: ['Commuting, parking, clothes and meals add up. Say the second job costs $220 for commuting and $90 for parking, or $310 a month.'] },
+      { h: 'See what is left', p: ['$375 minus $310 is $65 a month, or $780 a year. A $6,000 gap on paper shrinks to a few hundred dollars kept.'] },
+      { h: 'Add what the numbers miss', p: ['Time, learning, benefits and security do not show in the sum. Write them beside it and weigh them yourself.'] },
+      { h: 'Your call', p: ['The sum makes the money part clear so the rest of the choice can be honest. This is education, not advice.'] },
+    ],
+    cta: { text: 'Go through your costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
+  },
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);

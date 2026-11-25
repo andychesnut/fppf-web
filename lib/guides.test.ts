@@ -58,3 +58,18 @@ test('career break and recurring charge guides match their own arithmetic', () =
   assert.equal(16 + 10 + 12 + 45 + 8, 91);
   assert.equal(91 * 12, 1092);
 });
+
+test('moving and job offer guides match their own arithmetic', () => {
+  assert.equal(2100 - 1600, 500);
+  assert.equal(500 - 120, 380);
+  assert.equal(380 * 12, 4560);
+  assert.equal(4560 + 3000, 7560);
+  assert.equal(72000 / 12, 6000);
+  assert.equal(78000 / 12, 6500);
+  assert.equal(6000 * 0.75, 4500);
+  assert.equal(6500 * 0.75, 4875);
+  assert.equal(4875 - 4500, 375);
+  assert.equal(220 + 90, 310);
+  assert.equal(375 - 310, 65);
+  assert.equal(65 * 12, 780);
+});

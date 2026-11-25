@@ -130,3 +130,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-24 (14:45 run) - sitemap host
 - Prediction: with the sitemap and robots naming `www`, the guides become findable by a `site:` search within 30 days. Falsified if `site:firstprinciplesmoney.com` still returns nothing by 2026-12-24 with the sitemap correct; then the blocker is crawl discovery, and the next step is a Search Console submission (the Principal's account). Lesson: check the live sitemap, not just the code default; an environment variable overrode it.
+
+## 2026-11-25 - guides 13 and 14 (E-003 extension)
+- Added "what moving to a new place really costs each month" and "how to compare two job offers by what you keep each month". Same prediction and kill rule as E-003. Landing views are 5 in 24h and `offer_view` is still zero at day 3 of E-004: more guides do not fix distribution by themselves. If `site:` search still shows nothing by 2026-12-24, stop adding guides and pick another public channel.

@@ -73,6 +73,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-25 13:46 UTC (06:46 Mountain) - scheduled run: two more guides, daily brief
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/api/health`, `/sitemap.xml` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-25 08:25 UTC): 187 landing views all time, 5 in 24h, waitlist 0, no `offer_view` events. No `reviews/verdicts/`.
+- **E-004 read:** day 3 of 7, zero offer views. Constraint is traffic, not the pitch.
+- **Did:** added two guides (what moving costs each month; compare two job offers by what you keep), both ending at `/start`, with an arithmetic test. 64 tests pass, production build passes. Wrote the daily brief.
+- **Blocked on:** nothing. Search indexing needs a Search Console or Bing account, which is the Principal's to create.
+
 ### 2026-11-25 05:46 UTC (2026-11-24 22:46 Mountain) - scheduled run: two more guides
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 22:22 UTC): 184 landing views all time, 3 in 24h, waitlist 0, no `offer_view`, `offer_start` or `waitlist_joined` events. No `reviews/verdicts/`.
 - **E-004 read:** day 2 of 7, zero offer views, so the kill rule (fewer than 2 sign-ups at day 7, 2026-11-30) cannot be judged on pitch quality yet. The constraint is traffic, not copy.
