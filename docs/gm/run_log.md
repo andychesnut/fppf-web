@@ -78,6 +78,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **E-004 read:** day 2 of 7, zero offer views, so the kill rule (fewer than 2 sign-ups at day 7, 2026-11-30) cannot be judged on pitch quality yet. The constraint is traffic, not copy.
 - **Did:** added two guides (what a career break costs; find recurring charges in statements), both ending at `/start`, with an arithmetic test. 63 tests pass, production build passes. Not a brief window, so no daily brief.
 - **Blocked on:** nothing. Search indexing needs a Search Console or Bing account, which is the Principal's to create.
+- **Live check:** both new guide URLs returned 200 within about 3 minutes of the push.
 
 ### 2026-11-24 21:45 UTC (14:45 Mountain) - scheduled run: sitemap and robots named the redirecting domain
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/guides`, `/offer`, `/privacy`, `/terms`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-24 09:50 UTC, no newer feed): 182 landing views all time, 3 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A public search for `site:firstprinciplesmoney.com` returned no pages from the site, so none of the guides is known to be indexed yet.
