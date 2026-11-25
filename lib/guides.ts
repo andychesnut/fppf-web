@@ -207,6 +207,36 @@ export const GUIDES: Guide[] = [
     ],
     cta: { text: 'Go through your costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
   },
+  {
+    slug: 'what-a-pet-really-costs-each-month',
+    title: 'What a pet really costs each month',
+    description: 'A plain sum for a pet: food, care, the yearly costs spread across twelve months, and a set-aside for the surprise bill.',
+    intro: 'A pet is mostly a daily joy and partly a bill. Here is the sum that shows the bill, so you can set it beside the joy.',
+    sections: [
+      { h: 'Start with the regular costs', p: ['Take a made-up dog. Food is $55 a month and treats and supplies are $25. That is $80 a month.'] },
+      { h: 'Spread the yearly costs', p: ['Checkups, vaccines, licences and boarding come once or twice a year. Say they total $720. Divide by 12 and you get $60 a month.'] },
+      { h: 'Add a set-aside for the surprise', p: ['Illness and injury arrive without warning. Putting aside $40 a month builds a cushion of $480 a year.'] },
+      { h: 'Add it up', p: ['$80 plus $60 plus $40 is $180 a month, or $2,160 a year.'] },
+      { h: 'Set it beside what you get', p: ['Company, routine and walks do not show in the sum. The sum only shows the price, so you can weigh it against what the pet gives you.'] },
+      { h: 'Your call', p: ['Whether the cost fits your life is yours to decide. This is education, not advice.'] },
+    ],
+    cta: { text: 'Start from your own monthly number. It stays on your device.', href: '/start', label: 'Find my monthly number' },
+  },
+  {
+    slug: 'what-a-side-income-really-adds-to-your-month',
+    title: 'What a side income really adds to your month',
+    description: 'Turn side-job earnings into what you keep after tax, costs and the hours it takes, so you see the real figure.',
+    intro: 'Extra income feels bigger than it is. The sum below shows what is left once tax, costs and time are counted.',
+    sections: [
+      { h: 'Start with what it brings in', p: ['Take a made-up side job that earns $600 a month before anything is taken out.'] },
+      { h: 'Set aside tax', p: ['Self-employed income is often taxed with nothing withheld. At a made-up 25 percent, $150 should be set aside, leaving $450.'] },
+      { h: 'Subtract what it costs to earn', p: ['Supplies, fees and travel come out too. Say they total $90. $450 minus $90 is $360 a month, or $4,320 a year.'] },
+      { h: 'Count the hours', p: ['If the job takes 20 hours a month, $360 divided by 20 is $18 an hour kept. Compare that with what an hour of your time is worth to you.'] },
+      { h: 'Decide what the money is for', p: ['Extra money works best with a job to do. Naming it keeps it from vanishing into the month.'] },
+      { h: 'Your call', p: ['Whether the hours are worth the money is yours to decide. This is education, not advice.'] },
+    ],
+    cta: { text: 'Go through your costs one at a time. Everything stays on your device.', href: '/start', label: 'Check my costs' },
+  },
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);

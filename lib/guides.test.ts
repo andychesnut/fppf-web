@@ -73,3 +73,16 @@ test('moving and job offer guides match their own arithmetic', () => {
   assert.equal(375 - 310, 65);
   assert.equal(65 * 12, 780);
 });
+
+test('pet and side income guides match their own arithmetic', () => {
+  assert.equal(55 + 25, 80);
+  assert.equal(720 / 12, 60);
+  assert.equal(40 * 12, 480);
+  assert.equal(80 + 60 + 40, 180);
+  assert.equal(180 * 12, 2160);
+  assert.equal(600 * 0.25, 150);
+  assert.equal(600 - 150, 450);
+  assert.equal(450 - 90, 360);
+  assert.equal(360 * 12, 4320);
+  assert.equal(360 / 20, 18);
+});
