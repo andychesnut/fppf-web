@@ -69,6 +69,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Spend, month one, estimated:** domain about $16, Vercel Pro about $20. Unverified.
 - **Known cleanup, still open:** the gospel documents other than document 3 are out of date against the standing rulings (charter, RSI loop, rocks, issues, team, decisions status lines). The v1 plan and Product Brief still describe the six F's as the public framework.
 - **E-004 demand test (2026-11-23):** `/offer` waitlist, $49 one-time planned price, live after the push in the 21:45 UTC entry. Read `offer_view`, `offer_start`, `waitlist_joined` from ops-data from 2026-11-24.
+- **IndexNow (2026-11-26):** live; weekly Monday cron. Search-result presence still unmeasured.
 - **Next runs, in order:** follow the build order at the end of `docs/gm/product_direction.md`. Start each run with the live check and the metrics read. Do not ship a public page faster than it can be looked at; render it locally and look before pushing.
 
 ## Entries
@@ -77,7 +78,7 @@ Read this first on every run. The "Standing rulings" section overrides any older
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/align`, `/api/health` all 200. Metrics (ops-data, 2026-11-26 21:27 UTC): 195 landing views all time, 4 in 24h, 56 in 7 days, waitlist 0, no `offer_view`. No `reviews/verdicts/`.
 - **Judgment:** the agent proxy blocks `api.indexnow.org`, but the app on Vercel can reach it. So the site now pings IndexNow itself, which needs no Search Console account.
 - **Did:** `/api/indexnow-key` serves the public key; `/api/indexnow` posts the sitemap URLs to IndexNow (throttled to once an hour); a Vercel cron calls it Mondays 15:00 UTC (`vercel.json`). `lib/indexnow.ts` with a test. 67 tests pass, production build passes. The key is public by design, not a credential.
-- **Not yet verified:** that the ping was accepted. Check `/api/indexnow` live after deploy (next entry).
+- **Fix and verification:** the first live call returned 422 because a key file under `/api/` only covers URLs under `/api/`. The key is now served at the site root (`/<key>.txt`, a Vercel rewrite) and `keyLocation` is dropped. After the second deploy the root key file returned 200 and `/api/indexnow` returned 202 (accepted). Acceptance is not indexing; check for site results in a week.
 - **Blocked on:** nothing for the GM. E-004 reads 2026-11-30.
 
 ### 2026-11-26 13:45 UTC (06:45 Mountain) - scheduled run: offer link in the footer, daily brief
