@@ -136,3 +136,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-26 - related-guide links (E-003 extension)
 - Each guide now links three others. Prediction: once any guide is crawled, all 16 become reachable by links, not only through the sitemap. Same kill rule as E-003. No traffic to read yet; `site:` check on 2026-12-24 stands.
+
+## 2026-11-26 - E-004 read, day 4 of 7
+- `offer_view` still zero; landing views 6 in 24h. `/offer` was only linked from guides; the footer now links it from every page. Prediction and kill rule unchanged (read 2026-11-30). Search for `site:firstprinciplesmoney.com` still shows nothing indexed, so the constraint is discovery, not the pitch.

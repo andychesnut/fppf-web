@@ -73,6 +73,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-26 13:45 UTC (06:45 Mountain) - scheduled run: offer link in the footer, daily brief
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-26 08:10 UTC): 193 landing views all time, 6 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A `site:firstprinciplesmoney.com` web search still returns nothing from the site.
+- **Judgment:** no 19th guide; sixteen guides are live and none has drawn a visit. Found that `/offer` was reachable only from guides, not from the home page or other pages.
+- **Did:** added a "Monthly review (waitlist)" link to the site footer, so every page links to the demand test. 66 tests pass, production build passes. Wrote the daily brief.
+- **Blocked on:** indexing needs a Search Console or Bing account (the Principal's). E-004 reads 2026-11-30.
+
 ### 2026-11-26 05:46 UTC (2026-11-25 22:46 Mountain) - scheduled run: related-guide links
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Sitemap lists 23 URLs. Metrics (ops-data, 2026-11-25 21:38 UTC, newest feed): 191 landing views all time, 7 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. `site:firstprinciplesmoney.com` search still returns nothing from the site.
 - **Judgment:** guides already carry Article JSON-LD, canonical and Open Graph, so markup is not the gap. More guides are not moving traffic (I-008). Did not add a 17th guide.
