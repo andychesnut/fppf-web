@@ -10,5 +10,5 @@ export function indexNowUrls(base: string): string[] {
 
 export function indexNowPayload(base: string) {
   const host = new URL(base).host;
-  return { host, key: INDEXNOW_KEY, keyLocation: base + '/api/indexnow-key', urlList: indexNowUrls(base) };
+  return { host, key: INDEXNOW_KEY, urlList: indexNowUrls(base) };
 }
