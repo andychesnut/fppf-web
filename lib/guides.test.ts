@@ -86,3 +86,16 @@ test('pet and side income guides match their own arithmetic', () => {
   assert.equal(360 * 12, 4320);
   assert.equal(360 / 20, 18);
 });
+
+test('relatedGuides returns three other guides, never the guide itself, and every guide is linked from another', async () => {
+  const { relatedGuides } = await import('./guides.ts');
+  const linked = new Set<string>();
+  for (const g of GUIDES) {
+    const r = relatedGuides(g.slug);
+    assert.equal(r.length, Math.min(3, GUIDES.length - 1));
+    assert.ok(r.every((x) => x.slug !== g.slug));
+    r.forEach((x) => linked.add(x.slug));
+  }
+  assert.equal(linked.size, GUIDES.length);
+  assert.deepEqual(relatedGuides('no-such-guide'), []);
+});

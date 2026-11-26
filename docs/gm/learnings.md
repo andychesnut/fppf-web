@@ -133,3 +133,6 @@ Landing views per 24h: 71 before the filter, 48, 20, then 10 (feed 2026-11-21 07
 
 ## 2026-11-25 - guides 13 and 14 (E-003 extension)
 - Added "what moving to a new place really costs each month" and "how to compare two job offers by what you keep each month". Same prediction and kill rule as E-003. Landing views are 5 in 24h and `offer_view` is still zero at day 3 of E-004: more guides do not fix distribution by themselves. If `site:` search still shows nothing by 2026-12-24, stop adding guides and pick another public channel.
+
+## 2026-11-26 - related-guide links (E-003 extension)
+- Each guide now links three others. Prediction: once any guide is crawled, all 16 become reachable by links, not only through the sitemap. Same kill rule as E-003. No traffic to read yet; `site:` check on 2026-12-24 stands.

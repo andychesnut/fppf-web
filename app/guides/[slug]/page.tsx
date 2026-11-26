@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { GUIDES, bySlug } from '@/lib/guides.ts';
+import { GUIDES, bySlug, relatedGuides } from '@/lib/guides.ts';
 import { BRAND, DISCLAIMER, siteUrl } from '@/lib/site.ts';
 
 export const dynamicParams = false;
@@ -28,6 +28,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       ))}
       <p>{g.cta.text}</p>
       <p><Link href={g.cta.href} className="a-btn">{g.cta.label}</Link></p>
+      <h2>More guides</h2>
+      <ul>{relatedGuides(g.slug).map((r) => <li key={r.slug}><Link href={'/guides/' + r.slug}>{r.title}</Link></li>)}</ul>
       <p className="small">Planning a monthly check? <Link href="/offer">See the planned monthly review</Link>.</p>
       <p className="muted small">{DISCLAIMER}</p>
     </main>

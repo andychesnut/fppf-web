@@ -73,6 +73,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-26 05:46 UTC (2026-11-25 22:46 Mountain) - scheduled run: related-guide links
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Sitemap lists 23 URLs. Metrics (ops-data, 2026-11-25 21:38 UTC, newest feed): 191 landing views all time, 7 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. `site:firstprinciplesmoney.com` search still returns nothing from the site.
+- **Judgment:** guides already carry Article JSON-LD, canonical and Open Graph, so markup is not the gap. More guides are not moving traffic (I-008). Did not add a 17th guide.
+- **Did:** every guide now ends with a "More guides" list (three others, deterministic, wrapping), so crawlers and readers reach all guides from any guide. `relatedGuides()` in `lib/guides.ts` with a test (every guide is linked from another). 66 tests pass, production build passes. Not a brief window, so no daily brief.
+- **Blocked on:** nothing for the GM. Indexing still needs a Search Console or Bing account (the Principal's). E-004 reads 2026-11-30.
+
 ### 2026-11-25 21:45 UTC (14:45 Mountain) - scheduled run: two more guides
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-25 21:38 UTC): 191 landing views all time, 7 in 24h, waitlist 0. No `reviews/verdicts/`.
 - **E-004 read:** day 3 of 7, still no offer views. Traffic is the constraint. Kill rule reads 2026-11-30.

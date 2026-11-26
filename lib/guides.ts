@@ -240,3 +240,12 @@ export const GUIDES: Guide[] = [
 ];
 
 export const bySlug = (s: string) => GUIDES.find((g) => g.slug === s);
+
+/** Three other guides to link at the foot of a guide: the next three in order, wrapping around. Deterministic so the build is stable. */
+export function relatedGuides(slug: string, n = 3): Guide[] {
+  const i = GUIDES.findIndex((g) => g.slug === slug);
+  if (i < 0) return [];
+  const out: Guide[] = [];
+  for (let k = 1; k < GUIDES.length && out.length < n; k++) out.push(GUIDES[(i + k) % GUIDES.length]);
+  return out;
+}
