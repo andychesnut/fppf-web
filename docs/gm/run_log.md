@@ -73,6 +73,13 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-26 21:45 UTC (14:45 Mountain) - scheduled run: IndexNow from the app itself
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/align`, `/api/health` all 200. Metrics (ops-data, 2026-11-26 21:27 UTC): 195 landing views all time, 4 in 24h, 56 in 7 days, waitlist 0, no `offer_view`. No `reviews/verdicts/`.
+- **Judgment:** the agent proxy blocks `api.indexnow.org`, but the app on Vercel can reach it. So the site now pings IndexNow itself, which needs no Search Console account.
+- **Did:** `/api/indexnow-key` serves the public key; `/api/indexnow` posts the sitemap URLs to IndexNow (throttled to once an hour); a Vercel cron calls it Mondays 15:00 UTC (`vercel.json`). `lib/indexnow.ts` with a test. 67 tests pass, production build passes. The key is public by design, not a credential.
+- **Not yet verified:** that the ping was accepted. Check `/api/indexnow` live after deploy (next entry).
+- **Blocked on:** nothing for the GM. E-004 reads 2026-11-30.
+
 ### 2026-11-26 13:45 UTC (06:45 Mountain) - scheduled run: offer link in the footer, daily brief
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, 2026-11-26 08:10 UTC): 193 landing views all time, 6 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A `site:firstprinciplesmoney.com` web search still returns nothing from the site.
 - **Judgment:** no 19th guide; sixteen guides are live and none has drawn a visit. Found that `/offer` was reachable only from guides, not from the home page or other pages.

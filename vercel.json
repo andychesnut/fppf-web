@@ -1,3 +1,4 @@
 {
-  "git": { "deploymentEnabled": { "ops-data": false } }
+  "git": { "deploymentEnabled": { "ops-data": false } },
+  "crons": [{ "path": "/api/indexnow", "schedule": "0 15 * * 1" }]
 }
