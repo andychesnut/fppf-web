@@ -74,6 +74,11 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-27 05:45 UTC (2026-11-26 22:45 Mountain) - scheduled run: live check, no build
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`, status codes): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, newest feed 2026-11-26 21:27 UTC, no newer one): 195 landing views all time, 4 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A web search for `site:firstprinciplesmoney.com` still returns nothing from the site.
+- **Judgment:** 17 days of guides have drawn no known visits (I-008), and the IndexNow ping is only 1 day old, so another guide or tweak would not move the constraint. Shipped nothing; no code changed. Next check of indexing on 2026-11-30 with the E-004 read.
+- **Blocked on:** indexing needs a Search Console or Bing account (the Principal's). Default already queued: crawlers only.
+
 ### 2026-11-26 21:45 UTC (14:45 Mountain) - scheduled run: IndexNow from the app itself
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`): `/`, `/snapshot`, `/privacy`, `/terms`, `/align`, `/api/health` all 200. Metrics (ops-data, 2026-11-26 21:27 UTC): 195 landing views all time, 4 in 24h, 56 in 7 days, waitlist 0, no `offer_view`. No `reviews/verdicts/`.
 - **Judgment:** the agent proxy blocks `api.indexnow.org`, but the app on Vercel can reach it. So the site now pings IndexNow itself, which needs no Search Console account.
