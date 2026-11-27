@@ -74,6 +74,12 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-27 13:46 UTC (06:46 Mountain) - scheduled run: live check, daily brief, no build
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`, status codes): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/api/health` all 200; health db true, email false, checkout false. Sitemap lists 23 URLs. Metrics (ops-data, 2026-11-27 08:21 UTC): 196 landing views all time, 3 in 24h, 36 in 7 days, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A `site:firstprinciplesmoney.com` web search still returns nothing from the site.
+- **Judgment:** the IndexNow ping is 1 day old and 17 days of guides have drawn no known visits, so shipping more would not move the constraint. No code changed. E-004 reads 2026-11-30.
+- **Did:** wrote the daily brief.
+- **Blocked on:** indexing needs a Search Console or Bing account (the Principal's). Default already queued: crawlers only.
+
 ### 2026-11-27 05:45 UTC (2026-11-26 22:45 Mountain) - scheduled run: live check, no build
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`, status codes): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/api/health` all 200; health db true, email false, checkout false. Metrics (ops-data, newest feed 2026-11-26 21:27 UTC, no newer one): 195 landing views all time, 4 in 24h, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A web search for `site:firstprinciplesmoney.com` still returns nothing from the site.
 - **Judgment:** 17 days of guides have drawn no known visits (I-008), and the IndexNow ping is only 1 day old, so another guide or tweak would not move the constraint. Shipped nothing; no code changed. Next check of indexing on 2026-11-30 with the E-004 read.
