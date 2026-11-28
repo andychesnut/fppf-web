@@ -74,6 +74,11 @@ Read this first on every run. The "Standing rulings" section overrides any older
 
 ## Entries
 
+### 2026-11-28 21:46 UTC (14:46 Mountain) - scheduled run: live check, no build
+- **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`, status codes): `/`, `/snapshot`, `/privacy`, `/terms`, `/offer`, `/guides`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Sitemap lists 23 URLs. Metrics (ops-data, 2026-11-28 19:57 UTC): 201 landing views all time, 5 in 24h, 26 in 7 days, waitlist 0, no `offer_view`, 1 email saved all time. No `reviews/verdicts/`.
+- **Judgment:** unchanged. Discovery is the constraint (I-008); the IndexNow ping is 2 days old and more pages would not move it. No code changed. E-004 reads 2026-11-30: with no offer views, the kill rule (fewer than 2 sign-ups) will trigger, and the next step is to rework the pitch and the routes to `/offer`, not to build more product.
+- **Blocked on:** indexing needs a Search Console or Bing account (the Principal's). Default queued: crawlers only.
+
 ### 2026-11-28 13:46 UTC (06:46 Mountain) - scheduled run: live check, daily brief, no build
 - **Verified at start:** origin is andychesnut/fppf-web. Live (public fetch, `www`, status codes): `/`, `/snapshot`, `/privacy`, `/terms`, `/sitemap.xml`, `/api/health` all 200; health db true, email false, checkout false. Sitemap lists 23 URLs. Metrics (ops-data, 2026-11-28 07:41 UTC): 198 landing views all time, 2 in 24h, 27 in 7 days, waitlist 0, no `offer_view`. No `reviews/verdicts/`. A `site:firstprinciplesmoney.com` web search returns nothing from the site (the search tool ignores the operator, so this is weak evidence; the 2026-12-24 check stands).
 - **Judgment:** unchanged. Discovery is the constraint (I-008); the IndexNow ping is 2 days old. No code changed. E-004 reads 2026-11-30.
